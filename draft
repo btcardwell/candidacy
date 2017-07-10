@@ -1,0 +1,31 @@
+1 page ~ 30 lines
+
+CMS
+    Tracker
+    ECAL
+        - cite CMS TDR
+
+        The electromagnetic calorimeter (ECAL) is composed of 61200 lead tunstate crystals in the barrel and 7324 in each endcap (*is 'each' right?). Lead tungstate crystals allow for a fast (80% of light within 25 ns), compact (radiation length = 0.89 cm), fine-grained (Moliere length = 2.2 cm), and radiation hard (up to 10 Mrad) calorimeter. The main drawback is the relatively low light yield (30 photon / MeV), which necesitates photodetectors with intrinsic gain that work in magnetic fields (*say B-field part better). 
+
+        The barrel section (EB) extends from 129 to ### (*look up) cm and covers a pseudorapidity range of 0 to 1.479. Each crystal covers about 1 (*square?) degree in theta-eta (*double check) and is tapered (*right word?) so that it's long edges define lines of constant phi. In the end, the crystals have a width of approximately one Moliere radius and a depth of 25.8 radiation lengths.
+
+        The endcap section (EE) is 314 cm from the IP (*right word?) and covers a pseudorapidity range of 1.479 to 3.0. Additionally, a preshower detector (two planes of silicon strip detectors and a lead absorber) sits just inside the grid of lead tungstate crystals. (*Say what the preshower is for? Is it for pi0 rejection? If so, how and why?)
+    HCAL
+        - cite CMS TDR
+
+        The hadronic calorimeter (HCAL) is composed of plastic scintillator interspersed within brass absorber. The scintillation light is transferred to readout through wavelength shifting fibres (WLS) that are spliced onto clear fibers (*say what readout means. PMT?). The scintillator plates are 3.7 mm thick.
+        The barrel section (HB) spans a pseudorapidty range of -1.4 to 1.4 and has 2304 towers, each of which ha 15 brass plates and covers an area of 0.087 x 0.087 in eta-phi. In addition, a single layer of 10 mm thick scintillator tiles sits just outside the solenoid. This extra layer, known as hadron outer (HO), spans a pseudorapidty range of -1.26 to 1.26 and increaes the effective HCAL interaction length to greater than 10.
+        Each endcap consists of 14 towers with five degree phi segmentation and spans a pseudorapidity range of 1.3 to 3.0. Also, a steel and quartz fiber forward calorimeter (HF) sits 11.2 m from the interaction pipe in a pseudorapidty range of 3.0 to 5.0. In HF, particles produce Cherenkov light when traversing the quartz fibers that run parallel to the beamline. (*say why HF is necessary)
+    Solenoid
+    Muon system
+        - cite CMS TDR
+        - Specifically mention CMS design specs to meet physics goals?
+        - Probably a sentence about the technology choices in each of DT, CSC, and RPCs would be good
+        - Describe orientation of DTs?
+
+        The muon system (MS), which is the outermost subdetector, detects muons with 3 varieties of gaseous ionization detectors: drift tubes (DTs) in the barrel, cathode strip chambers (CSCs) in the endcaps, and resistive plate chambers (RPCs) in both the barrel and endcaps. The DTs and CSCs were chosen for the barrel and endcap, respectively, because the neutron-induced background, muon rates, and strength of the magnetic field are all higher in the encap. The RPCs are useful in both the endcaps and barrel because their fast response and good time resolution allow unambiguous bunch crossing identification. Combining MS and tracker measurements improves the muon pT resolution at high momenta where the tracker pT resolution declines (*quantify).
+
+        In the barrel detector (BD), four layers of DTs and and RPCs are embedded in the solenoid return yoke at 4.0, 4.9, 5.9, and 7.9 m. SAY SOMETHING ABOUT HOW DTS ACTUALLY WORK. The maximum drift length is 2 cm and the single point resolution is 200 um. When reconstructing a vector describing the muon momentum, the phi precision is better than 100 um in position and 1 mrad in direction. 
+
+        Each muon endcap detector (ME) is composed of 234 CSCs and 4 RPC stations (*figure out exactly what RPC station means and say that instead). Each CSC has six gas gaps with radial cathode strips and nearly perpendicualr planes of anode wires. The wire signal from the ionization-induced electron avalanch is fast enough to use in the L1 trigger, but the slower (*quantify) cathode strip signal provides precise (*quantify) position measurements. In the end, the CSC spacial resolution is approximate 200 um and the angular resolution is approximately 10 mrad.
+    Trigger, particle reconstruction, etc
