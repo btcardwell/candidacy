@@ -18,15 +18,24 @@ Ideal writing schedule
         7/12 - Write up one analysis
         7/11 - Write up one analysis
         7/10 - Write up three subdetectors
-        7/9  - Write up three subdetectors
-            MS
-            ECAL
-            HCAL
+            Tracker
+.            Trigger
+.            Solenoid
+.        7/9  - Write up three subdetectors
 
 Ideal learning schedule
     7/28 - Know everything about everything
-.    7/8  - Brief notes on 4 analyses
-.    7/8  - Finish SM paper
+    7/17 - Learn about LLPs in SM
+    7/14 - Thoroughly learn one analysis
+    7/14 - Some SUSY variant
+    7/13 - Thoroughly learn one analysis
+    7/13 - Some SUSY variant
+    7/12 - Thoroughly learn one analysis
+    7/12 - Some SUSY variant
+    7/11 - Thoroughly learn one analysis
+    7/11 - Basic SUSY (mSSM)
+    7/10 - Work through Higgs mechanism
+    7/10 - Notes on pixel upgrade paper
 
 
 Learning list
@@ -35,6 +44,7 @@ Learning list
 .    Finish SM paper
     More naturalness, hierarchy, fine-tuning
 .    CMS subdetectors
+    CMS TDR
     Higgs mechanism thoroughly
     Beyond tree-level SM
     How is SUSY natural?
