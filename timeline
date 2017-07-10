@@ -19,12 +19,14 @@ Ideal writing schedule
         7/11 - Write up one analysis
         7/10 - Write up three subdetectors
         7/9  - Write up three subdetectors
+            MS
+            ECAL
+            HCAL
 
 Ideal learning schedule
     7/28 - Know everything about everything
-    7/9  - Most relevant parts of 'particle detectors at accelerators'
-    7/8  - Brief notes on 4 analyses
-    7/8  - Finish SM paper
+.    7/8  - Brief notes on 4 analyses
+.    7/8  - Finish SM paper
 
 
 Learning list
@@ -34,14 +36,33 @@ Learning list
     More naturalness, hierarchy, fine-tuning
 .    CMS subdetectors
     Higgs mechanism thoroughly
+    Beyond tree-level SM
     How is SUSY natural?
     SUSY basics (probably from SUSY Primer)
     Basics of SUSY beyond MSSM that lead to LLP (split, stealth, etc)
     MC methods
     LL SM particles
     SM production, decay, and reconstruction in CMS
+        gamma
+        e
+        mu
+        tau
+        q
+        g
+        b
+        t
+        hadrons
+        W
+        Z
+        H
     Particle interaction w/ matter
     Particle detectors at accelerators
+    Make sure I'm extremely clear on definition, typical values, etc of
+        Luminosity
+        Cross section
+        Width
+        Branching fraction
+        <dE/dx>
     
 
 
