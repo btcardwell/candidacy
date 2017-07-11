@@ -1,31 +1,47 @@
-
-Learning list
-    4 Analyses in depth
-    A few more analyses shallow
-    SM Intro
-    More naturalness, hierarchy, fine-tuning
-    CMS subdetectors
-    CMS TDR
-    Higgs mechanism thoroughly
-    Beyond tree-level SM
+Learn
     How is SUSY natural?
-    SUSY basics (probably from SUSY Primer)
-    Basics of SUSY beyond MSSM that lead to LLP (split, stealth, etc)
-    MC methods
-    LL SM particles
-    SM production, decay, and reconstruction in CMS
+    What natural SUSY variants are still viable?
+    Which natural SUSY variants lead to LLPs?
+    Should I talk about anything other than SUSY?
+        Extra dimensions?
+        Composite Higgs?
+    How are particles reconstructed in CMS?
         gamma
         e
         mu
         tau
-        q
-        g
-        b
-        t
-        hadrons
+        top
+        bottom
+        quarks
+        gluons
         W
         Z
-        H
+        MET
+        Other jets
+            ISR
+    Production modes in CMS
+        gamma
+        e
+        mu
+        tau
+        top
+        bottom
+        quarks
+        gluons
+        W
+        Z
+        Higgs
+    Decay modes in CMS
+        tau
+        top
+        bottom
+        W
+        Z
+        Higgs
+        Pion
+        Kaon
+        Other hadrons?
+    Is there anything to learn about hierarchy problem & fine tuning that I didn't learn when thinking about naturalness?
     Particle interaction w/ matter
     Particle detectors at accelerators
     Make sure I'm extremely clear on definition, typical values, etc of
@@ -34,6 +50,50 @@ Learning list
         Width
         Branching fraction
         <dE/dx>
-    
+    MC methods
+    What is the overall experimental viability of naturalness?
+    What searches would be most valuable in 2017?
+    Do I need to worry about dark matter?
+
+Memorize
+    Learn
+        CMS numbers
+            Bunches
+            Protons / bunch
+            Pileup
+            Radii of subdetectors
+            Channels, sizes of subdetector components
+        SM lifetimes/widths
+        SM LLPs
+        SM cross sections
+        CMS-relevant hadrons
+            Quark content
+            Masses
+            Lifetimes
+            Decays
+    Review
+        SM masses
+        Poisson, gaussian, etc
+        Coupling strengths
+        Typical lifetimes for EM, weak, strong decays
+        Planck mass
 
 
+Practice explaining
+    Learn
+        Naturalness
+        CMS detector
+        Why Higgs mass is unnatural
+        Other naturalness problems in physics
+    Review
+        Statistics
+
+Practice doing
+    Learn
+        Higgs mechanism
+        SM mass corrections
+        Writing matrix elements from diagrams
+        Draw a bunch of diagrams
+            Production and decay of SM particles
+            Relevant SUSY diagrams
+    Review
