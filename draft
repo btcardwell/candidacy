@@ -65,6 +65,18 @@ Analyses
         Displaced vertices
             -cite CONF-2017-026
 
+            LLPs with lifetimes on the order of ~1 nm (*check this) can decay inside the detector volume, but with a reconstructed vertex far from the nominal interaction point (*last 3 words true?). ATLAS performs one such search with large MET and at least one displaced vertex (DV) with large track multiplicity. The search is sensitive to long-lived gluinos with lifetimes in the 10 ps to 10 ns range.
+
+            LLPs appear in BSM theories such as Hidden Valley models, where the LLP decay is suppressed by a large barrier potential, SUSY models with small R-parity violating couplings, and Split SUSY, where the LLP decay is suppressed by the high virtuality of an intermediate state. This search uses a simplified model in the Split SUSY paradigm as a benchmark. In the simplified model, gluinos are kinematically accessible while squarks are not. The relevant process, then, is pair produced gluinos that decay to a quark and virtual squark, which then decays to a quark and the LSP, which is presumed to be a neutralino. Because the squark mass is so high, the gluino lives long enough to form an R-hadron with SM quarks and propogate some measureable distance away from the IP. 
+
+            Jets and MET are reconstructed as normal in this analysis, but special care must be taken when looking for displaced tracks. The standard ATLAS tracking algorithm constrains the transverse and longitudinal impact parameters of potential tracks, so the authors employed an additional algorithm, referred to as large-radius tracking (LRT). LRT is run after the standard tracking algorithm and only uses hits that were not used in standard track reconstruction. By relaxing d0, z0, and number of hits requirements, LRT is able to reconstruct tracks that point back to DVs.
+            
+            Because no SM process will produce events that meet the mass and track multiplicity requirements on the DV, only instrumental backgrounds are considered. Specifically, hadronic interactions in detector material, incorrectly combining vertices from short-lived SM particles, and incorrectly adding hits from unrelated tracks to low-mass vertices (*make sure I understand this last one) can all lead to events that mimic the desired signal.
+
+            The authors minimize the effect of hadronic interactions by vetoing the material-dense regions of the detector and estimate the residual background by extrapolating from the low-mass region, which is dominated by hadronic interactions. After a dedicated study, the background from merged vertices was found to be negligable. Finally, the background from crossing tracks is treated as an uncertainty in the background estimate that is determined with a model that adds pseudo-tracks to data vertices. 
+
+            After estimating 0.02 +- 0.02 background events, exactly 0 are observed. The result is then interpreted as upper limits on the gluino mass and pair-production cross section as a function of gluino lifetime. (*Include plots and/or report numbers)
+
         Disappearing tracks
             -cite CONF-2017-017
     CMS
