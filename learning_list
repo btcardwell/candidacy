@@ -4,6 +4,7 @@ Learn
     Should I talk about anything other than SUSY?
         Extra dimensions?
         Composite Higgs?
+        Hidden Valleys and dark sectors produce LLPs. Are they natural?
     How are particles reconstructed in CMS?
         gamma
         e
@@ -63,6 +64,8 @@ Memorize
             Pileup
             Radii of subdetectors
             Channels, sizes of subdetector components
+            Luminosity
+            Particle flux at different radii
         SM lifetimes/widths
         SM LLPs
         SM cross sections
@@ -71,12 +74,13 @@ Memorize
             Masses
             Lifetimes
             Decays
+        Fundamental force strengths/timescales
     Review
         SM masses
         Poisson, gaussian, etc
         Coupling strengths
-        Typical lifetimes for EM, weak, strong decays
         Planck mass
+        hbar*c-type stuff in non-natural units
 
 Practice explaining
     Learn
@@ -87,6 +91,8 @@ Practice explaining
         How is SUSY natural?
     Review
         Statistics
+            How is a limit plot made?
+            What does '5 sigma disovery' mean?
 
 Practice doing
     Learn
@@ -97,3 +103,8 @@ Practice doing
             Production and decay of SM particles
             Relevant SUSY diagrams
     Review
+        Estimate lifetimes, propagation distances, widths from each other real fast
+        Find other things I should be able to numerically estimate real fast
+
+List of phrases I should have in my back pocket
+    In general, loop momentum integrals always diverge either quadratically or logarithmically, not linearly
