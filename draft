@@ -111,4 +111,17 @@ Analyses
             After estimating the background by extrapolating data from the cosmic-enriched region to the signal region and determining systematic uncertainties related to the MC simulation, trigger acceptance, and luminosity, the authors calculated the expected background for LLP lifetimes ranging from 10^-7 to 10^6 s. In all cases, the expected background was less then one event. After unblinding, the observed number of events is exactly zero in every lifetime scenerio. These results are then interpreted as upper limits on the signal production cross section (*include limit plots or table), which are the first limits for stopped particles that decay to muons at the LHC.
 
         HSCPs
-            -cite CMS EXO7-010
+            - cite CMS EXO7-010
+            - nice dE/dx plot (fig 1)
+
+            Particles that live for more than a couple ns (*Check this and be more exact) will appear stable in CMS and ATLAS because they can traverse the entire detector before decaying. If such a particle is also sufficiently massive, it can be catigorized as a heavy stable charged particle (HSCP). HSCPs are characterterized by a greater rate of energy loss via ionization due to the lower speed with which they pass through detector material. Additionally, HSCPs can be fractionally, singly, or multiply charged, which also affects their rate of energy loss. 
+
+            HSCPs will often be misidentified or unobserved by standard reconstruction algorithms and analysis criteria, which tend to assume beta~1 and q=+-e (*dE/dx plot is nice around here). These criteria (tracker dE/dx and and MS TOF) provide two handles for a dedicated HSCP search in the context of three benchmark models: (1) HSCPs that form R-hadrons that either change the sign of their electric charge or become neutral before reaching the MS depending on the nature of R-hadron's interaction with nuclear matter, (2) lepton-like HSCPs (quasi-stable sleptons) that are produced either through decays of squarks or gluinos or directly if squarks and gluinos are kinematically inaccessible, and (3) long-lived leptonlike fermions with aritrary electric charge. The first two models bear more directly on naturalness and SUSY, so they will be the focus of this presentation.
+
+            (*I should talk about how low-beta tracks will show up as zig-zags in DTs b/c reconstruction assumes beta~1. Zig-zag offset is used to estimate beta. Not sure where to fit it in.) (*Also need to talk about tracker-only vs tracker+TOF)
+
+            The trigger requires all events to have either a high-pT muon or large MET. The high-pT muon trigger is more efficient for all benchmark models except the case where the R-hadron becomes neutral before reaching the MS. In the case where the R-hadron does not leave a track in the MS, the large MET trigger should recover some events.  
+
+            The authors estimate the signal-region background using and ABCD method in which events are binned in a 2D plane with uncorrelated axes and the ratio of events in two control regions is used to extrapolate into the signal region from a third control region (*Do I need to explain this? If I do, I should be more clear). Systematic uncertainties are introduced in background estimation, signal acceptance, and integrated luminosity.
+
+            No significant excess over predicted background is observed, so the results are interpreted as upper limits in the production cross section - mass plane for the considered models. By comparing the observed and theoretical limits, the authors also extract mass limits for the gluinos, stops, and staus in various models.
