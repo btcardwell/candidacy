@@ -1,6 +1,15 @@
+SM
+    The standard model of particle physics (SM) decribes all known particles and forces (except gravity) and is experimentally verified to astonishing (*weak word) accuracy. The SM consists of 12 spin-1/2 particles, the fermions, that make up all observed matter, 5 spin-1 particles, the gauge bosons, that communicate the electromagnetic, weak, and strong fundamental forces, and 1 fundamental scalar, the Higgs boson, which will be described in detail below.
+    
+    The SM particles fit into multiplets of three symmetry groups, which makes the SM an SU(3)cxSU(2)LxSU(1)Y theory. These three symmetry groups correspond to color, the charge associated with the strong nuclear force; weak isopin, the charge associated with the left-handed chiral doublet something something; and weak hypercharge, the something something something, respectively. 
 
-Naturalness
-    - Totally spitballed after talking to Humberto on 7/10
+    The Higgs potential (*insert equation) has a nonzero vacuum expectation value (VEV), which spontaneously breaks the SU(2)LxU(1)Y symmetry to a U(1)EM symmetry. Breaking the continuous symmetries creates 4 Nambu-Goldstone bosons, 3 of which are 'eaten' by the W+, W-, and Z bosons, causing the gauge bosons to acquire mass (*say in terms of DOF instead?). After parameterizing the Higgs field in terms of its VEV and propagating something something, the SM Lagrangian now contains mass terms for the quarks and leptons (*this is the first time I'm saying those words)(*Include eqs probably).
+
+Higgs mass unnatural
+
+    Like all SM particles, the Higgs boson interacts with virtual particles in the vacuum through loop processes. The Higgs is unique, however, in that it is the only fundamental scalar in the theory. As a fundamental scalar, the Higgs sees corrections to its mass that depend quadratically on the energy scale at which the SM is replaced by a more complete theory (*eqs). The fermions and gauge bosons do not suffer this same fate because their masses are protected by the chiral and gauge symmetries, which are referred to as custodial symmetries in this context. The Higgs mass is found experimentally to be 125.1 GeV, even though it's sensitive to energy scales some 10\^16 times higher. This leads many (*weak) to describe the Higgs mass as 'unnatural', a concept that will be defined thoroughly below.
+
+More thorough and general definition of naturalness
 
     The naturalness criterion takes several forms, some of which feel way more like bullshit than others. Here are the formulations I can think of off the top of my head: (1) all parameters in a model should be of order 1, (2) Loop-level contributions should not be larger than tree-level contributions, (3) any small parameter should be protected by a custodial symmetry, and (4) fine-tuning is bad. To my ear, (1) and (2) sound dumb and (3) and (4) might be compelling with the right context.
 
@@ -10,13 +19,16 @@ Naturalness
 
     There are other unnatural quantities that people worry about (even though they're less important to my world). I know of two off the top of my head: (1) whatever the parameter of interest is in the strong CP problem and (2) the cosmological consant. The strong CP problem is something like "some parameter in QCD stuff implies maximal CP violation, but we don't see any CP violation in strong interactions. The cosmological constant is way the fuck too small compared to naive expectations. Maybe like 120 orders of magnitude too small? I don't know of any reasonable solutions to the cosmological constant problem, and it seems like such a giant crazy problem that people just kinda sweep it under the rug. I have now said roughly everything I know about naturalness problems outside the contet of the Higgs mass.
 
+General BSM naturalness talk
+
     There are a few proposed solutions to the SM naturalness problem. SUSY is the main one, and I'll spend the great majority of my time on it. Extra dimensions and composite Higgs models are the other two that pop up fairly often, but won't spend much time on them outside the next two sentences. Extra dimensions solves the hierarchy problem either by lowering the cutoff scale (as in large extra dimensions (ADD)) or introducing a warping factor that reduces the level of unnaturalness (warped extra dimensions (RS)). Composite Higgs models propose that the Higgs stops behaving as a fundamental scalar at some energy level, which removes the quadratic dependence.
 
     SUSY introduces a new symmetry in which every field can rotate freely between fermions and bosons. Thus, every correction to the Higgs mass from a fermion loop is exactly cancelled by the assoicated boson loop, and vice-versa. We know that SUSY can't be an exact symmetry because the superpartners would have already been observed with the same mass as their SM counterparts. Broken SUSY can still be natural, however, as long as it's approximately true. That is, as long as the superpartners show up at a mass scale not too far above the EW scale. Some sparticles are more important than others for correcting the higgs mass and therefore naturalness, so we can get away with some sparticles being more massive than others, which is getting more appealing as null LHC results keep rolling in. There are other tricky things you can do to work around all these null results; I'll need to learn more about them in the immediate future.
 
-Long-Lived Particles
-
-CMS
+SUSY intro
+SUSY breaking
+LLPs
+CMS detector
     Tracker
         - cite CMS TDR, jinst 12 c02033
 
@@ -60,8 +72,7 @@ CMS
         - Mention fpgas in L1 or more details about HLT?
 
         The trigger reduces the data writing rate from the 40 MHz collision rate to less than 1 kHz so that events can be written to tape. The rate reduction happens in two stages: Level-1 (L1) and High-Level Trigger (HLT). The HLT uses input from ECAL, HCAL, and MS that represents physics objects (e/gamma, tau, jets, ET, and mu) and uses custom electronics to reduce the rate to ~100 kHz in 3.8 us. The HLT then uses a dedicated processor farm to reduce the rate to the desired < 1 kHz.
-
-Analyses
+LLP searches
     ATLAS
         Displaced vertices
             -cite CONF-2017-026
@@ -127,5 +138,21 @@ Analyses
             The authors estimate the signal-region background using and ABCD method in which events are binned in a 2D plane with uncorrelated axes and the ratio of events in two control regions is used to extrapolate into the signal region from a third control region (*Do I need to explain this? If I do, I should be more clear). Systematic uncertainties are introduced in background estimation, signal acceptance, and integrated luminosity.
 
             No significant excess over predicted background is observed, so the results are interpreted as upper limits in the production cross section - mass plane for the considered models. By comparing the observed and theoretical limits, the authors also extract mass limits for the gluinos, stops, and staus in various models.
+Summary of limits
+Viability of naturalness
+Important 2017 searches
+Conclusion
+
+
+
+Naturalness
+    - Totally spitballed after talking to Humberto on 7/10
+
+
+Long-Lived Particles
+
+CMS
+
+Analyses
 
 Summary of limits / viability of naturalness
