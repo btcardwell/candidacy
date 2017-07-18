@@ -5,10 +5,8 @@ SM
 
     The Higgs potential (*insert equation) has a nonzero vacuum expectation value (VEV), which spontaneously breaks the SU(2)LxU(1)Y symmetry to a U(1)EM symmetry. Breaking 3 of the 4 generators leaves 3 extra degrees of freedom, which ultimately become the masses of the W+, W-, and Z bosons, while the remaining degree of freedom is associated with electric charge and the massless photon. Expanding the Higgs field about its VEV and picking a gauge produces quark and charged lepton mass terms in the SM Lagrangian. In this way, spontaneous symmetry breaking of the Higgs field gives mass to all massive SM particles (*Give example mass term or work it out a little bit).
 
-Higgs mass unnatural
     Like all SM particles, the Higgs boson interacts with virtual particles through loop processes. The Higgs is unique, however, in that it is the only fundamental scalar in the theory. As a fundamental scalar, the Higgs sees corrections to its mass that depend quadratically on the energy scale at which the SM is replaced by a more complete theory (*eqs). The fermions and gauge bosons do not suffer this same fate because their masses are protected by the chiral and gauge symmetries, which are referred to as custodial symmetries in this context. The Higgs mass is found experimentally to be 125.1 GeV, even though it's sensitive to energy scales some 10\^16 times higher. This leads many (*weak) to describe the Higgs mass as 'unnatural', a concept that will be defined thoroughly below.
-
-More thorough and general definition of naturalness
+Naturalness
     The naturalness criterion takes several forms, some of which feel way more like bullshit than others. Here are the formulations I can think of off the top of my head: (1) all parameters in a model should be of order 1, (2) Loop-level contributions should not be larger than tree-level contributions, (3) any small parameter should be protected by a custodial symmetry, and (4) fine-tuning is bad. To my ear, (1) and (2) sound dumb and (3) and (4) might be compelling with the right context.
 
     Let's look at (3). In the SM, the parameter of interest is the Higgs mass, which unlike the fermions and gauge bosons, has no custodial symmetry to hold it down. The fermions masses are protected by a U(1)xU(1) chiral symmetry that would exist if the fermions were massless, and the vector bosons are protected by gauge symmetry (*how does this one work? Would gauge symmetry be enlarged if vector bosons were massless?). The Higgs, a fundamental scalar, has no such symmetry. Looking at the 1-loop corrections to the Higgs propagator, we see a quadratic dependence on the cutoff scale, which implies that a Higgs mass well below the energy scale of new physics is unnatural.
@@ -16,32 +14,19 @@ More thorough and general definition of naturalness
     Now look at (4), again in the context of the Higgs mass. If mH depends quadratically on the cutoff, we expect it's mass to be fucking huge, like comparable to the cutoff scale. We know experimentally that its mass is 125.1 GeV, so it's bare mass (*or is it a coupling constant of some kind? I need to be extremely clear on this) must exactly cancel the cutoff-dependent contribution. 'Whatever', you might say, 'things cancel each other out sometimes'. In this case, however, the values need to be tuned to the tune of 1 part in 10^30 or some crazy shit like that. We have no good explanation for why these two numbers would match so perfectly, so it seems incredibly suspicious that it would just happen by chance.
 
     There are other unnatural quantities that people worry about (even though they're less important to my world). I know of two off the top of my head: (1) whatever the parameter of interest is in the strong CP problem and (2) the cosmological consant. The strong CP problem is something like "some parameter in QCD stuff implies maximal CP violation, but we don't see any CP violation in strong interactions. The cosmological constant is way the fuck too small compared to naive expectations. Maybe like 120 orders of magnitude too small? I don't know of any reasonable solutions to the cosmological constant problem, and it seems like such a giant crazy problem that people just kinda sweep it under the rug. I have now said roughly everything I know about naturalness problems outside the contet of the Higgs mass.
-
-General BSM naturalness talk
+    
     There are a few proposed solutions to the SM naturalness problem. SUSY is the main one, and I'll spend the great majority of my time on it. Extra dimensions and composite Higgs models are the other two that pop up fairly often, but won't spend much time on them outside the next two sentences. Extra dimensions solves the hierarchy problem either by lowering the cutoff scale (as in large extra dimensions (ADD)) or introducing a warping factor that reduces the level of unnaturalness (warped extra dimensions (RS)). Composite Higgs models propose that the Higgs stops behaving as a fundamental scalar at some energy level, which removes the quadratic dependence. (*Hidden valley, dark sector, little Higgs?)
-
 SUSY -> SUSY breaking -> LLPs
     SUSY introduces a new symmetry in which every SM field fits into a larger multiplet with an inherent symmetry between fermions and bosons. In it's simplest form, this new symmetry results in one new boson for every SM fermion and one new fermion for every SM boson. Because fermion loops come a relative minus sign (*there must be a better way to say that), every bosonic correction to the Higgs mass is then cancelled by a fermionic correction and vice versa. If supersymmetry were an exact symmetry, the bare Higgs mass would then be uncorrected to all orders in perturbation theory.
 
     Experimental evidence shows that SUSY can't be exact, however, because no superpartners (*need to define this somewhere earlier) have been found, and exact SUSY requires each superpartner to have the same mass as its standard model counterpart. The mechanism and scale of SUSY breaking is an open question with many competing answers that achieve different theoretical goals and lead to different TeV-scale phenemena. A handful of approaches to SUSY breaking that are particularly prominant or relevant to naturalness and long-lived particles (LLPs) are minimal supersymmetric SM (MSSM), gauge-mediated susy breaking (GMSB), anomaly-mediated SUSY breaking (AMSB), split SUSY, stealth SUSY, R-parity violating SUSY (RPV), compressed SUSY, focus point SUSY, and displaced SUSY (*prospective list. I'll narrow it down as I learn more)(*do these get capitalized?)
 
     The SUSY variants most relevant to this discussion are those that are motivated by naturalness and have reduced sensitivity to traditional LHC analyses. Specifically, we are interested in SUSY breaking models that predict long-lived particles (LLPs). That is, particles whose lifetimes are such that they decay at least a detectable distance from the nominal interaction point, which includes everything from particles that decay at (*give ballparky number (~100um?)) to particles that propagate through the entire detector. 
-
 Specific theory examples of LLPs
     weakly coupled RPV
     compressed spectra
     hidden valley
     something about a dark sector?
-
-Specific LLP experimental signatures (maybe this should wait until after CMS detector?)
-    extra dE/dx and longer TOF from smaller beta (HSCPs)
-    out-of-time signals (stopped particles)
-    displaced vertices
-    disappearing tracks
-
-    I haven't talked yet about what makes a SUSY model natural. Maybe that can wait until discussion of limits/viability of naturalness?
-
-
 CMS detector
     Tracker
         - cite CMS TDR, jinst 12 c02033
@@ -88,6 +73,13 @@ CMS detector
         The trigger reduces the data writing rate from the 40 MHz collision rate to less than 1 kHz so that events can be written to tape. The rate reduction happens in two stages: Level-1 (L1) and High-Level Trigger (HLT). The HLT uses input from ECAL, HCAL, and MS that represents physics objects (e/gamma, tau, jets, ET, and mu) and uses custom electronics to reduce the rate to ~100 kHz in 3.8 us. The HLT then uses a dedicated processor farm to reduce the rate to the desired < 1 kHz.
 LLP searches
     General discussion of possible signals and complementarity of searches described below
+        LLPs leave distinct signatures that differentiate LLP signals from SM backgrounds but also add complexity to LLP analyses. CMS and ATLAS were generally designed to detect and reconstruct stable particles from prompt decays, so LLP analyses often need to veer off the traditional analysis path in terms of object reconstruction (*really reconstruction? Maybe object definition?), background estimation, and which data tier to use (*can I say this more generally?). This paper will focus on four complementary LLP signatures: displaced vertices, disappearing tracks, stopped particles, and heavy stable charged particles (HSCPs)(*is HSCP a signature? say TOF / dE/dx instead?).
+
+        Displaced vertices and disappearing tracks both look for particles that are unstable on detector timescales (*quantify?). Displaced vertices searches are sensitive to LLPs that decay to visible (*detectable? some other word?) particles in the inner volume (*specify) of the detector and leave tracks that can be traced back to a vertex that is sufficiently displaced from the nominal interaction point. Disappearing tracks searches are sensitive to LLPs that decay to invisible (*neutral? some other word?) particles along with particles that are too soft to be reconstructed. Together, these two types of analyses cover something something parameter space of LLPs that decay on detector timescales.
+
+        HSCP and stopped particle searches are both sensitive to LLPs that are detector-stable but far more massive than any stable SM particle. HSCP searches use ionization energy loss per unit distance (dE/dX) and time-of-flight (TOF) measurements to look for particles that are moving more slowly than the expected SM particles, which normally (*quantify) have beta > 0.9. Stopped particle searches take this idea one step further and look for particles that actually come to rest inside the detector before decaying, a phenomena that could be possible with long-enough LLP lifetimes and small initial kinetic energy. These analyses look (*repetative) for calorimeter energy deposits or hits in the muon system (*too specific for LLP analyses intro?) that are out of time with proton bunch crossings that could be due to stopped particles decaying.
+
+        These four approaches cover a wide range of LLP lifetimes that would be missed in traditional searches. The next section will look  at a recent example of each analysis type from either ATLAS or CMS.
     ATLAS
         Displaced vertices
             -cite CONF-2017-026
@@ -121,7 +113,6 @@ LLP searches
             Pixel tracklets can be faked by random combinations of unrealted hits from nearby particles or by pixel hits that don't have the proper SCT hits associated to them, either due to a hadron suffering a hard scatter or a lepton radiating a hard photon. These backgrounds come primarily from ttbar and W+j, and estimates for each type of background are obtained from data. After constructing control regions for the lepton- and hadron-related backgrounds, the authors extract transfer factors... (*I don't understand this. Need to work through it). The authors estimate the remaining background by defining a control region with large d0 uncertainty that is dominated by pixel tracklets reconstructed from random, unrelated hits. After verifying that the pT spectrum of fake pixel tracklets is independent of MET (which defines the signal and control regions), the authors estimate the contribution of this background in the signal region by multiplying the number of signal-region tracklets by the ratio of control-region fake tracklets to total control-region tracklets.
 
             No excess over expected background is observed, so upper limits are placed in the NLSP chargino mass-lifetime plane for the EW signal process and in the NLSP chargino mass gluon mass plane for the QCD production process (*will be way clearer after texing in sparticle symbols). (*Include either plots or #s)
-
     CMS
         Stopped particles
             - cite CMS PAS EXO-17-004
