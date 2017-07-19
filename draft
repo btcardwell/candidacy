@@ -1,5 +1,5 @@
 SM
-    The standard model of particle physics (SM) decribes all known particles and forces (except gravity) and is experimentally verified to astonishing (*weak word) accuracy. The SM consists of 12 spin-1/2 particles, the fermions, that make up all observed matter, 5 spin-1 particles, the gauge bosons, that communicate the electromagnetic, weak, and strong fundamental forces, and 1 fundamental scalar, the Higgs boson, which will be described in detail below.
+    The standard model of particle physics (SM) describes all known particles and forces (except gravity) and is experimentally verified to astonishing (*weak word) accuracy. The SM consists of 12 spin-1/2 particles, the fermions, that make up all observed matter, 5 spin-1 particles, the gauge bosons, that communicate the electromagnetic, weak, and strong fundamental forces, and 1 fundamental scalar, the Higgs boson, which will be described in detail below.
     
     The SM particles fit into multiplets of three symmetry groups, which makes the SM an SU(3)cxSU(2)LxSU(1)Y theory. These three symmetry groups correspond to color, the charge associated with the strong nuclear force; weak isopin, the charge associated with the left-handed chiral doublet something something; and weak hypercharge, the something something something, respectively. 
 
@@ -22,11 +22,13 @@ SUSY -> SUSY breaking -> LLPs
     Experimental evidence shows that SUSY can't be exact, however, because no superpartners (*need to define this somewhere earlier) have been found, and exact SUSY requires each superpartner to have the same mass as its standard model counterpart. The mechanism and scale of SUSY breaking is an open question with many competing answers that achieve different theoretical goals and lead to different TeV-scale phenemena. A handful of approaches to SUSY breaking that are particularly prominant or relevant to naturalness and long-lived particles (LLPs) are minimal supersymmetric SM (MSSM), gauge-mediated susy breaking (GMSB), anomaly-mediated SUSY breaking (AMSB), split SUSY, stealth SUSY, R-parity violating SUSY (RPV), compressed SUSY, focus point SUSY, and displaced SUSY (*prospective list. I'll narrow it down as I learn more)(*do these get capitalized?)
 
     The SUSY variants most relevant to this discussion are those that are motivated by naturalness and have reduced sensitivity to traditional LHC analyses. Specifically, we are interested in SUSY breaking models that predict long-lived particles (LLPs). That is, particles whose lifetimes are such that they decay at least a detectable distance from the nominal interaction point, which includes everything from particles that decay at (*give ballparky number (~100um?)) to particles that propagate through the entire detector. 
-Specific theory examples of LLPs
+*Specific theory examples of LLPs
     weakly coupled RPV
     compressed spectra
+    way virtual intermediate sparticle
     hidden valley
     something about a dark sector?
+    word often relevant to above: R-hadron
 CMS detector
     Tracker
         - cite CMS TDR, jinst 12 c02033
@@ -95,7 +97,6 @@ LLP searches
             The authors minimize the effect of hadronic interactions by vetoing the material-dense regions of the detector and estimate the residual background by extrapolating from the low-mass region, which is dominated by hadronic interactions. After a dedicated study, the background from merged vertices was found to be negligable. Finally, the background from crossing tracks is treated as an uncertainty in the background estimate that is determined with a model that adds pseudo-tracks to data vertices. 
 
             After estimating 0.02 +- 0.02 background events, exactly 0 are observed. The result is then interpreted as upper limits on the gluino mass and pair-production cross section as a function of gluino lifetime. (*Include plots and/or report numbers)
-
         Disappearing tracks
             - cite CONF-2017-017
             - nice disappearing track cartoon
@@ -128,7 +129,6 @@ LLP searches
             In addition to the above criteria, the authors developed a new muon reconstruction algorithm, called displaced standalone (DSA), that uses only muon system hits and does not constrain the location of the primary vertex in any way. The full selection requires exactly one good DSA track in each hemisphere with pT greater than 50 GeV, no reconstructed vertices, and several criteria related to the quality of the reconstructed track and timing measurement, such as the minimum number of DT and RPC hits and maximum time measurement uncertainty. Finally, restrictions on the direction of muon momentum (incoming vs outgoing), relative time measurements, and maximum number of CSC hits (0), minimize background from beam halo and cosmics.
 
             After estimating the background by extrapolating data from the cosmic-enriched region to the signal region and determining systematic uncertainties related to the MC simulation, trigger acceptance, and luminosity, the authors calculated the expected background for LLP lifetimes ranging from 10^-7 to 10^6 s. In all cases, the expected background was less then one event. After unblinding, the observed number of events is exactly zero in every lifetime scenerio. These results are then interpreted as upper limits on the signal production cross section (*include limit plots or table), which are the first limits for stopped particles that decay to muons at the LHC.
-
         HSCPs
             - cite CMS EXO7-010
             - nice dE/dx plot (fig 1)
@@ -144,11 +144,11 @@ LLP searches
             The authors estimate the signal-region background using and ABCD method in which events are binned in a 2D plane with uncorrelated axes and the ratio of events in two control regions is used to extrapolate into the signal region from a third control region (*Do I need to explain this? If I do, I should be more clear). Systematic uncertainties are introduced in background estimation, signal acceptance, and integrated luminosity.
 
             No significant excess over predicted background is observed, so the results are interpreted as upper limits in the production cross section - mass plane for the considered models. By comparing the observed and theoretical limits, the authors also extract mass limits for the gluinos, stops, and staus in various models.
-Summary of limits
-Viability of naturalness
+*Summary of limits
+*Viability of naturalness
     What is a natural SUSY model?
     Compare limits to natural SUSY model constraints
     Note that theorists don't know shit and we should try our best to blanket parameter space
-Important 2017 searches
-    No idea. Roughly write everything else, then talk to Jamie and Andrew
-Conclusion
+*Important 2017 searches
+    No idea.
+    Roughly write everything else, then talk to Jamie and Andrew
