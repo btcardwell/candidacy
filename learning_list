@@ -5,42 +5,6 @@ Learn
         Extra dimensions?
         Composite Higgs?
         Hidden Valleys and dark sectors produce LLPs. Are they natural?
-    How are particles reconstructed in CMS?
-        gamma
-        e
-        mu
-        tau
-        top
-        bottom
-        quarks
-        gluons
-        W
-        Z
-        MET
-        Other jets
-            ISR
-    Production modes in CMS
-        gamma
-        e
-        mu
-        tau
-        top
-        bottom
-        quarks
-        gluons
-        W
-        Z
-        Higgs
-    Decay modes in CMS
-        tau
-        top
-        bottom
-        W
-        Z
-        Higgs
-        Pion
-        Kaon
-        Other hadrons?
     Is there anything to learn about hierarchy problem & fine tuning that I didn't learn when thinking about naturalness?
     Particle interaction w/ matter
     Particle detectors at accelerators
@@ -103,6 +67,43 @@ Practice explaining
         Why Higgs mass is unnatural
         Other naturalness problems in physics
         How is SUSY natural?
+        What are the pros and cons of using d0 for displaced vertices?
+        How are particles reconstructed in CMS?
+            gamma
+            e
+            mu
+            tau
+            top
+            bottom
+            quarks
+            gluons
+            W
+            Z
+            MET
+            Other jets
+                ISR
+        Production modes in CMS
+            gamma
+            e
+            mu
+            tau
+            top
+            bottom
+            quarks
+            gluons
+            W
+            Z
+            Higgs
+        Decay modes in CMS
+            tau
+            top
+            bottom
+            W
+            Z
+            Higgs
+            Pion
+            Kaon
+            Other hadrons?
     Review
         Statistics
             How is a limit plot made?
