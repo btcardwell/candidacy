@@ -1,13 +1,12 @@
 SM
-    The standard model of particle physics (SM) describes all known particles and forces (except gravity) and is experimentally verified to astonishing (*weak word) accuracy (*say 2nd clause better). The SM consists of 12 spin-1/2 particles, the fermions, that make up all observed matter, 5 spin-1 particles, the gauge bosons, that communicate the electromagnetic, weak, and strong forces, and 1 fundamental scalar, the Higgs boson, which will be described in detail below.
+    The standard model of particle physics (SM) describes all known particles and their non-gravitational interactions and is experimentally verified to astonishing (*weak word) accuracy (*say 2nd clause better). The SM consists of 12 spin-1/2 particles, the fermions, that make up all observed matter, 12 spin-1 particles, the gauge bosons, that communicate the electromagnetic, weak, and strong forces (*maybe put in pre-EWSB terms instead?), and 1 fundamental scalar, the Higgs boson, which will be described in detail below.
     
-    (*Rewrite this whole paragraph while looking at a book)
-    The SM particles fit into multiplets of three symmetry groups, which makes the SM an SU(3)cxSU(2)LxSU(1)Y theory (*awkward). These three symmetry groups correspond to color, the charge associated with the strong nuclear force; weak isospin, the charge associated with the left-handed chiral doublet something something; and weak hypercharge, the something something something, respectively. 
+    All SM particles transform according to the gauged symmetry group SU(3)cxSU(2)LxU(1)Y, where SU(3)c is associated with color charge, SU(2)L is associated with weak isospin, and U(1)Y is associated with weak hypercharge. The gauge bosons are associated with the generators of these groups, thus there are 8 gluons associated with SU(3)c, 3 W bosons associated with SU(2)L, and 1 B boson associated with U(1)Y. The fermions are catagorized by which representation of each group they fit into. For example, SU(3)c distinguishes the quarks (which live in the fundamental representation) from the leptons (which are singlets), and SU(2)L distinguishes the left-handed fermions (doublets) from the right-handed fermions (singlets). Finally, different values of weak hypercharge further distignuish SM particles according to a linear combination of their weak isospin and electric charge (*is there some more fundamental way to describe Y?).
 
-    The Higgs potential (*insert equation) has a nonzero vacuum expectation value (VEV), which spontaneously breaks the SU(2)LxU(1)Y symmetry to a U(1)EM symmetry. Breaking 3 of the 4 generators leaves 3 extra degrees of freedom, which ultimately become the masses of the W+, W-, and Z bosons, while the remaining degree of freedom is associated with electric charge and the massless photon. Expanding the Higgs field about its VEV and picking a gauge produces quark and charged lepton mass terms in the SM Lagrangian. In this way, spontaneous symmetry breaking of the Higgs field gives mass to all massive SM particles (*Give example mass term or work it out a little bit).
+    The Higgs potential has a nonzero vacuum expectation value (VEV), which spontaneously breaks SU(2)LxU(1)Y to U(1)EM while leaving SU(3)c unscathed. Once the dust settles, the B and 3 W bosons have been mixed to produce the W+, W-, Z bosons that mediate the weak force and the photon that mediates electromagnetism. 3 of the 4 generators are broken in the process, leaving 3 extra degrees of freedom that ultimately become the masses of the W+, W-, and Z bosons while the remaining symmetry is associated with electric charge. Furthermore, expanding the Higgs field about its VEV produces mass terms for the quarks and charged leptons, thus giving mass to all massive SM particles. (*probably show a little math)
 
-    (*rewrite this paragraph while looking at a book)
-    Like the mass of all SM particles, the Higgs mass is affected by interactions with virtual particles through loop processes. As the only fundamental scalar in the theory, however, the Higgs sees corrections to its mass that depend quadratically on the cutoff scale of the SM. (*compare to dependence of fermions and gauge bosons, show a little math). To show this dependence on loop corrections, SM masses are often written as power series, where the first term is the bare (uncorrected) mass and the following terms are due to loop corrections (*how bout some eqs?). The next section will explore the concept of naturalness, a major motivating principle in beyond the SM (BSM) physics, that is directly tied to the relationship between a particle's bare mass and the terms that correct it.
+    (*kinda funny wording throughout. Maybe it would be better to trade some words for math?)
+    All SM particles interact with virtual particles through loop interactions. These interactions lead to corrections to SM parameters such as particle masses. It is common to write a given parameter as a linear combination of its 'bare' (uncorrected) value and its corrections. As the only fundamental scalar in SM, the Higgs is uniquely affected by these corrections. The next section explores the concept of naturalness, a major motivating principle for beyond the standard model (BSM) physics that is directly tied to the relationship between the Higgs bare mass and the terms that correct it.
 
 Naturalness
     The naturalness criterion takes several forms. Here are a few (*cite these): (1) all parameters in a model should be of order 1, (2) Loop-level contributions should not be larger than tree-level contributions, (3) any small parameter should be protected by a custodial symmetry, and (4) fine-tuning is bad (*probably a better way to say 4). Although these statements are all trying to get at the same fundamental notion, I find (3) and (4) to be most compelling.
@@ -46,49 +45,51 @@ SUSY -> SUSY breaking -> LLPs (need to break this up somehow)
 
 CMS detector
     Overview
-
+        (*cite cms experiment at the cern lhc)
+          The Compact Muon Solenoid (CMS) detector is designed to reconstruct a variety of particles from 14 TeV proton-proton collisions at the Large Hadron Collider (LHC). To meet this goal, CMS combines information from several subdetectors nested radially in and around a 4-T superconducting solenoid. All together, CMS is 21.6 m long, 14.6 m across, and weighs approximately 12500 tons. The subdetectors that make up CMS are described below.
     Tracker
-        - cite CMS TDR, jinst 12 c02033
+        (*cite CMS TDR, jinst 12 c02033)
+        (*maybe I should trade some number listing for talking about how silicon detectors work)
+        (*what about readout, cooling, etc?)
+        In the region closest to the interaction point, CMS uses a fast, high-granularity silicon tracker to reconstruct tracks and pinpoint (*too flowery?) primary and secondary vertices. The tracker is subdivided into two regions: at r < 20 cm, the high particle flux (*specify) requires smaller pixels to keep occupancy near 0.1\%. Moving farther from the IP decreases particle flux, which allows the use of larger silicon strips.
 
-        The inner tracking system can be divided into three regions. At r < 20 cm, the high particle flux requires smaller pixels to keep occupancy near 0.1%. Moving farther from the IP decreases particle flux, which allows the use of larger silicon strips.
-
-        The pixel tracker, which was upgraded in winter 2016/17, makes up the innermost layer and features approximately 124 million 285 um thick silicon sensors, each of which covers an active area of 16.2 x 64.8 mm^2 (*really? I feel like I've seen "1 m^2 coverage" before. This is way more than that). The pixels are spread between four barrel layers (BPIX) and 3 endcap rings (FPIX). The innermost barrel layer is now at 2.9 cm, whereas the original BPIX had only 3 layers with the innermost at 4.4 cm. The increased number of channels (*I didn't mention that # of channels had changed been changed), combined with the extra barrel layer, and smaller first-laer radius allows for 4-hit tracking out to eta < 2.4 and improved b-tagging despite the increased pileup expected in 2017.
-
-        The next two layers are collectively known as the silicon strip tracker (SST). The SST is itself seperated into four sections, the inner barrel (TIB), outer barrel (TOB), inner disks (TID), and endcap (TEC). Together, all four sections have (*weak word) 9.6 million silicon strips that vary from 23 um to 52 um (*does this include endcaps?) in single-point resolution depending on the particle flux in each region. At each triger, the strip output voltage is transferred via optical link (*right language?) to be read out by off-detector front-end electronics (*right language?).
+        The pixel tracker, which was upgraded in winter 2016/17, makes up the innermost layer and features approximately 124 million silicon pixels, each of which covers an active area of 100 by 150 um\^2. The pixels are spread between four barrel layers (BPIX) at 2.9 < r < 16 cm and 3 endcap rings (FPIX) at 29 < z < 52 cm. The upgraded pixel tracker should provide 4-hit tracking out to eta < 2.4 and improved b-tagging over the original pixel tracker despite the increased pileup expected in 2017.
+        
+        Just outside the pixel tracker, the silicon strip tracker (SST) occupies the 20 < r < 116 cm and |z| < 282 cm region of CMS. Composed of 9.3 million silicon strips that vary from \_ to \_ in size (*look up) depending on particle flux, the SST covers an active area of roughly 196 m\^2. At each trigger, the strip output voltage is transferred via optical link to be read out by off-detector front-end electronics (*right language?).
     ECAL
-        - cite CMS TDR
+        (*cite CMS TDR)
+        (*talk about readout?)
+        (*More in the way of concept/how stuff works?)
+        Moving outward, the electromagnetic calorimeter (ECAL) follows the inner tracker. As a homogeneous scintillation calorimeter, ECAL uses 61200 lead tunstate crystals in the barrel and 7324 in each endcap to reconstruct the energy deposited during electromagnetic showers. Lead tungstate crystals allow for a fast (80\% of light within 25 ns), compact (radiation length = 0.89 cm), fine-grained (Moliere length = 2.2 cm), and radiation hard (up to 10 Mrad(*learn context for this number)) calorimeter. The main drawback is the relatively low light yield (30 photon / MeV), which necesitates photodetectors with intrinsic gain that work in magnetic fields (*say B-field part better). 
 
-        The electromagnetic calorimeter (ECAL) is composed of 61200 lead tunstate crystals in the barrel and 7324 in each endcap (*is 'each' right?). Lead tungstate crystals allow for a fast (80% of light within 25 ns), compact (radiation length = 0.89 cm), fine-grained (Moliere length = 2.2 cm), and radiation hard (up to 10 Mrad) calorimeter. The main drawback is the relatively low light yield (30 photon / MeV), which necesitates photodetectors with intrinsic gain that work in magnetic fields (*say B-field part better). 
+        The barrel section (EB) extends radially from 129 to 177 (*look up) cm and covers a pseudorapidity range of 0 to 1.479. The crystals are tapered to approximately project back to the IP but not so perfectly that particle trajectories would be likely to align with cracks. Each crystal is approximately one Moliere radius wide and 25.8 radiation lengths deep.
 
-        The barrel section (EB) extends from 129 to ### (*look up) cm and covers a pseudorapidity range of 0 to 1.479. Each crystal covers about 1 (*square?) degree in theta-eta (*double check) and is tapered (*right word?) so that it's long edges define lines of constant phi. In the end, the crystals have a width of approximately one Moliere radius and a depth of 25.8 radiation lengths.
-
-        The endcap section (EE) is 314 cm from the IP (*right word?) and covers a pseudorapidity range of 1.479 to 3.0. Additionally, a preshower detector (two planes of silicon strip detectors and a lead absorber) sits just inside the grid of lead tungstate crystals. (*Say what the preshower is for? Is it for pi0 rejection? If so, how and why?)
+        The crystals in each endcap section (EE) are arranged in an x-y grid that starts at |z| = 315 cm and covers a pseudorapidity range of 1.479 to 3.0. Additionally, a preshower detector, which consists of two planes of silicon strip detectors and a lead absorber, sits just inside the grid of lead tungstate crystals. (*Say what the preshower is for? Is it for pi0 rejection? If so, how and why?)
     HCAL
-        - cite CMS TDR
+        (*cite CMS TDR)
+        (*talk about readout?)
+        The hadronic calorimeter (HCAL) uses 3.7mm plates of plastic scintillator interspersed within brass absorber to reconstruct the energy deposited during hadronic showers. Embedded wavelength-shifting fibers capture the scintillation light and transfer it to clear fibers so it can eventually be read out by hybrid photodiodes.
 
-        The hadronic calorimeter (HCAL) is composed of plastic scintillator interspersed within brass absorber. The scintillation light is transferred to readout through wavelength shifting fibres (WLS) that are spliced onto clear fibers (*say what readout means. PMT?). The scintillator plates are 3.7 mm thick.
-        The barrel section (HB) spans a pseudorapidty range of -1.4 to 1.4 and has 2304 towers, each of which ha 15 brass plates and covers an area of 0.087 x 0.087 in eta-phi. In addition, a single layer of 10 mm thick scintillator tiles sits just outside the solenoid. This extra layer, known as hadron outer (HO), spans a pseudorapidty range of -1.26 to 1.26 and increaes the effective HCAL interaction length to greater than 10.
-        Each endcap consists of 14 towers with five degree phi segmentation and spans a pseudorapidity range of 1.3 to 3.0. Also, a steel and quartz fiber forward calorimeter (HF) sits 11.2 m from the interaction pipe in a pseudorapidty range of 3.0 to 5.0. In HF, particles produce Cherenkov light when traversing the quartz fibers that run parallel to the beamline. (*say why HF is necessary)
+        The barrel section (HB) spans a pseudorapidty range of -1.4 to 1.4 and has 2304 towers (*check), each of which contains 14 (*check) brass plates and covers an area of 0.087 x 0.087 in eta-phi (*get a feel for this area). In addition, an extra layer (or two at eta = 0) of scintillator tiles sits just outside the solenoid. This extra layer, known as hadron outer (HO), spans a pseudorapidty range of -1.26 to 1.26 and increases the minimum effective HCAL interaction length to greater than 11.8.
+
+        Each endcap consists spans a pseudorapidity range of 1.3 to 3.0 with 14 towers in eta and 5 to 10 degree phi segmentation. Also, a steel and quartz fiber forward calorimeter (HF) sits 11.2 m from the interaction pipe in a pseudorapidty range of 3.0 to 5.0. In HF, particles produce Cherenkov light when traversing the quartz fibers that run parallel to the beamline. (*say why HF is useful or mention crazy flux?)
     Solenoid
-        - cite CMS TDR
-
-        CMS employs a 4T superconducting solenoid to aid in the measurement of charged particle momenta. The solenoid consists of 2168 turns of Nb-Ti superconducting cable and has an inner diameter of 5.9 m and a length of 12.9 m (*is 5.9 right? I see "cold bore = 6.3 m" in "At the CERN LHC"). The flux returns through an iron yoke that also houses the muon system. The significant (*quantify?) bending power helps CMS meet its physics goals of unambiguous sign determination and momentum resolution of 10% for muons up to 1 TeV.
+        (*cite cms experiment at the cern lhc)
+        CMS employs a 4 T superconducting solenoid to aid in the measurement of charged particle momenta. The solenoid consists of 2168 turns of Nb-Ti superconducting cable and has an inner diameter of 6 m and a length of 12.5 m. The flux returns through an iron yoke that also houses the muon system. The significant (*quantify?) bending power helps CMS meet its physics goals of unambiguous sign determination and momentum resolution of 10\% for muons up to 1 TeV.
     Muon system
-        - cite CMS TDR
-        - Specifically mention CMS design specs to meet physics goals?
-        - Probably a sentence about the technology choices in each of DT, CSC, and RPCs would be good
-        - Describe orientation of DTs?
+        (*cite CMS TDR)
+        (*Specifically mention CMS design specs to meet physics goals?)
+        The muon system (MS), which is the outermost subdetector, detects muons with 3 varieties of gaseous ionization detectors: drift tubes (DTs) in the barrel, cathode strip chambers (CSCs) in the endcaps, and resistive plate chambers (RPCs) in both the barrel and endcaps. The choice of detector varies between barrel and endcap due to the difference in neutron-induced background, muon rates, and magnetic field strength. The RPCs are useful in both the endcaps and barrel because their fast response and good time resolution allow unambiguous bunch crossing identification. Combining MS and tracker measurements improves the muon pT resolution at high momenta where the tracker pT resolution declines (*quantify or show std plot?).
 
-        The muon system (MS), which is the outermost subdetector, detects muons with 3 varieties of gaseous ionization detectors: drift tubes (DTs) in the barrel, cathode strip chambers (CSCs) in the endcaps, and resistive plate chambers (RPCs) in both the barrel and endcaps. The DTs and CSCs were chosen for the barrel and endcap, respectively, because the neutron-induced background, muon rates, and strength of the magnetic field are all higher in the encap. The RPCs are useful in both the endcaps and barrel because their fast response and good time resolution allow unambiguous bunch crossing identification. Combining MS and tracker measurements improves the muon pT resolution at high momenta where the tracker pT resolution declines (*quantify).
+        In the barrel detector (BD), four layers of DTs and and RPCs are embedded in the solenoid return yoke at 4.0, 4.9, 5.9, and 7.9 m. (*Say how DT works?) The maximum drift length is 2 cm and the single point resolution is 200 um. When reconstructing a vector describing the muon momentum, the phi precision is better than 100 um in position and 1 mrad in direction. 
 
-        In the barrel detector (BD), four layers of DTs and and RPCs are embedded in the solenoid return yoke at 4.0, 4.9, 5.9, and 7.9 m. SAY SOMETHING ABOUT HOW DTS ACTUALLY WORK. The maximum drift length is 2 cm and the single point resolution is 200 um. When reconstructing a vector describing the muon momentum, the phi precision is better than 100 um in position and 1 mrad in direction. 
-
-        Each muon endcap detector (ME) is composed of 234 CSCs and 4 RPC stations (*figure out exactly what RPC station means and say that instead). Each CSC has six gas gaps with radial cathode strips and nearly perpendicualr planes of anode wires. The wire signal from the ionization-induced electron avalanch is fast enough to use in the L1 trigger, but the slower (*quantify) cathode strip signal provides precise (*quantify) position measurements. In the end, the CSC spacial resolution is approximate 200 um and the angular resolution is approximately 10 mrad.
+        Each muon endcap detector (ME) is composed of 234 CSCs and 4 RPC stations (*figure out exactly what RPC station means and say that instead). Each CSC has six gas gaps with radial cathode strips and nearly perpendicualar planes of anode wires. The wire signal from the ionization-induced electron avalanch is fast enough to use in the L1 trigger, while the slower (*quantify) cathode strip signal provides precise (*quantify) position measurements. All in all, the CSC spacial resolution is approximately 200 um and the angular resolution is approximately 10 mrad.
     Trigger, particle reconstruction, etc
-        - cite CMS TDR, jinst 12 c03021
-        - Is entire detector read out at L1?
-        - Mention fpgas in L1 or more details about HLT?
-
+        (*cite CMS TDR, jinst 12 c03021)
+        (*Is entire detector read out at L1?)
+        (*Mention fpgas in L1 or more details about HLT?)
+        (*Something about particle flow?)
+        (*Sloppy, but I'm getting tired)
         The trigger reduces the data writing rate from the 40 MHz collision rate to less than 1 kHz so that events can be written to tape. The rate reduction happens in two stages: Level-1 (L1) and High-Level Trigger (HLT). The HLT uses input from ECAL, HCAL, and MS that represents physics objects (e/gamma, tau, jets, ET, and mu) and uses custom electronics to reduce the rate to ~100 kHz in 3.8 us. The HLT then uses a dedicated processor farm to reduce the rate to the desired < 1 kHz.
 
 LLP searches 
@@ -131,10 +132,9 @@ LLP searches
             No excess over expected background is observed, so upper limits are placed in the NLSP chargino mass-lifetime plane for the EW signal process and in the NLSP chargino mass gluon mass plane for the QCD production process (*hopefully will be way clearer after texing in sparticle symbols). (*Either include  plots or say numbers)
     CMS
         Stopped particles
-            - cite CMS PAS EXO-17-004
-            - mention how stopped particles complement HSCP search?
-            - Allen talks about trigger efficiency stuff. Is that really important?
-
+            (*cite CMS PAS EXO-17-004)
+            (*mention how stopped particles complement HSCP search?)
+            (*Allen talks about trigger efficiency stuff. Is that really important?)
             With long enough lifetimes and sufficient mass, LLPs could actually come to rest in the detector before decaying. The eventual decay would then lead to energy deposits in the calorimeters or hits in the muon system that could be out of time with proton bunch crossings. A recent CMS analysis looked for such a signal in dimuon final states (*necessarily dimuon?) using the full 2015 and 2016 datasets. 
 
             This analysis is interpreted in the context of two potential LLPs: gluinos and multiply charged massive particles (mchamps). Long-lived gluinos can appear in models such as Split SUSY, where the squarks and sleptons are quite heavy, but the gluino is relatively light. After being pair produced, gluinos could form R-hadrons and eventually decay to quark-antiquark pairs along with NLSP neutralinos, which then decay to LSP neutralinos along with muon-antimuon pairs. The gluino decay is supressed by the large squark mass, which leads to its appreciable lifetime. Mchamps will not be discussed further because their existence is not directly motivated by naturalness (*is this true?).
@@ -160,7 +160,7 @@ LLP searches
             No significant excess over predicted background is observed, so the results are interpreted as upper limits in the production cross section - mass plane for the considered models. By comparing the observed and theoretical limits, the authors also extract mass limits for the gluinos, stops, and staus in various models. (*Include plots - table is too big and too many numbers to list)
 
 *Summary of limits
-    Overview of curent CMS/ATLAS mass limits
+    Overview of curent CMS/ATLAS mass limits (*use summary plots)
     Discussion of how LLPs fit into limit picture
     Talk about higgs mass, edm, CP/flavor violation limits?
 *Viability of naturalness
