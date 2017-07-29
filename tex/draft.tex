@@ -89,145 +89,221 @@ I'll write an abstract here.
 
     In the SM and in BSM theories, LLPs result from any of the following conditions: (1) a symmetry that guarantees stability, (2) weak couplings to decay products, (3) highly-virtual intermediate states, or (4) limited phase space in which to decay. In the SM, charge and baryon number conservation guarantee the absolute stability of the electron and proton as the the lightest particles carrying their respective conserved quantities. Neutrons and muons, on the other hand, are long-lived for reasons (2), (3), and (4). Both are pure weak decays, which gives them a smaller coupling constant, but they also decay through a W-boson, which is far more massive than either parent particle, and most importantly, the proton and electron masses leave them little phase space in which to decay. \fxnote{Mention neutrino, pion, kaon, some other bound state I might be forgetting?}\fxnote{Add diagrams?}  
 
-    In SUSY models, LLPs arise for the same basic reasons, and different SUSY models produce LLPs in different ways. The most straightforward SUSY LLP occurs in models with conserved R-partity, a proposed symmetry that prevents proton decay\fxnote{Be prepared to show this. Maybe add some diagrams illustrating proton decay w/o R-parity}. In models with R-parity, the SM particles are assigned R-parity +1 and their superpartners are assigned R-parity -1. Conserving the product of R-parity at each vertex has two immediate phenomenalogical consequences: (1) sparticles can only be produced in pairs and (2) the lightest supersymmetric particle (LSP) is absolutely stable. A neutral LSP could show up in collider searches as missing energy ($\MET$), making $\MET$ a key signature in many conventional searches.
+    In SUSY models, LLPs arise for the same basic reasons, and different SUSY models produce LLPs in different ways. The most straightforward SUSY LLP occurs in models with conserved R-partity, a proposed symmetry that prevents proton decay\fxnote{Be prepared to show this. Maybe add some diagrams illustrating proton decay w/o R-parity}. In models with R-parity, the SM particles are assigned R-parity +1 and their superpartners are assigned R-parity -1. Conserving the product of R-parity at each vertex has two immediate phenomenalogical consequences: (1) sparticles can only be produced in pairs and (2) the lightest supersymmetric particle (LSP) is absolutely stable. A neutral LSP could show up in collider searches as missing energy ($\MET$), making $\MET$ a key signature in many conventional SUSY searches.
 
-    \fxnote{Diagrams showing some combination of proton decay, stable LSP, and RPV LSP}  
+    On the other hand, models with weakly coupled R-parity violating (RPV) terms produce long-lived but not perfectly stable LSPs. Fig.~\ref{rp_and_rpv_diagrams} shows two possible processes, one where R-parity gaurantees a stable LSP and one where RPV produces a long-lived but stable LSP. A similar situation arises in GMSB models\fxnote{should I describe GMSB?} where the gravitino is the LSP. The coupling between the next-to-LSP (NLSP) and gravitino is inversely proportional to the scale of SUSY breaking, which supresses the NSLP decay rate and can lead to LLPs.\fxnote{cite dimopoulos low energy}\fxnote{}  
 
-    On the other hand, models with weakkly coupled R-parity violating (RPV) terms produce long-lived but not perfectly stable LSPs. Luckily, RPV models can still avoid proton decay by allowing either terms that violate baryon number or terms that violate lepton number, but not both\fxnote{cite something}. A similar situation arises in GMSB models where the gravitino is the LSP. The coupling between the next-to-LSP (NLSP) and gravitino is inversely proportional to the scale of SUSY breaking, which supresses the NSLP decay rate and can lead to LLPs. \fxnote{is now a good time to explain GMSB?}\fxnote{cite dimopoulos low energy}
+    \noindent \begin{figure}[htbp] \begin{center}
+    \includegraphics[width=0.8\textwidth]{images/rp_and_rpv_diagrams}
+        \caption{R-parity and RPV diagrams}
+    \label{rp_and_rpv_diagrams}
+    \end{center} \end{figure}
 
     LLPs can also arise from particular SUSY mass spectra. Models in the Split\fxnote{capitalize?}  SUSY paradigm, for example, propose that the scalar sparticles are significantly more massive than the gauginos. In these models, the gluino becomes long-lived when its decay to a quark and neutralino is mediated by a highly-virtual squark. \fxnote{cite kilian} \fxnote{mention that split throws out naturalness motivation?}\fxnote{Add diagrams} On the other hand, some AMSB models\fxnote{explain AMSB?} predict the zino\fxnote{no such thing. Maybe I meant bino or general neutralino?} and wino are the LSP and NLSP, respectively, and are nearly degenerate in mass. The wino then becomes long-lived when its decay is suppressed by the lack of available phase space. \fxnote{cite R\&S out of this world}
     \fxnote{Andrew says don't worry about mentioning models that don't come up in the searches, but be prepared to explain the basic ideas behind HV, dark sector and how they result in LLP}  
 
 \section{The CMS Detector}\fxnote{Add pictures of everything}
-\subsection{Overview}
-    \fxnote{define eta, coordinate system in general}  
-    \fxnote{Mention that ATLAS is similar, says Andrew}  
-    \fxnote{Maybe mention PDFs. Definitely know about them, says Andrew}  
-    \fxnote{cite cms experiment at the cern lhc}
-    The Compact Muon Solenoid (CMS) detector is designed to reconstruct a variety of particles from collisions at the Large Hadron Collider (LHC), which is a circular proton-proton collider that ran with center-of-mass energy \SI{7}{\tera\electronvolt} in 2010-11, \SI{8}{\tera\electronvolt} in 2012, and \SI{13}{\tera\electronvolt} from 2015 to the present. To meet this goal, CMS combines information from several subdetectors nested radially in and around a \SI{4}{\tesla} superconducting solenoid. All together, CMS is \SI{21.6}{\m} long, \SI{14.6}{\m} across, and weighs approximately \SI{12500}{t}. The subdetectors that make up CMS are described below.
+    \subsection{Overview}
+        \fxnote{define eta, coordinate system in general}  
+        \fxnote{Mention that ATLAS is similar, says Andrew}  
+        \fxnote{Maybe mention PDFs. Definitely know about them, says Andrew}  
+        \fxnote{cite cms experiment at the cern lhc}
+        The Compact Muon Solenoid (CMS) detector is designed to reconstruct a variety of particles from collisions at the Large Hadron Collider (LHC), which is a circular proton-proton collider that ran with center-of-mass energy \SI{7}{\tera\electronvolt} in 2010-11, \SI{8}{\tera\electronvolt} in 2012, and \SI{13}{\tera\electronvolt} from 2015 to the present. To meet this goal, CMS combines information from several subdetectors nested radially in and around a \SI{4}{\tesla} superconducting solenoid. All together, CMS is \SI{21.6}{\m} long, \SI{14.6}{\m} across, and weighs approximately \SI{12500}{t}. The subdetectors that make up CMS are shown in Fig.~\ref{cms} and described below.
 
-\subsection{Tracker}
-    \fxnote{cite CMS TDR, jinst 12 c02033}
-    \fxnote{mention that analyses below used pre-upgrade tracker}
-    In the region closest to the interaction point, CMS uses a fast, high-granularity silicon tracker to reconstruct tracks and pinpoint primary and secondary vertices. The tracker is subdivided into two regions: at $\mathrm{r}<\SI{20}{cm}$, the high particle flux \fxnote{specify} requires small pixels to keep occupancy near \SI{0.1}{\percent}. Moving farther from the IP decreases particle flux, which allows the use of larger silicon strips.
+        \noindent \begin{figure}[htbp] \begin{center}
+        \includegraphics[width=0.8\textwidth]{images/cms}
+            \caption{CMS}
+        \label{cms}
+        \end{center} \end{figure}
 
-    The pixel tracker, which was upgraded in winter 2016/17, makes up the innermost layer and features approximately \num{124} million silicon pixels, each of which covers an active area of \num{100} by \SI{150}{\micro\meter^2}. The pixels are spread between four barrel layers (BPix) at $\num{2.9}<\mathrm{r}<\SI{16}{cm}$ and 3 endcap disks (FPix) at $\num{29} < \mathrm{z} < \SI{52}{cm}$. The upgraded pixel tracker should provide 4-hit tracking out to $\eta < \num{2.4}$ and improved b-tagging over the original pixel tracker despite the increased pileup expected in 2017.
-    
-    Just outside the pixel tracker, the silicon strip tracker (SST) occupies the $\num{20} < r < \SI{116}{cm}$ and $\lvert z \rvert < \SI{282}{cm}$ region of CMS. Composed of \num{9.3} million silicon strips that vary from \_ to \_ in size \fxnote{look up} depending on particle flux in the region, the SST covers an active area of roughly \SI{196}{m^2}. At each trigger, the strip output voltage is read out via optical link.
+    \subsection{Tracker}
+        \fxnote{cite CMS TDR, jinst 12 c02033}
+        \fxnote{mention that analyses below used pre-upgrade tracker}
+        In the region closest to the interaction point, CMS uses a fast, high-granularity silicon tracker to reconstruct tracks and pinpoint primary and secondary vertices. The tracker is subdivided into two regions. Inside \SI{20}{cm}, the pixel tracker  uses smaller\fxnote{than what?} silicon pixels to keep the occupancy near \SI{0.1}{\percent} despite the high\fxnote{specify} particle flux. Outside \SI{20}{\cm}, the silicon strip tracker (SST) achieves similar occupancy with larger silicon strips.\fxnote{check occupacy numbers}  
 
-\subsection{Electromagnetic Calorimeter}
-    \fxnote{cite CMS TDR}
-    \fxnote{I define EE & EB but never use those definitions}
-    After traversing the inner tracker, particles next encounter the electromagnetic calorimeter (ECAL). As a homogeneous scintillation calorimeter, ECAL uses \num{61200} lead tunstate crystals in the barrel and \num{7324} in each endcap to reconstruct the energy deposited during electromagnetic showers. Lead tungstate crystals allow for a fast (\SI{80}{\percent} of light within \SI{25}{ns}), compact (radiation length = \SI{0.89}{cm}), fine-grained (Moli\`ere radius = \SI{2.2}{cm}), and radiation hard (up to 10 Mrad\fxnote{learn context for this number}) calorimeter. The main drawback is the relatively low light yield (\SI{30}{photon\per\mega\electronvolt}), which necesitates photodetectors with intrinsic gain that work in magnetic fields.
+        The pixel tracker, which was upgraded in winter 2016/17, makes up the innermost layer and features approximately \num{124} million silicon pixels, each of which covers an active area of \num{100} by \SI{150}{\micro\meter^2}. The pixels are spread between four barrel layers (BPix) at $\num{2.9}<\mathrm{r}<\SI{16}{cm}$ and 3 endcap disks (FPix) at $\num{29} < \mathrm{z} < \SI{52}{cm}$. The upgraded pixel tracker should provide 4-hit tracking out to $\eta < \num{2.4}$ and improved b-tagging over the original pixel tracker despite the increased pileup expected in 2017.
+        
+        Just outside the pixel tracker, the silicon strip tracker (SST) occupies the $\num{20} < r < \SI{116}{cm}$ and $\lvert z \rvert < \SI{282}{cm}$ region of CMS. Composed of \num{9.3} million silicon strips that vary from \_ to \_ in size \fxnote{look up} depending on particle flux in the region, the SST covers an active area of roughly \SI{196}{m^2}. At each trigger, the strip output voltage is read out via optical link.
 
-    The barrel section (EB) extends radially from \num{129} to \SI{177}{cm} and covers a pseudorapidity range of \num{0} to \num{1.479}. The crystals are tapered to approximately project back to the IP\fxnote{define if not already} but not so perfectly that likely particle trajectories align with cracks. Each crystal is approximately one Moli\`ere radius wide and 25.8 radiation lengths deep.
+    \subsection{Electromagnetic Calorimeter}
+        \fxnote{cite CMS TDR}
+        \fxnote{I define EE & EB but never use those definitions}
+        After traversing the inner tracker, particles next encounter the electromagnetic calorimeter (ECAL). As a homogeneous scintillation calorimeter, ECAL uses \num{61200} lead tunstate crystals in the barrel and \num{7324} in each endcap to reconstruct the energy deposited during electromagnetic showers. Lead tungstate crystals allow for a fast (\SI{80}{\percent} of light within \SI{25}{ns}), compact (radiation length = \SI{0.89}{cm}), fine-grained (Moli\`ere radius = \SI{2.2}{cm}), and radiation hard (up to 10 Mrad\fxnote{learn context for this number}) calorimeter. The main drawback is the relatively low light yield (\SI{30}{photon\per\mega\electronvolt}), which necesitates photodetectors with intrinsic gain that work in magnetic fields.
 
-    The crystals in each endcap section (EE) are arranged in an x-y grid that starts at $\lvert z \rvert = \SI{315}{cm}$ and covers a pseudorapidity range of \num{1.479} to \num{3.0}. Additionally, a preshower detector, which consists of two planes of silicon strip detectors and a lead absorber, sits just inside the grid of lead tungstate crystals. \fxnote{Say what the preshower is for? Is it for pi0 rejection? If so, how and why?}
+        The barrel section (EB) extends radially from \num{129} to \SI{177}{cm} and covers a pseudorapidity range of \num{0} to \num{1.479}. The crystals are tapered to approximately project back to the IP\fxnote{define if not already} but not so perfectly that likely particle trajectories align with cracks. Each crystal is approximately one Moli\`ere radius wide and 25.8 radiation lengths deep.
 
-\subsection{Hadronic Calorimeter}
-    \fxnote{cite CMS TDR}
-    \fxnote{define HB & HF never to be used}
-    The hadronic calorimeter (HCAL) uses \SI{3.7}{mm} plates of plastic scintillator interspersed within brass absorber to reconstruct the energy deposited during hadronic showers. Embedded wavelength-shifting fibers capture the scintillation light and transfer it to clear fibers to be read out by hybrid photodiodes.
+        The crystals in each endcap section (EE) are arranged in an x-y grid that starts at $\lvert z \rvert = \SI{315}{cm}$ and covers a pseudorapidity range of \num{1.479} to \num{3.0}. Additionally, a preshower detector, which consists of two planes of silicon strip detectors and a lead absorber, sits just inside the grid of lead tungstate crystals. \fxnote{Say what the preshower is for? Is it for pi0 rejection? If so, how and why?}
 
-    The barrel section (HB) spans a pseudorapidty range of \num{-1.4} to \num{1.4} and has \num{2304} towers \fxnote{check}, each of which contains \num{14} \fxnote{check} brass plates and covers an area of \num{0.087} x \SI{0.087}{in} $\eta-\phi$ \fxnote{get a feel for this area}. In addition, an extra layer (or two at $\eta = \num{0}$)of scintillator tiles sits just outside the solenoid. This extra layer, known as hadron outer (HO), spans a pseudorapidty range of \num{-1.26} to \num{1.26} and increases the minimum effective HCAL interaction length to greater than \num{11.8}.
+    \subsection{Hadronic Calorimeter}
+        \fxnote{cite CMS TDR}
+        \fxnote{define HB & HF never to be used}
+        The hadronic calorimeter (HCAL) uses \SI{3.7}{mm} plates of plastic scintillator interspersed within brass absorber to reconstruct the energy deposited during hadronic showers. Embedded wavelength-shifting fibers capture the scintillation light and transfer it to clear fibers to be read out by hybrid photodiodes.
 
-    Each endcap spans a pseudorapidity range of \num{1.3} to \num{3.0} with \num{14} towers in eta and \num{5} to \SI{10}{\degree} $\phi$ segmentation. Also, a steel and quartz fiber forward calorimeter (HF) sits \SI{11.2}{m} from the interaction pipe in a pseudorapidty range of \num{3.0} to \num{5.0}. In HF, particles produce Cherenkov light when traversing the quartz fibers that run parallel to the beamline. \fxnote{say why HF is useful or mention crazy flux?}
+        The barrel section (HB) spans a pseudorapidty range of \num{-1.4} to \num{1.4} and has \num{2304} towers \fxnote{check}, each of which contains \num{14} \fxnote{check} brass plates and covers an area of \num{0.087} x \SI{0.087}{in} $\eta-\phi$ \fxnote{get a feel for this area}. In addition, an extra layer (or two at $\eta = \num{0}$)of scintillator tiles sits just outside the solenoid. This extra layer, known as hadron outer (HO), spans a pseudorapidty range of \num{-1.26} to \num{1.26} and increases the minimum effective HCAL interaction length to greater than \num{11.8}.
 
-\subsection{Solenoid}
-    \fxnote{cite cms experiment at the cern lhc}
-    CMS employs a \SI{4}{T} superconducting solenoid to aid in the measurement of charged particle momenta. The solenoid consists of \num{2168} turns of Nb-Ti superconducting cable and has an inner diameter of \SI{6}{m} and a length of \SI{12.5}{m}. The flux returns through an iron yoke that also houses the muon system. The significant \fxnote{quantify?} bending power helps CMS meet its physics goals of unambiguous sign determination and momentum resolution of \SI{10}{\percent} for muons up to \SI{1}{\tera\electronvolt}.
+        Each endcap spans a pseudorapidity range of \num{1.3} to \num{3.0} with \num{14} towers in eta and \num{5} to \SI{10}{\degree} $\phi$ segmentation. Also, a steel and quartz fiber forward calorimeter (HF) sits \SI{11.2}{m} from the interaction pipe in a pseudorapidty range of \num{3.0} to \num{5.0}. In HF, particles produce Cherenkov light when traversing the quartz fibers that run parallel to the beamline. \fxnote{say why HF is useful or mention crazy flux?}
 
-\subsection{Muon System}
-    \fxnote{cite CMS TDR}
-    \fxnote{Specifically mention CMS design specs to meet physics goals?}
-    The muon system (MS), which is the outermost subdetector, detects muons with \num{3} varieties of gaseous ionization detectors: drift tubes (DTs) in the barrel, cathode strip chambers (CSCs) in the endcaps, and resistive plate chambers (RPCs) in both the barrel and endcaps. The choice of detector varies between barrel and endcap due to the difference in neutron-induced background\fxnote{what?} , muon rates, and magnetic field strength\fxnote{why does B matter?}. The RPCs are useful in the endcaps and barrel because their fast response and good time resolution allow unambiguous bunch crossing identification. Combining MS and tracker measurements improves the muon pT\fxnote{define} resolution at high momenta where the tracker $\pT$ resolution declines \fxnote{quantify or show std plot?}.
+    \subsection{Solenoid}
+        \fxnote{cite cms experiment at the cern lhc}
+        CMS employs a \SI{4}{T} superconducting solenoid to aid in the measurement of charged particle momenta. The solenoid consists of \num{2168} turns of Nb-Ti superconducting cable and has an inner diameter of \SI{6}{m} and a length of \SI{12.5}{m}. The flux returns through an iron yoke that also houses the muon system. The significant \fxnote{quantify?} bending power helps CMS meet its physics goals of unambiguous sign determination and momentum resolution of \SI{10}{\percent} for muons up to \SI{1}{\tera\electronvolt}.
 
-    In the barrel detector (BD), four layers of DTs and and RPCs are embedded in the solenoid return yoke at \num{4.0}, \num{4.9}, \num{5.9}, and \SI{7.9}{m}. The maximum drift length is \SI{2}{\cm} and the single point resolution is \SI{200}{\cm}. When reconstructing a vector describing the muon momentum, the $\phi$ precision is better than \SI{100}{\micro\m} in position and \SI{1}{\milli\radian} in direction. 
+    \subsection{Muon System}
+        \fxnote{cite CMS TDR}
+        \fxnote{Specifically mention CMS design specs to meet physics goals?}
+        The muon system (MS), which is the outermost subdetector, detects muons with \num{3} varieties of gaseous ionization detectors: drift tubes (DTs) in the barrel, cathode strip chambers (CSCs) in the endcaps, and resistive plate chambers (RPCs) in both the barrel and endcaps. The choice of detector varies between barrel and endcap due to the difference in neutron-induced background\fxnote{what?} , muon rates, and magnetic field strength\fxnote{why does B matter?}. The RPCs are useful in the endcaps and barrel because their fast response and good time resolution allow unambiguous bunch crossing identification. Combining MS and tracker measurements improves the muon pT\fxnote{define} resolution at high momenta where the tracker $\pT$ resolution declines \fxnote{quantify or show std plot?}.
 
-    Each muon endcap detector (ME) is composed of \num{234} CSCs and four RPC stations \fxnote{figure out exactly what RPC station means and say that instead}. Each CSC has six gas gaps with radial cathode strips and nearly perpendicualar planes of anode wires. The wire signal from the ionization-induced electron avalanch is fast enough to use in the L1 trigger, while the slower \fxnote{quantify} cathode strip signal provides precise \fxnote{quantify} position measurements. All in all, the CSC spacial resolution is approximately \SI{200}{\micro\m} and the angular resolution is approximately \SI{10}{\milli\radian}.
+        In the barrel detector (BD), four layers of DTs and and RPCs are embedded in the solenoid return yoke at \num{4.0}, \num{4.9}, \num{5.9}, and \SI{7.9}{m}. The maximum drift length is \SI{2}{\cm} and the single point resolution is \SI{200}{\cm}. When reconstructing a vector describing the muon momentum, the $\phi$ precision is better than \SI{100}{\micro\m} in position and \SI{1}{\milli\radian} in direction. 
 
-\subsection{Trigger}
-    \fxnote{cite CMS TDR, jinst 12 c03021}
-    \fxnote{Is entire detector read out at L1?}
-    The trigger reduces the data writing rate from the \SI{40}{\mega\hertz} collision rate to less than \SI{1}{\kilo\hertz} so that events can be written to tape. The rate reduction happens in two stages: Level-1 (L1) and High-Level Trigger (HLT). L1 uses input from ECAL, HCAL, and MS that represents physics objects ($\mathrm{e}$/$\gamma$, $\tau$, jets, $\mu$, and $\MET$) and uses custom electronics to reduce the rate to $\approx$100 kHz in 3.8 us. The HLT then uses a dedicated processor farm to further reduce the rate to the desired $<$ 1 kHz.
+        Each muon endcap detector (ME) is composed of \num{234} CSCs and four RPC stations \fxnote{figure out exactly what RPC station means and say that instead}. Each CSC has six gas gaps with radial cathode strips and nearly perpendicualar planes of anode wires. The wire signal from the ionization-induced electron avalanch is fast enough to use in the L1 trigger, while the slower \fxnote{quantify} cathode strip signal provides precise \fxnote{quantify} position measurements. All in all, the CSC spacial resolution is approximately \SI{200}{\micro\m} and the angular resolution is approximately \SI{10}{\milli\radian}.
+
+    \subsection{Trigger}
+        \fxnote{cite CMS TDR, jinst 12 c03021}
+        \fxnote{Is entire detector read out at L1?}
+        The trigger reduces the data writing rate from the \SI{40}{\mega\hertz} collision rate to less than \SI{1}{\kilo\hertz} so that events can be written to tape. The rate reduction happens in two stages: Level-1 (L1) and High-Level Trigger (HLT). L1 uses input from ECAL, HCAL, and MS that represents physics objects ($\mathrm{e}$/$\gamma$, $\tau$, jets, $\mu$, and $\MET$) and uses custom electronics to reduce the rate to $\approx$100 kHz in 3.8 us. The HLT then uses a dedicated processor farm to further reduce the rate to the desired $<$ 1 kHz.
 
 \section{LHC Searches for Long-lived Particles}
-    \fxnote{Include diagrams for signal models} 
-    \fxnote{mention which data was used for each search} 
-    \fxnote{Steal limit plots and any cool figures from papers} 
-\subsection{Overview}
-    \fxnote{steal jamie's cartoon?}  
-    LLPs leave distinct signatures that differentiate them from SM backgrounds but also add complexity to LLP analyses. CMS and ATLAS were mainly designed to reconstruct stable particles from prompt decays, so LLP searches are often forced\fxnote{the searchers are forced, not the searches} to stray from the traditional analysis path in terms of object reconstruction\fxnote{really reconstruction? Maybe object definition?} and background estimation. This report focuses on four complementary LLP signatures: displaced vertices, disappearing tracks, low-velocity particles, and particles that come to a stop before decaying.
+        \fxnote{Include diagrams for signal models} 
+        \fxnote{mention which data was used for each search} 
+        \fxnote{Steal limit plots and any cool figures from papers} 
+    \subsection{Overview}
+        \fxnote{steal jamie's cartoon?}  
+        LLPs leave distinct signatures that differentiate them from SM backgrounds but also add complexity to LLP analyses. CMS and ATLAS were mainly designed to reconstruct stable particles from prompt decays, so LLP searches are often forced\fxnote{the searchers are forced, not the searches} to stray from the traditional analysis path in terms of object reconstruction\fxnote{really reconstruction? Maybe object definition?} and background estimation. This report focuses on four complementary LLP signatures: displaced vertices, disappearing tracks, low-velocity particles, and particles that come to a stop before decaying. See Fig.~\ref{jamie_cartoon} for a cartoon of several possible LLP signatures\fxnote{probably a better way to word this sentence}.
 
-    Displaced vertex and disappearing track analyses both look for\fxnote{again, analysts look, not analyses} particles that are unstable on detector timescales. Displaced vertex searches are sensitive to LLPs that decay to visible particles within the inner volume \fxnote{specify} of the detector, leaving tracks that point back to a vertex some measurable distance from the nominal interaction point (IP). Disappearing track searches are sensitive to LLPs that decay to particles that are either neutral or too soft to be reconstructed. Together, these two types of analyses cover a wide range of lifetimes and topologies for LLPs that decay on detector timescales\fxnote{dangerous as hell. Be really good at giving a quantitative explanation of this sentence}.
+        \noindent \begin{figure}[htbp] \begin{center}
+        \includegraphics[width=0.8\textwidth]{images/jamie_cartoon}
+            \caption{Diagram of several LLP spectra}
+        \label{jamie_cartoon}
+        \end{center} \end{figure}
 
-    Slow and stopped particle searches, on the other hand, are sensitive to detector-stable\fxnote{define?} LLPs that are far more massive\fxnote{be able to quantify} than any stable SM particle. The lower velocity of these high-mass particles shows up as increased ionization energy loss per unit distance ($\langle\frac{dE}{dx}\rangle$) or longer time-of-flight (TOF) measurements than SM particles, which generally have $\beta > \num{0.9}$\fxnote{cite something}. Stopped particle searches take this idea one step further and look for particles that actually come to rest inside the detector before decaying, a phenomenon that could be possible with long lifetimes and small initial kinetic energy\fxnote{how long and how small?}. These analyses look for calorimeter energy deposits or hits in the muon system that are out of time with proton bunch crossings.
+        Displaced vertex and disappearing track analyses both look for\fxnote{again, analysts look, not analyses} particles that are unstable on detector timescales. Displaced vertex searches are sensitive to LLPs that decay to visible particles within the inner volume \fxnote{specify} of the detector, leaving tracks that point back to a vertex some measurable distance from the nominal interaction point (IP). Disappearing track searches are sensitive to LLPs that decay to particles that are either neutral or too soft to be reconstructed. Together, these two types of analyses cover a wide range of lifetimes and topologies for LLPs that decay on detector timescales\fxnote{dangerous as hell. Be really good at giving a quantitative explanation of this sentence}.
 
-    These\fxnote{I've been saying `these' a lot recently} four approaches cover a wide\fxnote{how wide} range of LLP lifetimes that would be missed in traditional searches. The next section will look  at a recent example of each analysis type from either ATLAS or CMS.
+        Slow and stopped particle searches, on the other hand, are sensitive to detector-stable\fxnote{define?} LLPs that are far more massive\fxnote{be able to quantify} than any stable SM particle. The lower velocity of these high-mass particles shows up as increased ionization energy loss per unit distance ($\langle\frac{dE}{dx}\rangle$) or longer time-of-flight (TOF) measurements than SM particles, which generally have $\beta > \num{0.9}$\fxnote{cite something}. Stopped particle searches take this idea one step further and look for particles that actually come to rest inside the detector before decaying, a phenomenon that could be possible with long lifetimes and small initial kinetic energy\fxnote{how long and how small?}. These analyses look for calorimeter energy deposits or hits in the muon system that are out of time with proton bunch crossings.
 
-\subsection{Displaced Vertices}
-    \fxnote{cite CONF-2017-026}
-    \fxnote{Specify dataset}
-    LLPs that decay before reaching the inner tracker can be identified with a displaced vertex (DV)\fxnote{DVs defined clearly enough in overview?}\fxnote{Is it still a DV if it decays in active material somewhere?}. ATLAS performs a search for such particles by looking for at least one DV along with large MET and large track multiplicity.\fxnote{make sure I can explain why met and multiplicity} The search is sensitive to LLPs with lifetimes in the \SI{20}{\pico\s} to \SI{10}{\nano\s} range\fxnote{Am I defining sensitivity range consistently across analyses?}.
+        These\fxnote{I've been saying `these' a lot recently} four approaches cover a wide\fxnote{how wide} range of LLP lifetimes that would be missed in traditional searches. The next section will look  at a recent example of each analysis type from either ATLAS or CMS.
 
-    This search\fxnote{repetative wording} uses a simplified benchmark model in the split SUSY paradigm where gluinos are kinematically accessible but squarks are not. The relevant process, shown in \fxnote{reference figure}, is pair-produced gluinos that decay to a quark-\fxnote{how to punctuate?}virtual squark pair. The virtual squark then decays to a quark and the LSP, presumed to be a neutralino\fxnote{have I defined neutralino?}\fxnote{why is this a reasonable assumption?} \fxnote{steal diagram from andrew's preapproval. I can't access it - ask andrew}. The large mass of the intermediate squark suppresses the gluino decay, giving the gluino enough time to form an R-hadron\fxnote{first use. Define here if not in LLP section} that propagates some measureable distance before decaying. 
+    \subsection{Displaced Vertices}
+        \fxnote{cite CONF-2017-026}
+        \fxnote{Specify dataset}
+        LLPs that decay before reaching the inner tracker can be identified with a displaced vertex (DV)\fxnote{DVs defined clearly enough in overview?}\fxnote{Is it still a DV if it decays in active material somewhere?}. ATLAS performs a search for such particles by looking for at least one DV along with large MET and large track multiplicity.\fxnote{make sure I can explain why met and multiplicity} The search is sensitive to LLPs with lifetimes in the \SI{20}{\pico\s} to \SI{10}{\nano\s} range\fxnote{Am I defining sensitivity range consistently across analyses?}.
 
-    Jets and MET are reconstructed as in conventional analyses, but dispaced vertices demand special care when identifying tracks. The standard ATLAS tracking algorithm constrains the transverse and longitudinal impact parameters ($\mathrm{d}_0$ and $\mathrm{z}_0$, respectively) of potential tracks, so the authors employ an additional algorithm, referred to as large-radius tracking (LRT). LRT is run after the standard tracking algorithm and uses only hits that were not used in standard track reconstruction. By relaxing requirements on $\mathrm{d}_0$, $\mathrm{z}_0$, and number of hits, LRT is able to reconstruct tracks that point back to DVs.
-    
-    Because no SM process produces events that meet the mass and track multiplicity requirements on the DV, only instrumental backgrounds are considered. Specifically, the authors consider hadronic interactions in detector material, incorrectly combined vertices from short-lived SM particles, and hits from unrelated tracks that are incorrectly added to low-mass vertices\fxnote{unnecessary details? I need to get better at explaining this} .
+        This search\fxnote{repetative wording} uses a simplified benchmark model in the split SUSY paradigm where gluinos are kinematically accessible but squarks are not. The relevant process, shown in Fig.~\ref{displaced_process}, is pair-produced gluinos that decay to a quark-\fxnote{how to punctuate?}virtual squark pair. The virtual squark then decays to a quark and the LSP, presumed to be a neutralino\fxnote{have I defined neutralino?}\fxnote{why is this a reasonable assumption?} \fxnote{steal diagram from andrew's preapproval. I can't access it - ask andrew}. The large mass of the intermediate squark suppresses the gluino decay, giving the gluino enough time to form an R-hadron\fxnote{first use. Define here if not in LLP section} that propagates some measureable distance before decaying. 
 
-    The authors minimize the effect of hadronic interactions by vetoing the material-dense regions of the detector\fxnote{cool figure to steal} and estimate the residual background by extrapolating from the low-mass region, which is dominated by hadronic interactions. After a dedicated study, the background from merged vertices was found to be negligable. Finally, the background from crossing tracks is determined with a model that adds pseudo-tracks to data vertices and is normalized by comparing the sample of 3-track vertices in data to (2+1)-track vertices in the model.
+        \noindent \begin{figure}[htbp] \begin{center}
+        \includegraphics[width=0.8\textwidth]{images/displaced_process_diagram}
+        \caption{Process.}
+        \label{displaced_process}
+        \end{center} \end{figure}
 
-    After estimating $\num{0.02} \pm \num{0.02}$ background events, exactly zero are observed. The result is then interpreted as an upper limit on the gluino mass and pair-production cross section as a function of gluino lifetime. For an LSP neutralino mass of \SI{100}{\giga\electronvolt}, the gluino mass limit is approximately \SI{2000}{\giga\electronvolt} for lifetimes in the \SI{20}{\pico\s} to \SI{10}{\nano\s} range. \fxnote{Include plots}
+        Jets and $\MET$ are reconstructed as in conventional analyses, but dispaced vertices demand special care when identifying tracks. The standard ATLAS tracking algorithm constrains the transverse and longitudinal impact parameters ($\mathrm{d}_0$ and $\mathrm{z}_0$, respectively) of potential tracks, so the authors employ an additional algorithm, referred to as large-radius tracking (LRT). LRT is run after the standard tracking algorithm and uses only hits that were not used in standard track reconstruction. By relaxing requirements on $\mathrm{d}_0$, $\mathrm{z}_0$, and number of hits, LRT is able to reconstruct tracks that point back to DVs.
+        
+        Because no SM process produces events that meet the mass and track multiplicity requirements on the DV, only instrumental backgrounds are considered. Specifically, the authors consider hadronic interactions in detector material, incorrectly combined vertices from short-lived SM particles, and hits from unrelated tracks that are incorrectly added to low-mass vertices\fxnote{unnecessary details? I need to get better at explaining this} .
 
-\subsection{Disappearing Tracks}
-    \fxnote{cite CONF-2017-017}
-    \fxnote{nice disappearing track cartoon}
-    \fxnote{nice cartoon feynman diagrams of signal processes}
-    \fxnote{Specify dataset}
-    Certain models with nearly mass-degenerate LSP and NLSP have the potential to present a remarkable signal: charged particles that seem to disappear in the tracker. Specifically, models with winos as the lightest gauginos\fxnote{have these words been defined?}, such as many AMSB models\fxnote{why amsb? what is amsb?}, will have a chargino NLSP with an observable lifetime (\SI{0.2}{\nano\s} is a typical estimate\fxnote{why? how typical?}) that eventaully decays to the neutralino LSP and, commonly, a pion\fxnote{why?}. The nearly-degenerate masses have two important phenomenological roles: (1) increase the chargino lifetime, and (2) ensure low-momentum decay products. The low-momentum pion is then unlikely to be reconstructed, which results in a disappearing track.
+        The authors minimize the effect of hadronic interactions by vetoing the material-dense regions of the detector (see Fig.~\ref{material_map}) and estimate the residual background by extrapolating from the low-mass region, which is dominated by hadronic interactions. After a dedicated study, the background from merged vertices was found to be negligable. Finally, the background from crossing tracks is determined with a model that adds pseudo-tracks to data vertices and is normalized by comparing the sample of 3-track vertices in data to (2+1)-track vertices in the model.
 
-    Both ATLAS and CMS looked for disappearing tracks during Run I, but the tracker improvements installed in ATLAS before 2015 datataking and CMS before 2017 datataking should increase sensitivity to decays at shorter radii \fxnote{I haven't mentioned previous iterations when talking about other analyses}. The ALTAS search presented here is sensitive to LLP lifetimes of approximately \SI{10}{\pico\s} to \SI{10}{\nano\s} \fxnote{make sure I'm talking about lifetime sensitivity in the same way across analyses}.
+        \noindent \begin{figure}[htbp] \begin{center}
+        \includegraphics[width=0.8\textwidth]{images/material_map}
+        \caption{Map of material dense regions of the ATLAS detector.\fxnote{cite analysis}}
+        \label{material_map}
+        \end{center} \end{figure}
 
-    The authors consider two signal processes: (1) electroweak gaugino production resulting in a disappearing track, an ISR jet, and MET and (2) gluino pair production resulting in a disappearing track, four jets, and MET\fxnote{add diagrams}. Process (1) could be the only gaugino production mode at the LHC if the gluino mass is kinematically unaccessable\fxnote{why?}, but process (2), which leads to chargino production in cascade decays, will be dominant if the gluino mass is within reach.
+        After estimating $\num{0.02} \pm \num{0.02}$ background events, exactly zero are observed. The result is then interpreted as an upper limit on the gluino mass and pair-production cross section as a function of gluino lifetime, shown in Fig.~\ref{displaced_limit}. For an LSP neutralino mass of \SI{100}{\giga\electronvolt}, the gluino mass limit is approximately \SI{2000}{\giga\electronvolt} for lifetimes in the \SI{20}{\pico\s} to \SI{10}{\nano\s} range. \fxnote{Include plots}
 
-    Disappearing track candidates, called pixel tracklets, are selected with a looser track reconstruction algorithm that runs over hits that were not associated to tracks by the standard reconstruction algorithm. The pixel tracklets are required to pass several isolation, $\pT$\fxnote{has $\pT$ been defined?}, and quality requirements such as number of pixel layer hits. Finally, the disappearing tracks are selected by requiring exactly zero associated hits in the subsequent tracking layer. Event selection requires one pixel tracklet, no electron or muon candidates (to suppress $\ttbar$ and $\W/\Z + \mathrm{jets}$ processes\fxnote{why? be able to explain}), and the $\MET$ and jet requirements associated with either of the two production modes described above\fxnote{be able to explain} .
-    
-    Pixel tracklets can be faked by random combinations of unrealted hits from nearby particles or by tracks whose pixel hits and next tracking layer hits are not properly associated, either due to a hadron suffering a hard scatter or a lepton radiating a hard photon. These backgrounds come primarily from $\ttbar$ and $\W/\Z + \mathrm{jets}$ processes, and estimates for each type of background are obtained from data. \fxnote{I initially wrote a whole big thing about how each bg was estimated, but I'm thinking it was overkill}
+        \noindent \begin{figure}[htbp] \begin{center}
+        \includegraphics[width=0.8\textwidth]{images/displaced_limit}
+        \caption{Limit.}
+        \label{displaced_limit}
+        \end{center} \end{figure}
 
-    No excess over expected background is observed, so upper limits are placed in the NLSP chargino mass-lifetime plane for the EW signal process and in the NLSP chargino mass-gluon mass plane for the QCD production process \fxnote{hopefully will be way clearer after texing in sparticle symbols}. \fxnote{Either include plots or say numbers}
+    \subsection{Disappearing Tracks}
+        \fxnote{cite CONF-2017-017}
+        \fxnote{nice disappearing track cartoon}
+        \fxnote{nice cartoon feynman diagrams of signal processes}
+        \fxnote{Specify dataset}
+        Certain models with nearly mass-degenerate LSP and NLSP have the potential to present a remarkable signal: charged particles that seem to disappear in the tracker. Specifically, models with winos as the lightest gauginos\fxnote{have these words been defined?}, such as many AMSB models\fxnote{why amsb? what is amsb?}, will have a chargino NLSP with an observable lifetime (\SI{0.2}{\nano\s} is a typical estimate\fxnote{why? how typical?}) that eventaully decays to the neutralino LSP and, commonly, a pion\fxnote{why?}. The nearly-degenerate masses have two important phenomenological roles: (1) increase the chargino lifetime, and (2) ensure low-momentum decay products. The low-momentum pion is then unlikely to be reconstructed, which results in a disappearing track.
 
-\subsection{Stopped Particles}
-    \fxnote{Add calorimeter search?}  
-    \fxnote{Specify dataset}
-    \fxnote{cite CMS PAS EXO-17-004}
-    \fxnote{mention how stopped particles complement HSCP search?}
-    \fxnote{too redundant with overview?}
-    With long enough lifetimes and sufficient mass, LLPs could come to rest in the detector before decaying. The eventual decay would then lead to energy deposits in the calorimeters or hits in the muon system that could be out of time with proton bunch crossings. A recent CMS analysis looked for such a signal in dimuon final states using the full 2015 and 2016 datasets. 
+        Both ATLAS and CMS looked for disappearing tracks during Run I, but the tracker improvements installed in ATLAS before 2015 datataking and CMS before 2017 datataking should increase sensitivity to decays at shorter radii \fxnote{I haven't mentioned previous iterations when talking about other analyses}. The ALTAS search presented here is sensitive to LLP lifetimes of approximately \SI{10}{\pico\s} to \SI{10}{\nano\s} \fxnote{make sure I'm talking about lifetime sensitivity in the same way across analyses}.
 
-    This analysis is interpreted in the context of two potential LLPs: gluinos and multiply charged massive particles (mchamps). Long-lived gluinos can appear in models such as split\fxnote{capitalize?} SUSY, where the squarks and sleptons are quite heavy, but the gluino is relatively light. After being pair produced, gluinos form R-hadrons\fxnote{have these been defined?} and eventually decay to quark-antiquark pairs along with NLSP neutralinos, which then decay to LSP neutralinos along with muon-antimuon pairs. The gluino decay is supressed by the large squark mass, which leads to its appreciable lifetime.
+        The authors consider two signal processes, both shown in Fig.\ref{disappearing_processes}: (1) electroweak gaugino production resulting in a disappearing track, an ISR jet, and MET and (2) gluino pair production resulting in a disappearing track, four jets, and MET\fxnote{add diagrams}. Process (1) could be the only gaugino production mode at the LHC if the gluino mass is kinematically unaccessable\fxnote{why?}, but process (2), which leads to chargino production in cascade decays, will be dominant if the gluino mass is within reach.
 
-    This analysis uses the muon system to look for pairs of muons that arrive out of time with bunch crossings. The main backgrounds to such a signal are cosmic muons, beam halo\fxnote{explain}, and muon system noise. Beam halo and muon system noise are easily removed by selection criteria, but distinguishing signal from cosmic muons requires a more nuanced approach. After generating signal MC\fxnote{defined?} and modeling cosmic muons from data obtained in dedicated cosmic runs, the authors found that cosmic muons and signal could be differentiated using TOF information from the muon system RPCs and DTs. Essentially, the direction of muon momentum could be gleaned from the timing information, and the authors required outgoing muons in both the upper and lower hemispheres.\fxnote{Get cartoon from Juliette}  
-    
-    In addition to the above criteria, the authors developed a new muon reconstruction algorithm, called displaced standalone (DSA), that uses only muon system hits and does not constrain the location of the primary vertex in any way. The full selection requires exactly one good DSA track in each hemisphere with $\pT$ greater than \SI{50}{\giga\electronvolt}, no reconstructed vertices\fxnote{why?}, and several criteria related to the quality of the reconstructed track and timing measurement. Finally, restrictions on the direction of muon momentum (incoming vs outgoing), relative time measurements, and maximum number of CSC hits (0) minimize background from beam halo and cosmic muons\fxnote{be able to explain how}.
+        \noindent \begin{figure}[htbp] \begin{center}
+        \includegraphics[width=0.8\textwidth]{images/disappearing_processes}
+        \caption{Processes.}
+        \label{disappearing_processes}
+        \end{center} \end{figure}
 
-    After estimating the background by extrapolating data from the cosmic-enriched\fxnote{enriched how? be able to explain} region to the signal region and determining systematic uncertainties related to the MC simulation, trigger acceptance, and luminosity, the authors calculate the expected background for LLP lifetimes ranging from \SI{100}{\nano\s} to \SI{1}{\micro\s}. In all cases, the expected background is less then one event. Exactly zero events are observed in every lifetime scenario. These results are then interpreted as upper limits on the signal production cross section\fxnote{and mass limits}\fxnote{include limit plots or table}, which are the first limits for stopped particles that decay to muons at the LHC.
+        Disappearing track candidates, called pixel tracklets, are selected with a looser track reconstruction algorithm that runs over hits that were not associated to tracks by the standard reconstruction algorithm. The pixel tracklets are required to pass several isolation, $\pT$\fxnote{has $\pT$ been defined?}, and quality requirements such as number of pixel layer hits. Finally, the disappearing tracks are selected by requiring exactly zero associated hits in the subsequent tracking layer. Event selection requires one pixel tracklet, no electron or muon candidates (to suppress $\ttbar$ and $\W/\Z + \mathrm{jets}$ processes\fxnote{why? be able to explain}), and the $\MET$ and jet requirements associated with either of the two production modes described above\fxnote{be able to explain} .
+        
+        Pixel tracklets can be faked by random combinations of unrealted hits from nearby particles or by tracks whose pixel hits and next tracking layer hits are not properly associated, either due to a hadron suffering a hard scatter or a lepton radiating a hard photon. These backgrounds come primarily from $\ttbar$ and $\W/\Z + \mathrm{jets}$ processes, and estimates for each type of background are obtained from data. \fxnote{I initially wrote a whole big thing about how each bg was estimated, but I'm thinking it was overkill}
 
-\subsection{Heavy Stable Charged Particles}
-    \fxnote{cite CMS EXO7-010}
-    \fxnote{Specify dataset}
-    \fxnote{nice dE/dx plot (fig 1)}
-    Particles that live for more than a couple ns\fxnote{how do I typeset standalone units?} \fxnote{Check this and be more exact} will appear stable in CMS and ATLAS because they can traverse the entire detector before decaying. If such a particle is also sufficiently massive, it can be catigorized as a heavy stable charged particle (HSCP). HSCPs are characterterized by a greater rate of energy loss via ionization due to the lower speed with which they pass through detector material\fxnote{redundant w/ overview. Probably better explained here than there}. Additionally, HSCPs can be fractionally, singly, or multiply charged, which also affects their rate of energy loss. 
+        No excess over expected background is observed, so upper limits are placed in the NLSP chargino mass-lifetime plane for the EW signal process and in the NLSP chargino mass-gluon mass plane for the QCD production process \fxnote{hopefully will be way clearer after texing in sparticle symbols}. Fig.~\ref{disappearing_limits} shows the limits for both processes.
 
-    HSCPs will often be misidentified or missed entirely by standard reconstruction algorithms and analysis criteria, which tend to assume $\beta \approx \num{1}$ and $\lvert q \rvert = e$. Inverting these assumptions provides two handles for a dedicated HSCP search in the context of three benchmark models: (1) HSCPs that form R-hadrons that either change the sign of their electric charge or become neutral before reaching the MS, (2) lepton-like HSCPs (quasi-stable sleptons) that are produced either through decays of squarks or gluinos or directly if squarks and gluinos are kinematically inaccessible, and (3) long-lived leptonlike fermions with arbitrary electric charge\fxnote{insert feynman diagrams}. This discussion will focus on the first two models, as they bear more directly on naturalness and SUSY\fxnote{why?}.
+        \noindent \begin{figure}[htbp] \begin{center}
+        \includegraphics[width=0.8\textwidth]{images/disappearing_limits}
+        \caption{Limits.}
+        \label{disappearing_limits}
+        \end{center} \end{figure}
 
-    \fxnote{I could talk about how low-beta tracks will show up as zig-zags in DTs b/c reconstruction assumes $\beta \approx \num{1}$. Zig-zag offset is used to estimate beta. Not sure where to fit it in.} \fxnote{Worth mentioning tracker-only vs tracker+TOF?}
+    \subsection{Stopped Particles}
+        \fxnote{Add calorimeter search?}  
+        \fxnote{Specify dataset}
+        \fxnote{cite CMS PAS EXO-17-004}
+        \fxnote{mention how stopped particles complement HSCP search?}
+        \fxnote{too redundant with overview?}
+        With long enough lifetimes and sufficient mass, LLPs could come to rest in the detector before decaying. The eventual decay would then lead to energy deposits in the calorimeters or hits in the muon system that could be out of time with proton bunch crossings. A recent CMS analysis looked for such a signal in dimuon final states using the full 2015 and 2016 datasets. 
 
-    The trigger requires all events to have either a high-$\pT$ muon or large $\MET$. The high-$\pT$ muon trigger is more efficient for all benchmark models except the case where the R-hadron becomes neutral before reaching the MS. In the case where the R-hadron does not leave a track in the MS, the large MET trigger should recover some events.\fxnote{Clunky wording}  
+        This analysis is interpreted in the context of two potential LLPs: gluinos and multiply charged massive particles (mchamps). Long-lived gluinos can appear in models such as split\fxnote{capitalize?} SUSY, where the squarks and sleptons are quite heavy, but the gluino is relatively light. After being pair produced, gluinos form R-hadrons\fxnote{have these been defined?} and eventually decay to quark-antiquark pairs along with NLSP neutralinos, which then decay to LSP neutralinos along with muon-antimuon pairs, as shown in Fig.~\ref{stopped_process}. The gluino decay is supressed by the large squark mass, which leads to its appreciable lifetime.
 
-    The authors estimate the signal-region background using an ABCD method in which events are binned in a 2-D plane with uncorrelated axes and the ratio of events in two control regions is used to extrapolate into the signal region from a third control region \fxnote{Do I need to explain this? I glossed over the fact that they used both an ABCD and an ABCDEFGHI}. Systematic uncertainties are introduced in background estimation, signal acceptance, and integrated luminosity.
+        \noindent \begin{figure}[htbp] \begin{center}
+        \includegraphics[width=0.8\textwidth]{images/stopped_process}
+            \caption{Long-lived gluino proces.\fxnote{cite analysis}}
+        \label{stopped_process}
+        \end{center} \end{figure}
+        
+        This analysis uses the muon system to look for pairs of muons that arrive out of time with bunch crossings. The main backgrounds to such a signal are cosmic muons, beam halo\fxnote{explain}, and muon system noise. Beam halo and muon system noise are easily removed by selection criteria, but distinguishing signal from cosmic muons requires a more nuanced approach. After generating signal MC\fxnote{defined?} and modeling cosmic muons from data obtained in dedicated cosmic runs, the authors found that cosmic muons and signal could be differentiated using TOF information from the muon system RPCs and DTs. Essentially, the direction of muon momentum could be gleaned from the timing information, and the authors required outgoing muons in both the upper and lower hemispheres. Fig.~\ref{stopped_muon_differentiation} shows how muons from stopped particles are differentiated from cosmic muons.
+        
+        \noindent \begin{figure}[htbp] \begin{center}
+        \includegraphics[width=0.8\textwidth]{images/stopped_muon_differentiation}
+            \caption{Cosmic muon rejection with MS.\fxnote{cite analysis}}
+        \label{stopped_muon_differentiation}
+        \end{center} \end{figure}
 
-    No significant excess over predicted background is observed, so the results are interpreted as upper limits in the production cross section - mass plane for the considered models. By comparing the observed limits and theoretical predictions, the authors also extract mass limits for the gluinos, stops, and staus in various models. \fxnote{Include plots}
+        In addition to the above criteria, the authors developed a new muon reconstruction algorithm, called displaced standalone (DSA), that uses only muon system hits and does not constrain the location of the primary vertex in any way. The full selection requires exactly one good DSA track in each hemisphere with $\pT$ greater than \SI{50}{\giga\electronvolt}, no reconstructed vertices\fxnote{why?}, and several criteria related to the quality of the reconstructed track and timing measurement. Finally, restrictions on the direction of muon momentum (incoming vs outgoing), relative time measurements, and maximum number of CSC hits (0) minimize background from beam halo and cosmic muons\fxnote{be able to explain how}.
+
+        After estimating the background by extrapolating data from the cosmic-enriched\fxnote{enriched how? be able to explain} region to the signal region and determining systematic uncertainties related to the MC simulation, trigger acceptance, and luminosity, the authors calculate the expected background for LLP lifetimes ranging from \SI{100}{\nano\s} to \SI{1}{\micro\s}. In all cases, the expected background is less then one event. Exactly zero events are observed in every lifetime scenario. As shown in Fig.~\ref{stopped_limits}, these results are then interpreted as upper limits on the signal production cross section and mass\fxnote{mass of what?}, which are the first limits for stopped particles that decay to muons at the LHC.
+
+        \noindent \begin{figure}[htbp] \begin{center}
+        \includegraphics[width=0.8\textwidth]{images/stopped_limits}
+            \caption{Limits.\fxnote{cite analysis}}
+        \label{stopped_limits}
+        \end{center} \end{figure}
+
+    \subsection{Heavy Stable Charged Particles}
+        \fxnote{cite CMS EXO7-010}
+        \fxnote{Specify dataset}
+        \fxnote{nice dE/dx plot (fig 1)}
+        Particles that live for more than a couple ns\fxnote{how do I typeset standalone units?} \fxnote{Check this and be more exact} will appear stable in CMS and ATLAS because they can traverse the entire detector before decaying. If such a particle is also sufficiently massive, it can be catigorized as a heavy stable charged particle (HSCP). HSCPs are characterterized by a greater rate of energy loss via ionization due to the lower speed with which they pass through detector material\fxnote{redundant w/ overview. Probably better explained here than there}. Additionally, HSCPs can be fractionally, singly, or multiply charged, which also affects their rate of energy loss, as shown in Fig.~\ref{hscp_dedx}.
+
+        \noindent \begin{figure}[htbp] \begin{center}
+        \includegraphics[width=0.8\textwidth]{images/hscp_dedx}
+            \caption{Ionization energy loss.\fxnote{cite analysis}}
+        \label{hscp_dedx}
+        \end{center} \end{figure}
+
+        HSCPs will often be misidentified or missed entirely by standard reconstruction algorithms and analysis criteria, which tend to assume $\beta \approx \num{1}$ and $\lvert q \rvert = e$. Inverting these assumptions provides two handles for a dedicated HSCP search in the context of three benchmark models\fxnote{do I need figures for these?}: (1) HSCPs that form R-hadrons that either change the sign of their electric charge or become neutral before reaching the MS, (2) lepton-like HSCPs (quasi-stable sleptons) that are produced either through decays of squarks or gluinos or directly if squarks and gluinos are kinematically inaccessible, and (3) long-lived leptonlike fermions with arbitrary electric charge\fxnote{insert feynman diagrams}. This discussion will focus on the first two models, as they bear more directly on naturalness and SUSY\fxnote{why?}.
+
+        \fxnote{I could talk about how low-beta tracks will show up as zig-zags in DTs b/c reconstruction assumes $\beta \approx \num{1}$. Zig-zag offset is used to estimate beta. Not sure where to fit it in.} \fxnote{Worth mentioning tracker-only vs tracker+TOF?}
+
+        The trigger requires all events to have either a high-$\pT$ muon or large $\MET$. The high-$\pT$ muon trigger is more efficient for all benchmark models except the case where the R-hadron becomes neutral before reaching the MS. In the case where the R-hadron does not leave a track in the MS, the large MET trigger should recover some events.\fxnote{Clunky wording}  
+
+        The authors estimate the signal-region background using an ABCD method in which events are binned in a 2-D plane with uncorrelated axes and the ratio of events in two control regions is used to extrapolate into the signal region from a third control region \fxnote{Do I need to explain this? I glossed over the fact that they used both an ABCD and an ABCDEFGHI}. Systematic uncertainties are introduced in background estimation, signal acceptance, and integrated luminosity.
+
+        No significant excess over predicted background is observed, so the results are interpreted as upper limits in the production cross section - mass plane for the considered models. By comparing the observed limits and theoretical predictions, the authors also extract mass limits for the gluinos, stops, and staus in various models, as shown in Fig.~\ref{hscp_limits}.
+
+        \noindent \begin{figure}[htbp] \begin{center}
+        \includegraphics[width=0.8\textwidth]{images/hscp_limits}
+            \caption{Limits.\fxnote{cite analysis}}
+        \label{hscp_limits}
+        \end{center} \end{figure}
 
 \section{Experimental Viability of Natural SUSY}
     \fxnote{Andrew says: This should really be your most important section. You should try to bring together the results of the searches you talked about (and of other long-lived particle searches and even of more general SUSY searches) and explain what they mean for a possible natural explanation of EWSB. At what point can we claim that there is no natural solution, or at least that there is no natural solution in terms of SUSY? Essentially, nobody cares about what you talked about in Section 6; what's important is that you can give these results a meaningful context in the bigger picture of a natural explanation of EWSB.} 
