@@ -1,9 +1,10 @@
 \documentclass[12pt]{article}
 
+\usepackage[final]{graphicx}
 \usepackage[final]{fixme}
 \fxsetup{layout=footnote}
 \usepackage[left]{lineno}
-\usepackage[demo]{graphicx}
+\usepackage{tikz-feynman}
 \usepackage{amsmath,amsthm,amssymb,mathtools,caption,subcaption,mathrsfs,cancel,multirow,enumitem,setspace,sectsty,cite,hyperref,siunitx,cancel}
 \usepackage{fullpage}
 
@@ -43,12 +44,26 @@ I'll write an abstract here.
 
     \fxnote{Yukawa terms go here}
 
-    SM parameters, such as particle masses\fxnote{what else is corrected. How?}, are corrected by interactions with virtual particles through loop diagrams. Fig.~\ref{loop_diagrams}, for example, shows the potential corrections to the Higgs and electron masses. Because the Higgs is a fundamental scalar, its corrections depend quadratically on the cutoff scale, $\Lambda$, which is the largest energy scale for which the SM is valid. The fermions and gauge bosons, on the other hand, only depend logarithmically\fxnote{check. be able to work out example} on $\Lambda$. The next section explores the concept of naturalness, a major motivating principle for beyond the standard model (BSM) physics that is directly tied to the relationship between the bare Higgs mass and the terms that correct it.
+    SM parameters, such as particle masses\fxnote{what else is corrected. How?}, are corrected by interactions with virtual particles through loop diagrams. Fig.~\ref{loop_diagrams}, for example, shows corrections to the Higgs and electron masses. Because the Higgs is a fundamental scalar, its corrections depend quadratically on the cutoff scale, $\Lambda$, which is the largest energy scale for which the SM is valid. The fermions and gauge bosons, on the other hand, only depend logarithmically\fxnote{check. be able to work out example} on $\Lambda$. The next section explores the concept of naturalness, a major motivating principle for beyond the standard model (BSM) physics that is directly tied to the relationship between the bare Higgs mass and the terms that correct it.
+
 
     \noindent \begin{figure}[htbp] \begin{center}
-    \includegraphics[width=0.8\textwidth]{images/loop_diagrams}
-    \caption{Caption!\fxnote{cite something}}
-    \label{loop_diagrams}
+        \feynmandiagram [layered layout, horizontal=b to c] {
+            a -- [scalar] b,
+            b -- [fermion, half left] c,
+            c -- [fermion, half left] b,
+            c -- [scalar] d,
+        };
+        \qquad
+        \feynmandiagram [layered layout, horizontal=b to c] {
+            a -- [fermion] b,
+            b -- [fermion] c,
+            b -- [photon, half left] c,
+            c -- [opacity=0.0, half left] b,
+            c -- [fermion] d,
+        };
+        \caption{Higgs mass (left) corrected by fermion loop and fermion mass (right) corrected by photon loop.\fxnote{cite tikz-feyman}}
+        \label{loop_diagrams}
     \end{center} \end{figure}
 
 \section{Naturalness and the Higgs mass}
@@ -70,7 +85,20 @@ I'll write an abstract here.
     When calculating contributions from loop diagrams, one finds that fermion loops differ in sign from boson loops, which means that in SUSY every bosonic correction to the Higgs mass is cancelled by a fermionic correction and vice versa. In fact, exact supersymmetry predicts that the bare Higgs mass is uncorrected to all orders in perturbation theory, as shown in Fig.~\ref{exact_susy_correction} below.
     
     \noindent \begin{figure}[htbp] \begin{center}
-    \includegraphics[width=0.8\textwidth]{images/exact_susy_correction}
+        \feynmandiagram [inline=(d.base), layered layout, horizontal=b to c] {
+        a -- [scalar] b,
+        b -- [fermion, half left] c,
+        c -- [fermion, half left] b,
+        c -- [scalar] d,
+    };
+    \quad + \quad
+    \feynmandiagram [baseline={(current bounding box.center)}, layered layout, horizontal=b to c] {
+        a -- [scalar] b,
+        b -- [charged scalar, half left] c,
+        c -- [charged scalar, half left] b,
+        c -- [scalar] d,
+    };
+    \quad = \quad 0 \quad
     \caption{Caption!\fxnote{cite something}}
     \label{exact_susy_correction}
     \end{center} \end{figure}
@@ -94,7 +122,7 @@ I'll write an abstract here.
     On the other hand, models with weakly coupled R-parity violating (RPV) terms produce long-lived but not perfectly stable LSPs. Fig.~\ref{rp_and_rpv_diagrams} shows two possible processes, one where R-parity gaurantees a stable LSP and one where RPV produces a long-lived but stable LSP. A similar situation arises in GMSB models\fxnote{should I describe GMSB?} where the gravitino is the LSP. The coupling between the next-to-LSP (NLSP) and gravitino is inversely proportional to the scale of SUSY breaking, which supresses the NSLP decay rate and can lead to LLPs.\fxnote{cite dimopoulos low energy}\fxnote{}  
 
     \noindent \begin{figure}[htbp] \begin{center}
-    \includegraphics[width=0.8\textwidth]{images/rp_and_rpv_diagrams}
+    \includegraphics[width=0.3\textwidth]{images/rp_and_rpv_diagrams}
         \caption{R-parity and RPV diagrams}
     \label{rp_and_rpv_diagrams}
     \end{center} \end{figure}
@@ -111,7 +139,7 @@ I'll write an abstract here.
         The Compact Muon Solenoid (CMS) detector is designed to reconstruct a variety of particles from collisions at the Large Hadron Collider (LHC), which is a circular proton-proton collider that ran with center-of-mass energy \SI{7}{\tera\electronvolt} in 2010-11, \SI{8}{\tera\electronvolt} in 2012, and \SI{13}{\tera\electronvolt} from 2015 to the present. To meet this goal, CMS combines information from several subdetectors nested radially in and around a \SI{4}{\tesla} superconducting solenoid. All together, CMS is \SI{21.6}{\m} long, \SI{14.6}{\m} across, and weighs approximately \SI{12500}{t}. The subdetectors that make up CMS are shown in Fig.~\ref{cms} and described below.
 
         \noindent \begin{figure}[htbp] \begin{center}
-        \includegraphics[width=0.8\textwidth]{images/cms}
+        \includegraphics[width=0.7\textwidth]{images/cms}
             \caption{CMS}
         \label{cms}
         \end{center} \end{figure}
@@ -170,7 +198,7 @@ I'll write an abstract here.
         LLPs leave distinct signatures that differentiate them from SM backgrounds but also add complexity to LLP analyses. CMS and ATLAS were mainly designed to reconstruct stable particles from prompt decays, so LLP searches are often forced\fxnote{the searchers are forced, not the searches} to stray from the traditional analysis path in terms of object reconstruction\fxnote{really reconstruction? Maybe object definition?} and background estimation. This report focuses on four complementary LLP signatures: displaced vertices, disappearing tracks, low-velocity particles, and particles that come to a stop before decaying. See Fig.~\ref{jamie_cartoon} for a cartoon of several possible LLP signatures\fxnote{probably a better way to word this sentence}.
 
         \noindent \begin{figure}[htbp] \begin{center}
-        \includegraphics[width=0.8\textwidth]{images/jamie_cartoon}
+        \includegraphics[width=0.7\textwidth]{images/jamie_cartoon}
             \caption{Diagram of several LLP spectra}
         \label{jamie_cartoon}
         \end{center} \end{figure}
@@ -189,7 +217,13 @@ I'll write an abstract here.
         This search\fxnote{repetative wording} uses a simplified benchmark model in the split SUSY paradigm where gluinos are kinematically accessible but squarks are not. The relevant process, shown in Fig.~\ref{displaced_process}, is pair-produced gluinos that decay to a quark-\fxnote{how to punctuate?}virtual squark pair. The virtual squark then decays to a quark and the LSP, presumed to be a neutralino\fxnote{have I defined neutralino?}\fxnote{why is this a reasonable assumption?} \fxnote{steal diagram from andrew's preapproval. I can't access it - ask andrew}. The large mass of the intermediate squark suppresses the gluino decay, giving the gluino enough time to form an R-hadron\fxnote{first use. Define here if not in LLP section} that propagates some measureable distance before decaying. 
 
         \noindent \begin{figure}[htbp] \begin{center}
-        \includegraphics[width=0.8\textwidth]{images/displaced_process_diagram}
+        \feynmandiagram [layered layout, horizontal=a to b] {
+            a -- [plain, gluon] b,
+            b -- [anti charged scalar] c,
+            b -- [fermion] d,
+            c -- [anti fermion] e,
+            c -- [plain, boson] f,
+        };
         \caption{Process.}
         \label{displaced_process}
         \end{center} \end{figure}
@@ -201,7 +235,7 @@ I'll write an abstract here.
         The authors minimize the effect of hadronic interactions by vetoing the material-dense regions of the detector (see Fig.~\ref{material_map}) and estimate the residual background by extrapolating from the low-mass region, which is dominated by hadronic interactions. After a dedicated study, the background from merged vertices was found to be negligable. Finally, the background from crossing tracks is determined with a model that adds pseudo-tracks to data vertices and is normalized by comparing the sample of 3-track vertices in data to (2+1)-track vertices in the model.
 
         \noindent \begin{figure}[htbp] \begin{center}
-        \includegraphics[width=0.8\textwidth]{images/material_map}
+        \includegraphics[width=0.6\textwidth]{images/material_map}
         \caption{Map of material dense regions of the ATLAS detector.\fxnote{cite analysis}}
         \label{material_map}
         \end{center} \end{figure}
@@ -209,7 +243,12 @@ I'll write an abstract here.
         After estimating $\num{0.02} \pm \num{0.02}$ background events, exactly zero are observed. The result is then interpreted as an upper limit on the gluino mass and pair-production cross section as a function of gluino lifetime, shown in Fig.~\ref{displaced_limit}. For an LSP neutralino mass of \SI{100}{\giga\electronvolt}, the gluino mass limit is approximately \SI{2000}{\giga\electronvolt} for lifetimes in the \SI{20}{\pico\s} to \SI{10}{\nano\s} range. \fxnote{Include plots}
 
         \noindent \begin{figure}[htbp] \begin{center}
-        \includegraphics[width=0.8\textwidth]{images/displaced_limit}
+        \begin{subfigure}[htbp]{0.45\textwidth} \begin{center}
+        \includegraphics[width=\textwidth]{images/displaced_cross_section_limit}
+        \end{center} \end{subfigure}
+        \begin{subfigure}[htbp]{0.45\textwidth} \begin{center}
+        \includegraphics[width=\textwidth]{images/displaced_mass_limit}
+        \end{center} \end{subfigure}
         \caption{Limit.}
         \label{displaced_limit}
         \end{center} \end{figure}
@@ -225,8 +264,17 @@ I'll write an abstract here.
 
         The authors consider two signal processes, both shown in Fig.\ref{disappearing_processes}: (1) electroweak gaugino production resulting in a disappearing track, an ISR jet, and MET and (2) gluino pair production resulting in a disappearing track, four jets, and MET\fxnote{add diagrams}. Process (1) could be the only gaugino production mode at the LHC if the gluino mass is kinematically unaccessable\fxnote{why?}, but process (2), which leads to chargino production in cascade decays, will be dominant if the gluino mass is within reach.
 
+        \fxnote{ugh, this is too hard. just steal diagram from paper or make in jaxodraw. Maybe even use simulated event instead, but make sure I can draw these if asked?}  
         \noindent \begin{figure}[htbp] \begin{center}
-        \includegraphics[width=0.8\textwidth]{images/disappearing_processes}
+        \feynmandiagram [layered layout] {
+            i1 -- [plain] a [blob],
+            i2 -- [plain] a,
+            a -- [plain, boson] b [blob],
+            a -- [plain] f1,
+            a -- [plain, boson] f2,
+            b -- [plain, boson] f3,
+            b -- [scalar] f4,
+        };
         \caption{Processes.}
         \label{disappearing_processes}
         \end{center} \end{figure}
@@ -238,7 +286,15 @@ I'll write an abstract here.
         No excess over expected background is observed, so upper limits are placed in the NLSP chargino mass-lifetime plane for the EW signal process and in the NLSP chargino mass-gluon mass plane for the QCD production process \fxnote{hopefully will be way clearer after texing in sparticle symbols}. Fig.~\ref{disappearing_limits} shows the limits for both processes.
 
         \noindent \begin{figure}[htbp] \begin{center}
-        \includegraphics[width=0.8\textwidth]{images/disappearing_limits}
+        \begin{subfigure}[htbp]{0.3\textwidth} \begin{center}
+        \includegraphics[width=\textwidth]{images/disappearing_ew_limit}
+        \end{center} \end{subfigure}
+        \begin{subfigure}[htbp]{0.3\textwidth} \begin{center}
+        \includegraphics[width=\textwidth]{images/disappearing_strong_200ps_limit}
+        \end{center} \end{subfigure}
+        \begin{subfigure}[htbp]{0.3\textwidth} \begin{center}
+        \includegraphics[width=\textwidth]{images/disappearing_strong_1ns_limit}
+        \end{center} \end{subfigure}
         \caption{Limits.}
         \label{disappearing_limits}
         \end{center} \end{figure}
@@ -251,19 +307,14 @@ I'll write an abstract here.
         \fxnote{too redundant with overview?}
         With long enough lifetimes and sufficient mass, LLPs could come to rest in the detector before decaying. The eventual decay would then lead to energy deposits in the calorimeters or hits in the muon system that could be out of time with proton bunch crossings. A recent CMS analysis looked for such a signal in dimuon final states using the full 2015 and 2016 datasets. 
 
-        This analysis is interpreted in the context of two potential LLPs: gluinos and multiply charged massive particles (mchamps). Long-lived gluinos can appear in models such as split\fxnote{capitalize?} SUSY, where the squarks and sleptons are quite heavy, but the gluino is relatively light. After being pair produced, gluinos form R-hadrons\fxnote{have these been defined?} and eventually decay to quark-antiquark pairs along with NLSP neutralinos, which then decay to LSP neutralinos along with muon-antimuon pairs, as shown in Fig.~\ref{stopped_process}. The gluino decay is supressed by the large squark mass, which leads to its appreciable lifetime.
+        This analysis is interpreted in the context of two potential LLPs: gluinos and multiply charged massive particles (mchamps). Long-lived gluinos can appear in models such as split\fxnote{capitalize?} SUSY, where the squarks and sleptons are quite heavy, but the gluino is relatively light. After being pair produced, gluinos form R-hadrons\fxnote{have these been defined?} and eventually decay to quark-antiquark pairs along with NLSP neutralinos, which then decay to LSP neutralinos along with muon-antimuon pairs. This process is exactly the same as in Fig.~\ref{displaced_process}, but in this case the gluino has enough time to form R-hadrons\fxnote{double check}. The gluino decay is supressed by the large squark mass, which leads to its appreciable lifetime.
 
-        \noindent \begin{figure}[htbp] \begin{center}
-        \includegraphics[width=0.8\textwidth]{images/stopped_process}
-            \caption{Long-lived gluino proces.\fxnote{cite analysis}}
-        \label{stopped_process}
-        \end{center} \end{figure}
-        
         This analysis uses the muon system to look for pairs of muons that arrive out of time with bunch crossings. The main backgrounds to such a signal are cosmic muons, beam halo\fxnote{explain}, and muon system noise. Beam halo and muon system noise are easily removed by selection criteria, but distinguishing signal from cosmic muons requires a more nuanced approach. After generating signal MC\fxnote{defined?} and modeling cosmic muons from data obtained in dedicated cosmic runs, the authors found that cosmic muons and signal could be differentiated using TOF information from the muon system RPCs and DTs. Essentially, the direction of muon momentum could be gleaned from the timing information, and the authors required outgoing muons in both the upper and lower hemispheres. Fig.~\ref{stopped_muon_differentiation} shows how muons from stopped particles are differentiated from cosmic muons.
         
+        \fxnote{check if tof, beta, or bx is better} 
         \noindent \begin{figure}[htbp] \begin{center}
-        \includegraphics[width=0.8\textwidth]{images/stopped_muon_differentiation}
-            \caption{Cosmic muon rejection with MS.\fxnote{cite analysis}}
+        \includegraphics[width=\textwidth]{images/stopped_reject_cosmic_tof}
+        \caption{Cosmic muon rejection with MS.\fxnote{cite analysis}}
         \label{stopped_muon_differentiation}
         \end{center} \end{figure}
 
@@ -271,20 +322,26 @@ I'll write an abstract here.
 
         After estimating the background by extrapolating data from the cosmic-enriched\fxnote{enriched how? be able to explain} region to the signal region and determining systematic uncertainties related to the MC simulation, trigger acceptance, and luminosity, the authors calculate the expected background for LLP lifetimes ranging from \SI{100}{\nano\s} to \SI{1}{\micro\s}. In all cases, the expected background is less then one event. Exactly zero events are observed in every lifetime scenario. As shown in Fig.~\ref{stopped_limits}, these results are then interpreted as upper limits on the signal production cross section and mass\fxnote{mass of what?}, which are the first limits for stopped particles that decay to muons at the LHC.
 
+        \fxnote{ok to skip mchamp? Be able to explain why} 
         \noindent \begin{figure}[htbp] \begin{center}
-        \includegraphics[width=0.8\textwidth]{images/stopped_limits}
-            \caption{Limits.\fxnote{cite analysis}}
+        \begin{subfigure}[htbp]{0.5\textwidth} \begin{center}
+        \includegraphics[width=\textwidth]{images/stopped_limit_gluino_cross_section}
+        \end{center} \end{subfigure}
+        \begin{subfigure}[htbp]{0.45\textwidth} \begin{center}
+        \includegraphics[width=\textwidth]{images/stopped_limit_gluino_mass}
+        \end{center} \end{subfigure}
+        \caption{Limits.\fxnote{cite analysis}}
         \label{stopped_limits}
         \end{center} \end{figure}
 
     \subsection{Heavy Stable Charged Particles}
-        \fxnote{cite CMS EXO7-010}
+        \fxnote{cite CMS EXO-15-010}
         \fxnote{Specify dataset}
         \fxnote{nice dE/dx plot (fig 1)}
         Particles that live for more than a couple ns\fxnote{how do I typeset standalone units?} \fxnote{Check this and be more exact} will appear stable in CMS and ATLAS because they can traverse the entire detector before decaying. If such a particle is also sufficiently massive, it can be catigorized as a heavy stable charged particle (HSCP). HSCPs are characterterized by a greater rate of energy loss via ionization due to the lower speed with which they pass through detector material\fxnote{redundant w/ overview. Probably better explained here than there}. Additionally, HSCPs can be fractionally, singly, or multiply charged, which also affects their rate of energy loss, as shown in Fig.~\ref{hscp_dedx}.
 
         \noindent \begin{figure}[htbp] \begin{center}
-        \includegraphics[width=0.8\textwidth]{images/hscp_dedx}
+        \includegraphics[width=0.5\textwidth]{images/hscp_dedx}
             \caption{Ionization energy loss.\fxnote{cite analysis}}
         \label{hscp_dedx}
         \end{center} \end{figure}
@@ -299,9 +356,15 @@ I'll write an abstract here.
 
         No significant excess over predicted background is observed, so the results are interpreted as upper limits in the production cross section - mass plane for the considered models. By comparing the observed limits and theoretical predictions, the authors also extract mass limits for the gluinos, stops, and staus in various models, as shown in Fig.~\ref{hscp_limits}.
 
+        \fxnote{I show seperate trk, trk+tof limits but never explain that in text} 
         \noindent \begin{figure}[htbp] \begin{center}
-        \includegraphics[width=0.8\textwidth]{images/hscp_limits}
-            \caption{Limits.\fxnote{cite analysis}}
+        \begin{subfigure}[htbp]{0.45\textwidth} \begin{center}
+        \includegraphics[width=\textwidth]{images/hscp_limit_tracker_only}
+        \end{center} \end{subfigure}
+        \begin{subfigure}[htbp]{0.45\textwidth} \begin{center}
+        \includegraphics[width=\textwidth]{images/hscp_limit_tracker_tof}
+        \end{center} \end{subfigure}
+        \caption{Limits.\fxnote{cite analysis}}
         \label{hscp_limits}
         \end{center} \end{figure}
 
