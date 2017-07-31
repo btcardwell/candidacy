@@ -1,6 +1,6 @@
 \documentclass[12pt]{article}
 
-\usepackage[final]{graphicx}
+\usepackage[draft]{graphicx}
 \usepackage[final]{fixme}
 \fxsetup{layout=footnote}
 \usepackage[left]{lineno}
@@ -40,9 +40,12 @@ I'll write an abstract here.
     
     All SM particles transform according to the gauged symmetry group\fxnote{be good at describing the meaning of `gauged symmetry group'} $\SUthreecSUtwoLUoneY$, where $\SUthreec$ is associated with color charge, $\SUtwoL$ is associated with weak isospin, and $\UoneY$ is associated with weak hypercharge. The gauge bosons are associated with the generators of these groups, thus there are eight gluons associated with $\SUthreec$, three W bosons associated with $\SUtwoL$, and one B boson associated with $\UoneY$. The physical gauge bosons, which are linear combinations of the Ws and B, are the $\Wp$, $\Wm$, $\Z$, and photon ($\gamma$). The fermions are catagorized by which representation of each group they fit into\fxnote{make sure I'm good at explaining this}. For example, $\SUthreec$ distinguishes the quarks (which live in the fundamental representation) from the leptons (which are singlets), and $\SUtwoL$ distinguishes the left-handed fermions (doublets) from the right-handed fermions (singlets). Finally, weak hypercharge further distignuishes SM particles according to the Gell-Mann--Nishijima formula, $Y=Q-I_3$, where Q is electric charge and $I_3$ is the third component of weak isospin.
 
-    Experimentally, the $\Wpm$, $\Z$, quarks, and charged leptons are massive\fxnote{Gloss over neutrino mass?}. Explicit mass terms for the fermions or gauge bosons would violate the chiral and gauge symmetries of the SM Lagrangian, however, so $\SUtwoLUoneY$ must be broken. Specifically, the nonzero vacuum expectation value (VEV) of the Higgs field spontaneously breaks $\SUtwoLUoneY$ to $\UoneQ$. In the process, three of the four degrees of freedom associated with the complex Higgs doublet become the longitudinal polarizations of $\Wpm$ and $\Z$, giving them mass. The remaining degree of freedom is the physical Higgs boson. Expanding the Higgs field about its VEV produces Yukawa interactions such as those shown below. These terms are interpreted as giving the quarks and charged leptons mass, where the mass of each particle is given by the product of the Higgs VEV and the coupling constant.
+    Experimentally, the $\Wpm$, $\Z$, quarks, and charged leptons are massive\fxnote{Gloss over neutrino mass?}. Explicit mass terms for the fermions or gauge bosons would violate the chiral and gauge symmetries of the SM Lagrangian, however, so $\SUtwoLUoneY$ must be broken. Specifically, the nonzero vacuum expectation value (VEV) of the Higgs field spontaneously breaks $\SUtwoLUoneY$ to $\UoneQ$. In the process, three of the four degrees of freedom associated with the complex Higgs doublet become the longitudinal polarizations of $\Wpm$ and $\Z$, giving them mass. The remaining degree of freedom is the physical Higgs boson. Expanding the Higgs field about its VEV produces Yukawa interactions such as those in Eq.~\ref{yukawa_terms}. These terms are interpreted as giving mass to the quarks and charged leptons mass, where the mass of each particle is given by the product of the Higgs VEV, $v$, and the coupling constant, $Y$.
 
-    \fxnote{Yukawa terms go here}
+    \noindent \begin{equation}
+        \mathcal{L} = -\frac{Yv}{\sqrt{2}}\bar{\psi}\psi 
+        \label{yukawa_terms}
+    \end{equation}
 
     SM parameters, such as particle masses\fxnote{what else is corrected. How?}, are corrected by interactions with virtual particles through loop diagrams. Fig.~\ref{loop_diagrams}, for example, shows corrections to the Higgs and electron masses. Because the Higgs is a fundamental scalar, its corrections depend quadratically on the cutoff scale, $\Lambda$, which is the largest energy scale for which the SM is valid. The fermions and gauge bosons, on the other hand, only depend logarithmically\fxnote{check. be able to work out example} on $\Lambda$. The next section explores the concept of naturalness, a major motivating principle for beyond the standard model (BSM) physics that is directly tied to the relationship between the bare Higgs mass and the terms that correct it.
 
@@ -79,20 +82,20 @@ I'll write an abstract here.
     \fxnote{Clarify that not technically a problem. Nature might just be that way. Anthropic principle almost like an attempt to restore naturalness to a universe that appears unnatural, says Andrew} There are three main approaches to the apparently unnatural Higgs mass\fxnote{specify}: (1) argue that it was never really a problem in the first place, (2) reduce the SM cutoff scale, and (3) introduce a new symmetry to protect the Higgs mass. Arguments against naturalness often involve the anthropic principle, which posits that it should come as no surprise that humans live in a universe whose fundamental parameters are tuned to produce carbon-based life. Alternatively, some theories, such as large extra dimensions, lower the SM cutoff by proposing that gravity is spread across more than three spatial dimensions, which lowers the Planck mass itself. Finally, the dominant\fxnote{what do I mean by dominant?} BSM theory that aims to solve the naturalness problem by introducing a new symmetry is supersymmetry, which is explained below.
     
 \section{Supersymmetry}
-    \fxnote{seems like I should mention that naturalness favors lighter sparticles}  
+    \fxnote{seems like I should explicitly mention that naturalness favors lighter sparticles}  
     Supersymmetry (SUSY) introduces a new symmetry in which every SM field fits into a larger multiplet with an inherent symmetry between bosons and fermions\fxnote{I need to be better at explaining exactly what this means}. In its simplest form, SUSY results in one new boson for every SM fermion, one new fermion for every SM boson, and one new Higgs doublet.\fxnote{make sure I understand the new Higgs doublet} The increase in particle multiplicity calls for a new naming convention: the spin-0 superpartners to the SM fermions are referred to as sfermions (e.g. stop or smuon), and the spin-$\frac{1}{2}$ superpartners to the SM bosons are given the name of their SM counterpart with ``ino" tacked on to the end (e.g. Higgsino or wino).\fxnote{describe charginos, neutralinos?} Collectively the superpartners to the SM particles are known as sparticles.\fxnote{cite martin}  
 
     When calculating contributions from loop diagrams, one finds that fermion loops differ in sign from boson loops, which means that in SUSY every bosonic correction to the Higgs mass is cancelled by a fermionic correction and vice versa. In fact, exact supersymmetry predicts that the bare Higgs mass is uncorrected to all orders in perturbation theory, as shown in Fig.~\ref{exact_susy_correction} below.
     
     \noindent \begin{figure}[htbp] \begin{center}
-        \feynmandiagram [inline=(d.base), layered layout, horizontal=b to c] {
+        \feynmandiagram [inline=(d.base), layered layout, medium, horizontal=b to c] {
         a -- [scalar] b,
         b -- [fermion, half left] c,
         c -- [fermion, half left] b,
         c -- [scalar] d,
     };
     \quad + \quad
-    \feynmandiagram [baseline={(current bounding box.center)}, layered layout, horizontal=b to c] {
+    \feynmandiagram [baseline={(current bounding box.center)}, layered layout, medium, horizontal=b to c] {
         a -- [scalar] b,
         b -- [charged scalar, half left] c,
         c -- [charged scalar, half left] b,
@@ -103,12 +106,12 @@ I'll write an abstract here.
     \label{exact_susy_correction}
     \end{center} \end{figure}
 
-    Exact SUSY also requires that sparticles have the same mass as their SM counterparts, so the lack of sparticles in collider searches implies that SUSY must be broken. With broken susy, the same diagram as above produces a correction of the form
+    Exact SUSY also requires that sparticles have the same mass as their SM counterparts, so the lack of sparticles in collider searches implies that SUSY must be broken. With broken susy, the same diagram as above produces a correction of the form\fxnote{cite feng}  
 
     \noindent \begin{equation}
-    \delta \mHiggs = .
+        \delta \mHiggs^2 = \frac{3Y^2}{8\pi^2}\left(m_{\sfermion}^2 - m_{\f}^2 \right)\ln(\Lambda^2/m_{\sfermion}^2).
     \label{higgs_susy_correction}
-    \end{equation}\fxnote{look up}  
+    \end{equation}
     
     The mechanism and scale of SUSY breaking is an open question with many competing answers that achieve different theoretical goals and lead to different TeV-scale phenemena. A handful of models with particular approaches to SUSY breaking that are particularly prominant or particularly relevant to naturalness or long-lived particles are gauge-mediated susy breaking (GMSB), anomaly-mediated SUSY breaking (AMSB), split\fxnote{capitalize} SUSY, and R-parity violating SUSY (RPV). The details of these models will be explored as needed throughout this paper.
 
@@ -119,7 +122,7 @@ I'll write an abstract here.
 
     In SUSY models, LLPs arise for the same basic reasons, and different SUSY models produce LLPs in different ways. The most straightforward SUSY LLP occurs in models with conserved R-partity, a proposed symmetry that prevents proton decay\fxnote{Be prepared to show this. Maybe add some diagrams illustrating proton decay w/o R-parity}. In models with R-parity, the SM particles are assigned R-parity +1 and their superpartners are assigned R-parity -1. Conserving the product of R-parity at each vertex has two immediate phenomenalogical consequences: (1) sparticles can only be produced in pairs and (2) the lightest supersymmetric particle (LSP) is absolutely stable. A neutral LSP could show up in collider searches as missing energy ($\MET$), making $\MET$ a key signature in many conventional SUSY searches.
 
-    On the other hand, models with weakly coupled R-parity violating (RPV) terms produce long-lived but not perfectly stable LSPs. Fig.~\ref{rp_and_rpv_diagrams} shows two possible processes, one where R-parity gaurantees a stable LSP and one where RPV produces a long-lived but stable LSP. A similar situation arises in GMSB models\fxnote{should I describe GMSB?} where the gravitino is the LSP. The coupling between the next-to-LSP (NLSP) and gravitino is inversely proportional to the scale of SUSY breaking, which supresses the NSLP decay rate and can lead to LLPs.\fxnote{cite dimopoulos low energy}\fxnote{}  
+    On the other hand, models with weakly coupled R-parity violating (RPV) terms produce long-lived but not perfectly stable LSPs. Fig.~\ref{rp_and_rpv_diagrams} shows two possible processes, one where R-parity gaurantees a stable LSP and one where RPV produces a long-lived but stable LSP. A similar situation arises in GMSB models\fxnote{should I describe GMSB?} where the gravitino is the LSP. The coupling between the next-to-LSP (NLSP) and gravitino is inversely proportional to the scale of SUSY breaking, which supresses the NSLP decay rate and can lead to LLPs.\fxnote{cite dimopoulos low energy}
 
     \noindent \begin{figure}[htbp] \begin{center}
     \includegraphics[width=0.3\textwidth]{images/rp_and_rpv_diagrams}
@@ -155,7 +158,7 @@ I'll write an abstract here.
 
     \subsection{Electromagnetic Calorimeter}
         \fxnote{cite CMS TDR}
-        \fxnote{I define EE & EB but never use those definitions}
+        \fxnote{I define EE \& EB but never use those definitions}
         After traversing the inner tracker, particles next encounter the electromagnetic calorimeter (ECAL). As a homogeneous scintillation calorimeter, ECAL uses \num{61200} lead tunstate crystals in the barrel and \num{7324} in each endcap to reconstruct the energy deposited during electromagnetic showers. Lead tungstate crystals allow for a fast (\SI{80}{\percent} of light within \SI{25}{ns}), compact (radiation length = \SI{0.89}{cm}), fine-grained (Moli\`ere radius = \SI{2.2}{cm}), and radiation hard (up to 10 Mrad\fxnote{learn context for this number}) calorimeter. The main drawback is the relatively low light yield (\SI{30}{photon\per\mega\electronvolt}), which necesitates photodetectors with intrinsic gain that work in magnetic fields.
 
         The barrel section (EB) extends radially from \num{129} to \SI{177}{cm} and covers a pseudorapidity range of \num{0} to \num{1.479}. The crystals are tapered to approximately project back to the IP\fxnote{define if not already} but not so perfectly that likely particle trajectories align with cracks. Each crystal is approximately one Moli\`ere radius wide and 25.8 radiation lengths deep.
@@ -164,7 +167,7 @@ I'll write an abstract here.
 
     \subsection{Hadronic Calorimeter}
         \fxnote{cite CMS TDR}
-        \fxnote{define HB & HF never to be used}
+        \fxnote{define HB \& HF never to be used}
         The hadronic calorimeter (HCAL) uses \SI{3.7}{mm} plates of plastic scintillator interspersed within brass absorber to reconstruct the energy deposited during hadronic showers. Embedded wavelength-shifting fibers capture the scintillation light and transfer it to clear fibers to be read out by hybrid photodiodes.
 
         The barrel section (HB) spans a pseudorapidty range of \num{-1.4} to \num{1.4} and has \num{2304} towers \fxnote{check}, each of which contains \num{14} \fxnote{check} brass plates and covers an area of \num{0.087} x \SI{0.087}{in} $\eta-\phi$ \fxnote{get a feel for this area}. In addition, an extra layer (or two at $\eta = \num{0}$)of scintillator tiles sits just outside the solenoid. This extra layer, known as hadron outer (HO), spans a pseudorapidty range of \num{-1.26} to \num{1.26} and increases the minimum effective HCAL interaction length to greater than \num{11.8}.
@@ -190,9 +193,7 @@ I'll write an abstract here.
         The trigger reduces the data writing rate from the \SI{40}{\mega\hertz} collision rate to less than \SI{1}{\kilo\hertz} so that events can be written to tape. The rate reduction happens in two stages: Level-1 (L1) and High-Level Trigger (HLT). L1 uses input from ECAL, HCAL, and MS that represents physics objects ($\mathrm{e}$/$\gamma$, $\tau$, jets, $\mu$, and $\MET$) and uses custom electronics to reduce the rate to $\approx$100 kHz in 3.8 us. The HLT then uses a dedicated processor farm to further reduce the rate to the desired $<$ 1 kHz.
 
 \section{LHC Searches for Long-lived Particles}
-        \fxnote{Include diagrams for signal models} 
         \fxnote{mention which data was used for each search} 
-        \fxnote{Steal limit plots and any cool figures from papers} 
     \subsection{Overview}
         \fxnote{steal jamie's cartoon?}  
         LLPs leave distinct signatures that differentiate them from SM backgrounds but also add complexity to LLP analyses. CMS and ATLAS were mainly designed to reconstruct stable particles from prompt decays, so LLP searches are often forced\fxnote{the searchers are forced, not the searches} to stray from the traditional analysis path in terms of object reconstruction\fxnote{really reconstruction? Maybe object definition?} and background estimation. This report focuses on four complementary LLP signatures: displaced vertices, disappearing tracks, low-velocity particles, and particles that come to a stop before decaying. See Fig.~\ref{jamie_cartoon} for a cartoon of several possible LLP signatures\fxnote{probably a better way to word this sentence}.
@@ -211,7 +212,6 @@ I'll write an abstract here.
 
     \subsection{Displaced Vertices}
         \fxnote{cite CONF-2017-026}
-        \fxnote{Specify dataset}
         LLPs that decay before reaching the inner tracker can be identified with a displaced vertex (DV)\fxnote{DVs defined clearly enough in overview?}\fxnote{Is it still a DV if it decays in active material somewhere?}. ATLAS performs a search for such particles by looking for at least one DV along with large MET and large track multiplicity.\fxnote{make sure I can explain why met and multiplicity} The search is sensitive to LLPs with lifetimes in the \SI{20}{\pico\s} to \SI{10}{\nano\s} range\fxnote{Am I defining sensitivity range consistently across analyses?}.
 
         This search\fxnote{repetative wording} uses a simplified benchmark model in the split SUSY paradigm where gluinos are kinematically accessible but squarks are not. The relevant process, shown in Fig.~\ref{displaced_process}, is pair-produced gluinos that decay to a quark-\fxnote{how to punctuate?}virtual squark pair. The virtual squark then decays to a quark and the LSP, presumed to be a neutralino\fxnote{have I defined neutralino?}\fxnote{why is this a reasonable assumption?} \fxnote{steal diagram from andrew's preapproval. I can't access it - ask andrew}. The large mass of the intermediate squark suppresses the gluino decay, giving the gluino enough time to form an R-hadron\fxnote{first use. Define here if not in LLP section} that propagates some measureable distance before decaying. 
@@ -240,7 +240,7 @@ I'll write an abstract here.
         \label{material_map}
         \end{center} \end{figure}
 
-        After estimating $\num{0.02} \pm \num{0.02}$ background events, exactly zero are observed. The result is then interpreted as an upper limit on the gluino mass and pair-production cross section as a function of gluino lifetime, shown in Fig.~\ref{displaced_limit}. For an LSP neutralino mass of \SI{100}{\giga\electronvolt}, the gluino mass limit is approximately \SI{2000}{\giga\electronvolt} for lifetimes in the \SI{20}{\pico\s} to \SI{10}{\nano\s} range. \fxnote{Include plots}
+        After estimating $\num{0.02} \pm \num{0.02}$ background events, exactly zero are observed. The result is then interpreted as an upper limit on the gluino mass and pair-production cross section as a function of gluino lifetime, shown in Fig.~\ref{displaced_limit}. For an LSP neutralino mass of \SI{100}{\giga\electronvolt}, the gluino mass limit is approximately \SI{2000}{\giga\electronvolt} for lifetimes in the \SI{20}{\pico\s} to \SI{10}{\nano\s} range.
 
         \noindent \begin{figure}[htbp] \begin{center}
         \begin{subfigure}[htbp]{0.45\textwidth} \begin{center}
@@ -257,12 +257,11 @@ I'll write an abstract here.
         \fxnote{cite CONF-2017-017}
         \fxnote{nice disappearing track cartoon}
         \fxnote{nice cartoon feynman diagrams of signal processes}
-        \fxnote{Specify dataset}
         Certain models with nearly mass-degenerate LSP and NLSP have the potential to present a remarkable signal: charged particles that seem to disappear in the tracker. Specifically, models with winos as the lightest gauginos\fxnote{have these words been defined?}, such as many AMSB models\fxnote{why amsb? what is amsb?}, will have a chargino NLSP with an observable lifetime (\SI{0.2}{\nano\s} is a typical estimate\fxnote{why? how typical?}) that eventaully decays to the neutralino LSP and, commonly, a pion\fxnote{why?}. The nearly-degenerate masses have two important phenomenological roles: (1) increase the chargino lifetime, and (2) ensure low-momentum decay products. The low-momentum pion is then unlikely to be reconstructed, which results in a disappearing track.
 
         Both ATLAS and CMS looked for disappearing tracks during Run I, but the tracker improvements installed in ATLAS before 2015 datataking and CMS before 2017 datataking should increase sensitivity to decays at shorter radii \fxnote{I haven't mentioned previous iterations when talking about other analyses}. The ALTAS search presented here is sensitive to LLP lifetimes of approximately \SI{10}{\pico\s} to \SI{10}{\nano\s} \fxnote{make sure I'm talking about lifetime sensitivity in the same way across analyses}.
 
-        The authors consider two signal processes, both shown in Fig.\ref{disappearing_processes}: (1) electroweak gaugino production resulting in a disappearing track, an ISR jet, and MET and (2) gluino pair production resulting in a disappearing track, four jets, and MET\fxnote{add diagrams}. Process (1) could be the only gaugino production mode at the LHC if the gluino mass is kinematically unaccessable\fxnote{why?}, but process (2), which leads to chargino production in cascade decays, will be dominant if the gluino mass is within reach.
+        The authors consider two signal processes, both shown in Fig.\ref{disappearing_processes}: (1) electroweak gaugino production resulting in a disappearing track, an ISR jet, and MET and (2) gluino pair production resulting in a disappearing track, four jets, and MET. Process (1) could be the only gaugino production mode at the LHC if the gluino mass is kinematically unaccessable\fxnote{why?}, but process (2), which leads to chargino production in cascade decays, will be dominant if the gluino mass is within reach.
 
         \fxnote{ugh, this is too hard. just steal diagram from paper or make in jaxodraw. Maybe even use simulated event instead, but make sure I can draw these if asked?}  
         \noindent \begin{figure}[htbp] \begin{center}
@@ -301,7 +300,6 @@ I'll write an abstract here.
 
     \subsection{Stopped Particles}
         \fxnote{Add calorimeter search?}  
-        \fxnote{Specify dataset}
         \fxnote{cite CMS PAS EXO-17-004}
         \fxnote{mention how stopped particles complement HSCP search?}
         \fxnote{too redundant with overview?}
@@ -336,7 +334,6 @@ I'll write an abstract here.
 
     \subsection{Heavy Stable Charged Particles}
         \fxnote{cite CMS EXO-15-010}
-        \fxnote{Specify dataset}
         \fxnote{nice dE/dx plot (fig 1)}
         Particles that live for more than a couple ns\fxnote{how do I typeset standalone units?} \fxnote{Check this and be more exact} will appear stable in CMS and ATLAS because they can traverse the entire detector before decaying. If such a particle is also sufficiently massive, it can be catigorized as a heavy stable charged particle (HSCP). HSCPs are characterterized by a greater rate of energy loss via ionization due to the lower speed with which they pass through detector material\fxnote{redundant w/ overview. Probably better explained here than there}. Additionally, HSCPs can be fractionally, singly, or multiply charged, which also affects their rate of energy loss, as shown in Fig.~\ref{hscp_dedx}.
 
@@ -346,7 +343,7 @@ I'll write an abstract here.
         \label{hscp_dedx}
         \end{center} \end{figure}
 
-        HSCPs will often be misidentified or missed entirely by standard reconstruction algorithms and analysis criteria, which tend to assume $\beta \approx \num{1}$ and $\lvert q \rvert = e$. Inverting these assumptions provides two handles for a dedicated HSCP search in the context of three benchmark models\fxnote{do I need figures for these?}: (1) HSCPs that form R-hadrons that either change the sign of their electric charge or become neutral before reaching the MS, (2) lepton-like HSCPs (quasi-stable sleptons) that are produced either through decays of squarks or gluinos or directly if squarks and gluinos are kinematically inaccessible, and (3) long-lived leptonlike fermions with arbitrary electric charge\fxnote{insert feynman diagrams}. This discussion will focus on the first two models, as they bear more directly on naturalness and SUSY\fxnote{why?}.
+        HSCPs will often be misidentified or missed entirely by standard reconstruction algorithms and analysis criteria, which tend to assume $\beta \approx \num{1}$ and $\lvert q \rvert = e$. Inverting these assumptions provides two handles for a dedicated HSCP search in the context of three benchmark models\fxnote{do I need figures for these?}: (1) HSCPs that form R-hadrons that either change the sign of their electric charge or become neutral before reaching the MS, (2) lepton-like HSCPs (quasi-stable sleptons) that are produced either through decays of squarks or gluinos or directly if squarks and gluinos are kinematically inaccessible, and (3) long-lived leptonlike fermions with arbitrary electric charge. This discussion will focus on the first two models, as they bear more directly on naturalness and SUSY\fxnote{why?}.
 
         \fxnote{I could talk about how low-beta tracks will show up as zig-zags in DTs b/c reconstruction assumes $\beta \approx \num{1}$. Zig-zag offset is used to estimate beta. Not sure where to fit it in.} \fxnote{Worth mentioning tracker-only vs tracker+TOF?}
 
@@ -381,7 +378,6 @@ I'll write an abstract here.
 
     Fig.~\ref{atlas_susy_searches} summarizes limits on SUSY models from ATLAS searches. CMS limits are generally similar\fxnote{make sure this is true}, but a recent plot was not available.   
 
-    \fxnote{legible when printed?}  
     \noindent \begin{figure}[htbp] \begin{center}
     \includegraphics[width=0.8\textwidth]{images/atlas_susy_summary}
     \caption{Summary of current experimental limits on SUSY models from ATLAS searches.\fxnote{cite something}}
