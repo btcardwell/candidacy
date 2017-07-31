@@ -1,6 +1,6 @@
 \documentclass[12pt]{article}
 
-\usepackage[draft]{graphicx}
+\usepackage[final]{graphicx}
 \usepackage[final]{fixme}
 \fxsetup{layout=footnote}
 \usepackage[left]{lineno}
@@ -118,7 +118,51 @@ I'll write an abstract here.
 \section{Long-Lived Particles}
     The SUSY variants most relevant to this discussion are those that are motivated by naturalness and \fxnote{and/or?} produce a signal that could be missed by common SUSY search techniques. Specifically, we are interested in SUSY models that predict new long-lived particles (LLPs), which are defined as particles whose lifetimes are such that they decay at least a detectable distance from the nominal interaction point. This category includes everything from particles that decay at \fxnote{give ballparky number ($\approx$100um?)} to particles that propagate through the entire detector. 
 
-    In the SM and in BSM theories, LLPs result from any of the following conditions: (1) a symmetry that guarantees stability, (2) weak couplings to decay products, (3) highly-virtual intermediate states, or (4) limited phase space in which to decay. In the SM, charge and baryon number conservation guarantee the absolute stability of the electron and proton as the the lightest particles carrying their respective conserved quantities. Neutrons and muons, on the other hand, are long-lived for reasons (2), (3), and (4). Both are pure weak decays, which gives them a smaller coupling constant, but they also decay through a W-boson, which is far more massive than either parent particle, and most importantly, the proton and electron masses leave them little phase space in which to decay. \fxnote{Mention neutrino, pion, kaon, some other bound state I might be forgetting?}\fxnote{Add diagrams?}  
+    In the SM and in BSM theories, LLPs result from any of the following conditions: (1) a symmetry that guarantees stability, (2) weak couplings to decay products, (3) highly-virtual intermediate states, or (4) limited phase space in which to decay. In the SM, charge and baryon number conservation guarantee the absolute stability of the electron and proton as the the lightest particles carrying their respective conserved quantities. Neutrons and muons, whose decays are shown in Fig.\ref{sm_llp_processes}, are long-lived for reasons (2), (3), and (4). Both are pure weak decays, which gives them a smaller coupling constant, but they also decay through a W-boson, which is far more massive than either parent particle, and most importantly, the proton and electron masses leave them little phase space in which to decay. \fxnote{Mention neutrino, pion, kaon, some other bound state I might be forgetting?}\fxnote{Add diagrams?}  
+
+        \noindent \begin{figure}[htbp] \begin{center}
+            \begin{tikzpicture}
+            \begin{feynman}
+                \vertex (n1a) {\(d\)};
+                \vertex[right=2cm of n1a] (n1b);
+                \vertex[right=2cm of n1b] (p1) {\(u\)};
+
+                \vertex[below=0.3cm of n1a] (n2) {\(u\)};
+                \vertex[below=0.3cm of n2] (n3) {\(d\)};
+
+                \vertex[below=0.3cm of p1] (p2) {\(u\)};
+                \vertex[below=0.3cm of p2]  (p3) {\(d\)};
+
+                \vertex[above=of n1b] (w);
+
+                \vertex[above=of p1] (ln) {\(\nu_l\)}; 
+                \vertex[above=of ln] (lc) {\(l^{-}\)}; 
+
+                \diagram* {
+                    (n1a) -- [fermion] (n1b) -- [fermion] (p1),
+                    (n2) -- [fermion] (p2),
+                    (n3) -- [fermion] (p3),
+                    (n1b) -- [boson, edge label=\(\W^{-}\)] (w),
+                    (w) -- [fermion] (lc),
+                    (ln) -- [fermion] (w),
+                };
+                \draw [decoration={brace}, decorate] (n3.south west) -- (n1a.north west)
+                node [pos=0.5, left] {\(n\)};
+                \draw [decoration={brace}, decorate] (p1.north east) -- (p3.south east)
+                node [pos=0.5, right] {\(p\)};
+            \end{feynman}
+            \end{tikzpicture}
+            \qquad\qquad
+            \feynmandiagram [layered layout, horizontal=a to b] {
+                a [particle=\(\mu\)] -- [fermion] b,
+                b -- [fermion] d [particle=\(\nu_{\mu}\)],
+                b -- [boson, edge label=\(\W^{-}\)] c,
+                c -- [fermion] e [particle=\(e\)],
+                c -- [anti fermion] f [particle=\(\nu_{e}\)],
+            };
+            \caption{Neutron and muon decays.}
+            \label{sm_llp_process}
+        \end{center} \end{figure}
 
     In SUSY models, LLPs arise for the same basic reasons, and different SUSY models produce LLPs in different ways. The most straightforward SUSY LLP occurs in models with conserved R-partity, a proposed symmetry that prevents proton decay\fxnote{Be prepared to show this. Maybe add some diagrams illustrating proton decay w/o R-parity}. In models with R-parity, the SM particles are assigned R-parity +1 and their superpartners are assigned R-parity -1. Conserving the product of R-parity at each vertex has two immediate phenomenalogical consequences: (1) sparticles can only be produced in pairs and (2) the lightest supersymmetric particle (LSP) is absolutely stable. A neutral LSP could show up in collider searches as missing energy ($\MET$), making $\MET$ a key signature in many conventional SUSY searches.
 
@@ -195,12 +239,11 @@ I'll write an abstract here.
 \section{LHC Searches for Long-lived Particles}
         \fxnote{mention which data was used for each search} 
     \subsection{Overview}
-        \fxnote{steal jamie's cartoon?}  
         LLPs leave distinct signatures that differentiate them from SM backgrounds but also add complexity to LLP analyses. CMS and ATLAS were mainly designed to reconstruct stable particles from prompt decays, so LLP searches are often forced\fxnote{the searchers are forced, not the searches} to stray from the traditional analysis path in terms of object reconstruction\fxnote{really reconstruction? Maybe object definition?} and background estimation. This report focuses on four complementary LLP signatures: displaced vertices, disappearing tracks, low-velocity particles, and particles that come to a stop before decaying. See Fig.~\ref{jamie_cartoon} for a cartoon of several possible LLP signatures\fxnote{probably a better way to word this sentence}.
 
         \noindent \begin{figure}[htbp] \begin{center}
         \includegraphics[width=0.7\textwidth]{images/jamie_cartoon}
-            \caption{Diagram of several LLP spectra}
+            \caption{Diagram of several LLP topologies.\fxnote{cite Jamie or twiki}}
         \label{jamie_cartoon}
         \end{center} \end{figure}
 
@@ -255,8 +298,6 @@ I'll write an abstract here.
 
     \subsection{Disappearing Tracks}
         \fxnote{cite CONF-2017-017}
-        \fxnote{nice disappearing track cartoon}
-        \fxnote{nice cartoon feynman diagrams of signal processes}
         Certain models with nearly mass-degenerate LSP and NLSP have the potential to present a remarkable signal: charged particles that seem to disappear in the tracker. Specifically, models with winos as the lightest gauginos\fxnote{have these words been defined?}, such as many AMSB models\fxnote{why amsb? what is amsb?}, will have a chargino NLSP with an observable lifetime (\SI{0.2}{\nano\s} is a typical estimate\fxnote{why? how typical?}) that eventaully decays to the neutralino LSP and, commonly, a pion\fxnote{why?}. The nearly-degenerate masses have two important phenomenological roles: (1) increase the chargino lifetime, and (2) ensure low-momentum decay products. The low-momentum pion is then unlikely to be reconstructed, which results in a disappearing track.
 
         Both ATLAS and CMS looked for disappearing tracks during Run I, but the tracker improvements installed in ATLAS before 2015 datataking and CMS before 2017 datataking should increase sensitivity to decays at shorter radii \fxnote{I haven't mentioned previous iterations when talking about other analyses}. The ALTAS search presented here is sensitive to LLP lifetimes of approximately \SI{10}{\pico\s} to \SI{10}{\nano\s} \fxnote{make sure I'm talking about lifetime sensitivity in the same way across analyses}.
@@ -265,15 +306,23 @@ I'll write an abstract here.
 
         \fxnote{ugh, this is too hard. just steal diagram from paper or make in jaxodraw. Maybe even use simulated event instead, but make sure I can draw these if asked?}  
         \noindent \begin{figure}[htbp] \begin{center}
-        \feynmandiagram [layered layout] {
-            i1 -- [plain] a [blob],
-            i2 -- [plain] a,
-            a -- [plain, boson] b [blob],
-            a -- [plain] f1,
-            a -- [plain, boson] f2,
-            b -- [plain, boson] f3,
-            b -- [scalar] f4,
-        };
+        \begin{subfigure}[htbp]{0.3\textwidth} \begin{center}
+        \includegraphics[width=\textwidth]{images/disappearing_ew_process}
+        \end{center} \end{subfigure}
+        \qquad
+        \begin{subfigure}[htbp]{0.3\textwidth} \begin{center}
+        \includegraphics[width=\textwidth]{images/disappearing_qcd_process}
+        \end{center} \end{subfigure}
+        \fxnote{Can't get it to work in tikz-feynman. Just take from paper for now.} 
+        %\feynmandiagram [layered layout] {
+        %    i1 -- [plain] a [blob],
+        %    i2 -- [plain] a,
+        %    a -- [plain, boson] b [blob],
+        %    a -- [plain] f1,
+        %    a -- [plain, boson] f2,
+        %    b -- [plain, boson] f3,
+        %    b -- [scalar] f4,
+        %};
         \caption{Processes.}
         \label{disappearing_processes}
         \end{center} \end{figure}
@@ -289,10 +338,10 @@ I'll write an abstract here.
         \includegraphics[width=\textwidth]{images/disappearing_ew_limit}
         \end{center} \end{subfigure}
         \begin{subfigure}[htbp]{0.3\textwidth} \begin{center}
-        \includegraphics[width=\textwidth]{images/disappearing_strong_200ps_limit}
+        \includegraphics[width=\textwidth]{images/disappearing_qcd_200ps_limit}
         \end{center} \end{subfigure}
         \begin{subfigure}[htbp]{0.3\textwidth} \begin{center}
-        \includegraphics[width=\textwidth]{images/disappearing_strong_1ns_limit}
+        \includegraphics[width=\textwidth]{images/disappearing_qcd_1ns_limit}
         \end{center} \end{subfigure}
         \caption{Limits.}
         \label{disappearing_limits}
