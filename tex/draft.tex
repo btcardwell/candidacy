@@ -40,10 +40,10 @@ I'll write an abstract here.
     
     All SM particles transform according to the gauged symmetry group\fxnote{be good at describing the meaning of `gauged symmetry group'} $\SUthreecSUtwoLUoneY$, where $\SUthreec$ is associated with color charge, $\SUtwoL$ is associated with weak isospin, and $\UoneY$ is associated with weak hypercharge. The gauge bosons are associated with the generators of these groups, thus there are eight gluons associated with $\SUthreec$, three W bosons associated with $\SUtwoL$, and one B boson associated with $\UoneY$. The physical gauge bosons, which are linear combinations of the Ws and B, are the $\Wp$, $\Wm$, $\Z$, and photon ($\gamma$). The fermions are catagorized by which representation of each group they fit into\fxnote{make sure I'm good at explaining this}. For example, $\SUthreec$ distinguishes the quarks (which live in the fundamental representation) from the leptons (which are singlets), and $\SUtwoL$ distinguishes the left-handed fermions (doublets) from the right-handed fermions (singlets). Finally, weak hypercharge further distignuishes SM particles according to the Gell-Mann--Nishijima formula, $Y=Q-I_3$, where Q is electric charge and $I_3$ is the third component of weak isospin.
 
-    Experimentally, the $\Wpm$, $\Z$, quarks, and charged leptons are massive\fxnote{Gloss over neutrino mass?}. Explicit mass terms for the fermions or gauge bosons would violate the chiral and gauge symmetries of the SM Lagrangian, however, so $\SUtwoLUoneY$ must be broken. Specifically, the nonzero vacuum expectation value (VEV) of the Higgs field spontaneously breaks $\SUtwoLUoneY$ to $\UoneQ$. In the process, three of the four degrees of freedom associated with the complex Higgs doublet become the longitudinal polarizations of $\Wpm$ and $\Z$, giving them mass. The remaining degree of freedom is the physical Higgs boson. Expanding the Higgs field about its VEV produces Yukawa interactions such as those in Eq.~\ref{yukawa_terms}. These terms are interpreted as giving mass to the quarks and charged leptons mass, where the mass of each particle is given by the product of the Higgs VEV, $v$, and the coupling constant, $Y$.
+    Experimentally, the $\Wpm$, $\Z$, quarks, and charged leptons are massive\fxnote{Gloss over neutrino mass?}. Explicit mass terms for the fermions or gauge bosons would violate the chiral and gauge symmetries of the SM Lagrangian, however, so $\SUtwoLUoneY$ must be broken. Specifically, the nonzero vacuum expectation value (VEV) of the Higgs field spontaneously breaks $\SUtwoLUoneY$ to $\UoneQ$. In the process, three of the four degrees of freedom associated with the complex Higgs doublet become the longitudinal polarizations of $\Wpm$ and $\Z$, giving them mass. The remaining degree of freedom is the physical Higgs boson. Expanding the Higgs field about its VEV produces Yukawa interactions such as those in Eq.~\ref{yukawa_terms}. These terms are interpreted as giving mass to the quarks and charged leptons mass, where the mass of each particle is given by the product of the Higgs VEV, $v$, and the coupling constant, $y$.
 
     \noindent \begin{equation}
-        \mathcal{L} = -\frac{Yv}{\sqrt{2}}\bar{\psi}\psi 
+        \mathcal{L} = -\frac{yv}{\sqrt{2}}\bar{\psi}\psi 
         \label{yukawa_terms}
     \end{equation}
 
@@ -73,7 +73,7 @@ I'll write an abstract here.
     \fxnote{cite guidice naturally and t'hooft naturalness}
     \fxnote{Never mentioned dimensional analysis}
 
-    The naturalness criterion can be formulated in many ways, a few of which are reproduced here: (1) All dimensionless parameters should be of order one, (2) An effective theory should not be sensitive to small variations in the parameters of the higher-energy theory, and (3) any dimensionless parameter much smaller than unity must be protected by a custodial symmetry. Physicists implicitly, and perhaps unwittingly, apply naturalness in the form of (1) any time they use dimensional analysis to estimate a quantity, while (2) merely restates the idea that a predictive effective theory requires low-energy phenomena to be decoupled from the details of the high-energy theory\fxnote{This is my weakest point because I don't understand it as well as I'd like to. It's also wordy and maybe repetative}. This discussion focuses on statement (3), which is in some ways a more nuanced version of (1) that explains cases where dimensional analysis fails.
+    The naturalness criterion can be formulated in many ways, a few of which are reproduced here: (1) All dimensionless parameters should be of order one, (2) An effective theory should not be sensitive to small variations in the parameters of the higher-energy theory, and (3) any dimensionless parameter much smaller than unity must be protected by a custodial symmetry. Physicists implicitly, and perhaps unwittingly, apply naturalness in the form of (1) any time they use dimensional analysis to estimate a quantity, while (2) merely restates\fxnote{verb-subject agreement} the idea that a predictive effective theory requires low-energy phenomena to be decoupled from the details of the high-energy theory\fxnote{This is my weakest point because I don't understand it as well as I'd like to. It's also wordy and maybe repetative}. This discussion focuses on statement (3), which is in some ways a more nuanced version of (1) that explains cases where dimensional analysis fails.
 
     All massive particles correct the Higgs mass with terms proportional to $\Lambda^2$. Experimentally, the Higgs mass is \SI{125}{\giga\electronvolt}\fxnote{cite CMS, ATLAS}, a value that must be achieved by the sum of the bare mass and all corrections. Although corrections differ in sign, the precise cancellation of many extremely large terms to produce a value as small as the Higgs mass is extremely unlikely. In fact, the fine-tuning necessary to produce the Higgs mass is on the order of one part in \num{e30} if the SM is valid up to the Plank scale ($\mPlanck\approx$ \SI{e16}{\giga\electronvolt}), where quantum gravity becomes important. While it's possible that the bare mass and corrections just so happen to almost perfectly cancel, such miraculous fine tuning could also be a hint that some deeper physical mechanism is at work. That is, either some previously unknown symmetry is protecting the Higgs mass or the cutoff scale is order(TeV).
     
@@ -87,6 +87,7 @@ I'll write an abstract here.
 
     When calculating contributions from loop diagrams, one finds that fermion loops differ in sign from boson loops, which means that in SUSY every bosonic correction to the Higgs mass is cancelled by a fermionic correction and vice versa. In fact, exact supersymmetry predicts that the bare Higgs mass is uncorrected to all orders in perturbation theory, as shown in Fig.~\ref{exact_susy_correction} below.
     
+    \fxnote{Fix diagram} 
     \noindent \begin{figure}[htbp] \begin{center}
         \feynmandiagram [inline=(d.base), layered layout, medium, horizontal=b to c] {
         a -- [scalar] b,
@@ -95,21 +96,24 @@ I'll write an abstract here.
         c -- [scalar] d,
     };
     \quad + \quad
-    \feynmandiagram [baseline={(current bounding box.center)}, layered layout, medium, horizontal=b to c] {
-        a -- [scalar] b,
-        b -- [charged scalar, half left] c,
-        c -- [charged scalar, half left] b,
-        c -- [scalar] d,
-    };
+        \begin{tikzpicture}
+            \begin{feynman}
+                \diagram [baseline={(current bounding box.center)}, horizontal=a to c] {
+                    a -- [scalar] b,
+                    b -- [scalar] c,
+            };
+                \draw (b) arc [charged scalar, start angle=270, end angle=90, radius=0.7cm];
+            \end{feynman}
+        \end{tikzpicture}
     \quad = \quad 0 \quad
-    \caption{Caption!\fxnote{cite something}}
+    \caption{Broken!\fxnote{cite something}}
     \label{exact_susy_correction}
     \end{center} \end{figure}
 
     Exact SUSY also requires that sparticles have the same mass as their SM counterparts, so the lack of sparticles in collider searches implies that SUSY must be broken. With broken susy, the same diagram as above produces a correction of the form\fxnote{cite feng}  
 
     \noindent \begin{equation}
-        \delta \mHiggs^2 = \frac{3Y^2}{8\pi^2}\left(m_{\sfermion}^2 - m_{\f}^2 \right)\ln(\Lambda^2/m_{\sfermion}^2).
+        \delta \mHiggs^2 = \frac{3y_t^2}{8\pi^2}\left(m_{\sfermion}^2 - m_{\f}^2 \right)\ln(\Lambda^2/m_{\sfermion}^2).
     \label{higgs_susy_correction}
     \end{equation}
     
@@ -301,7 +305,7 @@ I'll write an abstract here.
 
     \subsection{Disappearing Tracks}
         \fxnote{cite CONF-2017-017}
-        Certain models with nearly mass-degenerate LSP and NLSP have the potential to present a remarkable signal: charged particles that seem to disappear in the tracker. Specifically, models with winos as the lightest gauginos\fxnote{have these words been defined?}, such as many AMSB models\fxnote{why amsb? what is amsb?}, will have a chargino NLSP with an observable lifetime (\SI{0.2}{\nano\s} is a typical estimate\fxnote{why? how typical?}) that eventaully decays to the neutralino LSP and, commonly, a pion\fxnote{why?}. The nearly-degenerate masses have two important phenomenological roles: (1) increase the chargino lifetime, and (2) ensure low-momentum decay products. The low-momentum pion is then unlikely to be reconstructed, which results in a disappearing track.
+        Certain models with nearly mass-degenerate LSP and NLSP have the potential to present a remarkable signal: charged particles that seem to disappear in the tracker. Specifically, models with winos as the lightest gauginos\fxnote{have these words been defined?}, such as many AMSB models\fxnote{why amsb? what is amsb?}, will have a chargino NLSP with an observable lifetime (\SI{0.2}{\nano\s} is a typical estimate\fxnote{why? how typical?}) that eventaully decays to the neutralino LSP and, commonly, a pion\fxnote{why?}. The nearly-degenerate masses have two important phenomenological roles: (1) increase the chargino lifetime, and (2) ensure low-momentum decay products. The low-momentum pion is then unlikely to be reconstructed, which results in a disappearing track~\cite{atlas_disappearing}.
 
         Both ATLAS and CMS looked for disappearing tracks during Run I, but the tracker improvements installed in ATLAS before 2015 datataking and CMS before 2017 datataking should increase sensitivity to decays at shorter radii \fxnote{I haven't mentioned previous iterations when talking about other analyses}. The ALTAS search presented here is sensitive to LLP lifetimes of approximately \SI{10}{\pico\s} to \SI{10}{\nano\s} \fxnote{make sure I'm talking about lifetime sensitivity in the same way across analyses}.
 
@@ -419,16 +423,39 @@ I'll write an abstract here.
 
 \section{Experimental Viability of Natural SUSY}
     \fxnote{Andrew says: This should really be your most important section. You should try to bring together the results of the searches you talked about (and of other long-lived particle searches and even of more general SUSY searches) and explain what they mean for a possible natural explanation of EWSB. At what point can we claim that there is no natural solution, or at least that there is no natural solution in terms of SUSY? Essentially, nobody cares about what you talked about in Section 6; what's important is that you can give these results a meaningful context in the bigger picture of a natural explanation of EWSB.} 
-      
-    Interpreting current limits in the context of naturalness requires some set of criteria that determine if a model is natural. No well-defined, universally-agreed-upon criteria exist, but certain themes recur in many discussions of natural model building\fxnote{better be able to confidently cite several sources}. The following discussion lays out a simplistic set of criteria for natural SUSY models and attempts to assess the status of naturalness in light of current experimental limits\fxnote{Did I just steal Chris's langauge?}.
+    
+    Interpreting current limits in the context of naturalness requires some set of criteria that determine if a model is natural. No well-defined, universally-agreed-upon criteria exist, but certain themes recur in many discussions of natural model building\fxnote{better be able to confidently cite several sources}. The following discussion lays out a simplistic set of criteria for natural SUSY models and attempts to assess the status of natural SUSY in light of current experimental limits\fxnote{Did I just steal Chris's langauge?}.
     
     When building a natural SUSY model, certain constraints are nearly unavoidable\fxnote{Dangerous. What if Linda knows how to avoid them?}. Specifically, the Higgsino\fxnote{careful, there could be multiple Higgsinos. Do I mean 'lightest Higgsino'?}, which corrects $m_H$ at tree level; the stop\fxnote{mention that stop is more important than other sfermions b/c large yukawa coupling? I'll have to clarify that somewhere}, which corrects $m_H$ at one loop; and the gluino, which corrects mStop at one loop and therefore $m_H$ at two, must all be light enough to avoid excessive fine tuning.\fxnote{Need diagrams and correction terms for sure} Furthermore, the stop and gluino masses are correlated --- a large difference between the two would itself be unnatural.
 
-    Natural SUSY scenarios, then, are most likely to be constrained by limits on the stop, gluino, and Higgsino masses. The Higgsino, however, does not carry color charge and is far less likely\fxnote{be able to quantify} to be produced at the LHC, leaving stop and gluino mass limits as the most important contraints on natural SUSY models. As shown in \fxnote{reference correction terms}, the size of stop and gluino corrections also depends on the messenger scale of SUSY breaking.\fxnote{Make sure I understand this. Messenger scale != breaking scale?}\fxnote{Either explain more thoroughly or drop completely. What are the consequences of a lower messenger scale?}  
+    \fxnote{cite cornering} 
+    \fxnote{make sure these are logically and notationally consistent w/ earlier higgs corrections} 
+    \noindent \begin{equation}
+        \delta \mHiggs^2 = \mu^2
+        \label{higgsino_correction}
+    \end{equation}
+    \noindent \begin{equation}
+        \delta \mHiggs^2 \approx - \frac{3}{8\pi^2} y_t^2 m_{\tilde{t}}^2 \ln{\left(\frac{\Lambda}{Q}\right)}
+        \label{stop_correction}
+    \end{equation}
+    \noindent \begin{equation}
+        \delta \mHiggs^2 \approx - \frac{g_3^2 y_t^2}{4\pi^4} M_3^2 \ln{\left(\frac{\Lambda}{Q}\right)}^2
+        \label{gluino_correction}
+    \end{equation}
 
-    Two qualitative decisions must be made when analyzing the state of naturalness: (1) How best to define the degree of fine tuning in a particular model and (2) what degree of fine tuning is acceptable? A common, but not universal, definition for (1) is \fxnote{insert Delta eq.}, where $\alpha_i$ is a particular parameter and $\Delta_i$ is the degree of fine tuning from variations in that parameter. The overall degree of fine tuning for the model can then be assigned as $\max{\left(\Delta_i\right)}$, the product of $\Delta_i$, or all $\Delta_i$ added in quadrature. Determining the acceptable degree of fine tuning is even more open ended. Before null results and serious constraints started rolling in, it was common\fxnote{cite something} to refer to the $\Delta \lesssim 10$ regions of parameter space as natural. As models are constrained, physicists seem willing to accept greater degrees of fine tuning. Instead of asking, ``what degree of fine tuning should be considered natural?", Feng\fxnote{cite} proposes physicists ask themselves, ``If SUSY were discovered with such-and-such degree of fine tuning, would I consider the naturalness problem solved and move on to different research questions?" Anecdotally, Feng reports that acceptable levels of fine tuning tend to increase when the question is posed in this way.\fxnote{break into two paragraphs?}  
+    Natural SUSY scenarios, then, are most likely to be constrained by limits on the stop, gluino, and Higgsino masses. The Higgsino, however, does not carry color charge and is far less likely\fxnote{be able to quantify} to be produced at the LHC, leaving stop and gluino mass limits as the most important contraints on natural SUSY models. As shown in Eqs.~\ref{stop_correction} and~\ref{gluino_correction}, the size of stop and gluino corrections also depends on $\Lambda$, the messenger scale of SUSY breaking.\fxnote{Make sure I understand this. Messenger scale != breaking scale?}\fxnote{Either explain more thoroughly or drop completely. What are the consequences of a lower messenger scale?}  
 
-    Fig.~\ref{atlas_susy_searches} summarizes limits on SUSY models from ATLAS searches. CMS limits are generally similar\fxnote{make sure this is true}, but a recent plot was not available.   
+    Two qualitative decisions must be made when analyzing the state of naturalness: (1) How best to define the degree of fine tuning in a particular model and (2) what degree of fine tuning is acceptable? A common, but not universal, definition for (1) is
+    
+    \fxnote{cite cornering} 
+    \noindent \begin{equation}
+        \Delta_i = \frac{\partial \ln{\mHiggs^2}}{\partial \ln{\alpha_i}} \quad ,
+        \label{fine_tuning}
+    \end{equation}
+
+    \noindent where $\alpha_i$ is a particular parameter and $\Delta_i$ is the degree of fine tuning from variations in that parameter. The overall degree of fine tuning for the model can then be assigned as $\max{\left(\Delta_i\right)}$. Determining the acceptable degree of fine tuning is even more open ended. Before null results and serious constraints started rolling in, it was common\fxnote{cite something} to refer to the $\Delta \lesssim 10$ regions of parameter space as natural. As models are constrained, physicists seem willing to accept greater degrees of fine tuning. Instead of asking, ``what degree of fine tuning should be considered natural?", Feng\fxnote{cite} proposes physicists ask themselves, ``If SUSY were discovered with such-and-such degree of fine tuning, would I consider the naturalness problem solved and move on to different research questions?" Anecdotally, Feng reports that acceptable levels of fine tuning tend to increase when the question is posed in this way.\fxnote{break into two paragraphs?}  
+
+    So, how is natural SUSY fairing? Fig.~\ref{atlas_susy_searches} summarizes limits on many SUSY models and topologies from ATLAS searches. CMS limits are generally similar\fxnote{make sure this is true}, but a recent plot was not available.\fxnote{give general summary}  
 
     \noindent \begin{figure}[htbp] \begin{center}
     \includegraphics[width=0.8\textwidth]{images/atlas_susy_summary}
@@ -436,12 +463,12 @@ I'll write an abstract here.
     \label{atlas_susy_summary}
     \end{center} \end{figure}
 
-    Indeed, limits on mStop and mGluino from conventional SUSY searches wipe out much of the natural parameter space from prompt decays\fxnote{quantify? That would require getting into how one quantifies fine tuning} for many models with decoupled first and second geration fermions, baryonic RPV, or compressed spectra that minimize missing energy while the natural MSSM is completely excluded.\fxnote{Good spot for sweet Cornering plots}\fxnote{Use ATLAS SUSY summary plot too. CMS's isn't updated}  
+    It's often helpful to look at limits in the context of simplified models. Fig.~\ref{cornering_limits} does just this for the cases of Effective SUSY, RPV SUSY, Hidden Valley SUSY, and a model that combines RPV with Effective SUSY. 
 
     \fxnote{How do LLPs open doors to naturalness and which of those doors have we already closed?} 
     Opening to the possibility of long-lived sparticles increases the parameter space in which natural SUSY could be hiding. LLP analyses such as the ones described in \fxnote{Section whatever}   
 
-    Despite strong contraints, SUSY remains one of the least-tuned options for BSM naturalness\fxnote{Make sure I can explain this and make sure it isn't plagarized from Cornering}.\fxnote{Good place for Feng ``how much tuning is acceptable? discussion}    
+    Despite strong contraints, SUSY remains one of the least-tuned options for BSM naturalness\fxnote{Make sure I can explain this and make sure it isn't plagarized from Cornering}.
 
 \section{Conclusion and Important Searches for 2017}
 
@@ -450,7 +477,7 @@ I'll write an abstract here.
 \clearpage
 \pagebreak
 \singlespacing
-\bibliography{candidacy}{}
-\bibliographystyle{auto}
+\bibliography{draft}{}
+\bibliographystyle{unsrt}
 
 \end{document}
