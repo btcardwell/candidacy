@@ -1,6 +1,6 @@
 \documentclass[12pt]{article}
 
-\usepackage[draft]{graphicx}
+\usepackage[final]{graphicx}
 \usepackage[final]{fixme}
 \fxsetup{layout=footnote}
 \usepackage[left]{lineno}
@@ -34,6 +34,10 @@ I'll write an abstract here.
 \doublespacing
 %\linenumbers
 \pagenumbering{arabic}
+
+% Things to check
+\fxnote{When should symbols be italicized and when should they be mathrm'd?} 
+\fxnote{fine-tuning or fine tuning?} 
 
 \section{The Standard Model} \label{SM}
     The standard model of particle physics (SM) describes all known particles and their non-gravitational interactions and is experimentally verified to astonishing \fxnote{weak word} accuracy. The SM consists of \num{12} spin-$\frac{1}{2}$ particles, the fermions, that make up all observed matter; \num{12} spin-1 particles, the gauge bosons, that communicate the electromagnetic, weak, and strong forces; and one fundamental scalar, the Higgs boson, which will be described in detail below.
@@ -198,7 +202,7 @@ I'll write an abstract here.
         The pixel tracker, which was upgraded in winter 2016/17, makes up the innermost layer and features approximately \num{124} million silicon pixels, each of which covers an active area of \num{100} by \SI{150}{\micro\meter^2}. The pixels are spread between four barrel layers (BPix) at $\num{2.9}<\mathrm{r}<\SI{16}{cm}$ and 3 endcap disks (FPix) at $\num{29} < \mathrm{z} < \SI{52}{cm}$. The upgraded pixel tracker, shown in Fig.~\ref{pixel_old_new}, should provide 4-hit tracking out to $\eta < \num{2.4}$ and improved b-tagging over the original pixel tracker despite the increased pileup expected in 2017~\cite{cms_pixel_upgrade}.
 
         \noindent \begin{figure}[htbp] \begin{center}
-            \includegraphics[width=0.5\textwidth]{images/pixel_old_new}
+            \includegraphics[width=0.4\textwidth]{images/pixel_old_new}
             \caption{Diagram showing barrel pixel layers before and after the winter 2016/17 upgrade.\fxnote{cite website found through Andrew's citations}}
             \label{pixel_old_new}
         \end{center} \end{figure}
@@ -285,7 +289,7 @@ I'll write an abstract here.
 
         \noindent \begin{figure}[htbp] \begin{center}
         \includegraphics[width=0.6\textwidth]{images/material_map}
-            \caption{Map of material dense regions of the ATLAS detector.\fxnote{explain more}~\cite{atals_displaced}}
+            \caption{Map of material dense regions of the ATLAS detector.\fxnote{explain more}~\cite{atlas_displaced}}
         \label{material_map}
         \end{center} \end{figure}
 
@@ -312,11 +316,11 @@ I'll write an abstract here.
 
         \fxnote{ugh, this is too hard. just steal diagram from paper or make in jaxodraw. Maybe even use simulated event instead, but make sure I can draw these if asked?}  
         \noindent \begin{figure}[htbp] \begin{center}
-        \begin{subfigure}[htbp]{0.3\textwidth} \begin{center}
+        \begin{subfigure}[htbp]{0.2\textwidth} \begin{center}
         \includegraphics[width=\textwidth]{images/disappearing_ew_process}
         \end{center} \end{subfigure}
         \qquad
-        \begin{subfigure}[htbp]{0.3\textwidth} \begin{center}
+        \begin{subfigure}[htbp]{0.2\textwidth} \begin{center}
         \includegraphics[width=\textwidth]{images/disappearing_qcd_process}
         \end{center} \end{subfigure}
         \fxnote{Can't get it to work in tikz-feynman. Just take from paper for now.} 
@@ -355,10 +359,8 @@ I'll write an abstract here.
 
     \subsection{Stopped Particles}
         \fxnote{Add calorimeter search?}  
-        \fxnote{cite CMS PAS EXO-17-004}
-        \fxnote{mention how stopped particles complement HSCP search?}
         \fxnote{too redundant with overview?}
-        With long enough lifetimes and sufficient mass, LLPs could come to rest in the detector before decaying. The eventual decay would then lead to energy deposits in the calorimeters or hits in the muon system that could be out of time with proton bunch crossings. A recent CMS analysis looked for such a signal in dimuon final states using the full 2015 and 2016 datasets. 
+        With long enough lifetimes and sufficient mass, LLPs could come to rest in the detector before decaying. The eventual decay would then lead to energy deposits in the calorimeters or hits in the muon system that could be out of time with proton bunch crossings. A recent CMS analysis looked for such a signal in dimuon final states using the full 2015 and 2016 datasets~\cite{cms_stopped}. 
 
         This analysis is interpreted in the context of two potential LLPs: gluinos and multiply charged massive particles (mchamps). Long-lived gluinos can appear in models such as Split SUSY, where the squarks and sleptons are quite heavy, but the gluino is relatively light. After being pair produced, gluinos form R-hadrons\fxnote{have these been defined?} and eventually decay to quark-antiquark pairs along with NLSP neutralinos, which then decay to LSP neutralinos along with muon-antimuon pairs. This process is exactly the same as in Fig.~\ref{displaced_process}, but in this case the gluino has enough time to form R-hadrons\fxnote{double check}. The gluino decay is supressed by the large squark mass, which leads to its appreciable lifetime.
 
@@ -367,7 +369,7 @@ I'll write an abstract here.
         \fxnote{check if tof, beta, or bx is better} 
         \noindent \begin{figure}[htbp] \begin{center}
         \includegraphics[width=\textwidth]{images/stopped_reject_cosmic_tof}
-        \caption{Cosmic muon rejection with MS.\fxnote{cite analysis}}
+            \caption{Cosmic muon rejection using time-of-flight information from the muon system.~\cite{cms_stopped}}
         \label{stopped_muon_differentiation}
         \end{center} \end{figure}
 
@@ -383,18 +385,17 @@ I'll write an abstract here.
         \begin{subfigure}[htbp]{0.45\textwidth} \begin{center}
         \includegraphics[width=\textwidth]{images/stopped_limit_gluino_mass}
         \end{center} \end{subfigure}
-        \caption{Limits.\fxnote{cite analysis}}
+            \caption{Upper limits on production cross section as a function of gluino lifetime (left) and mass (right)~\cite{cms_stopped}}
         \label{stopped_limits}
         \end{center} \end{figure}
 
     \subsection{Heavy Stable Charged Particles}
-        \fxnote{cite CMS EXO-15-010}
         \fxnote{nice dE/dx plot (fig 1)}
-        Particles that live for more than a couple ns\fxnote{how do I typeset standalone units?} \fxnote{Check this and be more exact} will appear stable in CMS and ATLAS because they can traverse the entire detector before decaying. If such a particle is also sufficiently massive, it can be catigorized as a heavy stable charged particle (HSCP). HSCPs are characterterized by a greater rate of energy loss via ionization due to the lower speed with which they pass through detector material\fxnote{redundant w/ overview. Probably better explained here than there}. Additionally, HSCPs can be fractionally, singly, or multiply charged, which also affects their rate of energy loss, as shown in Fig.~\ref{hscp_dedx}.
+        Particles that live for more than a couple \SI{}{ns}\fxnote{Check this and be more exact} will appear stable in CMS and ATLAS because they can traverse the entire detector before decaying. If such a particle is also sufficiently massive, it can be catigorized as a heavy stable charged particle (HSCP). HSCPs are characterterized by a greater rate of energy loss via ionization due to the lower speed with which they pass through detector material\fxnote{redundant w/ overview. Probably better explained here than there}. Additionally, HSCPs can be fractionally, singly, or multiply charged, which also affects their rate of energy loss, as shown in Fig.~\ref{hscp_dedx}~\cite{cms_hscp}.
 
         \noindent \begin{figure}[htbp] \begin{center}
         \includegraphics[width=0.5\textwidth]{images/hscp_dedx}
-            \caption{Ionization energy loss.\fxnote{cite analysis}}
+            \caption{Ionization energy loss as a function of momentum for paticles of varying mass and charge~\cite{cms_hscp}}
         \label{hscp_dedx}
         \end{center} \end{figure}
 
@@ -416,18 +417,16 @@ I'll write an abstract here.
         \begin{subfigure}[htbp]{0.45\textwidth} \begin{center}
         \includegraphics[width=\textwidth]{images/hscp_limit_tracker_tof}
         \end{center} \end{subfigure}
-        \caption{Limits.\fxnote{cite analysis}}
+        \caption{Production cross section limits on several particles as a function of mass for the tracker-only and tracker+TOF analyses~\cite{cms_hscp}}
         \label{hscp_limits}
         \end{center} \end{figure}
 
 \section{Experimental Viability of Natural SUSY}
-    \fxnote{Andrew says: This should really be your most important section. You should try to bring together the results of the searches you talked about (and of other long-lived particle searches and even of more general SUSY searches) and explain what they mean for a possible natural explanation of EWSB. At what point can we claim that there is no natural solution, or at least that there is no natural solution in terms of SUSY? Essentially, nobody cares about what you talked about in Section 6; what's important is that you can give these results a meaningful context in the bigger picture of a natural explanation of EWSB.} 
+    Interpreting current limits in the context of naturalness requires some set of criteria that determine if a model is natural. No well-defined, universally-agreed-upon criteria exist, but certain themes recur in many discussions of natural model building~\cite{craig, vestiges, evans_toward_full, feng, cornering, kim}. The following discussion lays out a simplistic set of criteria for natural SUSY models and attempts to assess the status of natural SUSY in light of current experimental limits\fxnote{Did I just steal Chris's langauge?}.
     
-    Interpreting current limits in the context of naturalness requires some set of criteria that determine if a model is natural. No well-defined, universally-agreed-upon criteria exist, but certain themes recur in many discussions of natural model building\fxnote{better be able to confidently cite several sources}. The following discussion lays out a simplistic set of criteria for natural SUSY models and attempts to assess the status of natural SUSY in light of current experimental limits\fxnote{Did I just steal Chris's langauge?}.
-    
-    When building a natural SUSY model, certain constraints are nearly unavoidable\fxnote{Dangerous. What if Linda knows how to avoid them?}. Specifically, the Higgsino\fxnote{careful, there could be multiple Higgsinos. Do I mean 'lightest Higgsino'?}, which corrects $m_H$ at tree level; the stop\fxnote{mention that stop is more important than other sfermions b/c large yukawa coupling? I'll have to clarify that somewhere}, which corrects $m_H$ at one loop; and the gluino, which corrects mStop at one loop and therefore $m_H$ at two, must all be light enough to avoid excessive fine tuning.\fxnote{Need diagrams and correction terms for sure} Furthermore, the stop and gluino masses are correlated --- a large difference between the two would itself be unnatural.
+    \fxnote{I should be able to combine or reorganize the next two paragraphs to flow better} 
+    The parameters of interest are the Higgsino\fxnote{careful - do I mean lightest higgsino?}, stop, and gluino masses, which correct the Higgs mass at tree-level, one-loop, and two-loops, respectively (see Eqs.~\ref{higgsino_correction}-~\ref{gluino_correction}). Furthermore, the stop and gluino masses are correlated --- a large difference between the two would itself be unnatural~\cite{cornering}.
 
-    \fxnote{cite cornering} 
     \fxnote{define \mu, Q?} 
     \fxnote{make sure these are logically and notationally consistent w/ earlier higgs corrections} 
     \noindent \begin{equation}
@@ -447,49 +446,53 @@ I'll write an abstract here.
 
     Two qualitative decisions must be made when analyzing the state of naturalness: (1) How best to define the degree of fine tuning in a particular model and (2) what degree of fine tuning is acceptable? A common, but not universal, way to quantify fine tuning is
     
-    \fxnote{cite cornering} 
     \noindent \begin{equation}
         \Delta_i = \frac{\partial \ln{\mHiggs^2}}{\partial \ln{\alpha_i}} \quad ,
         \label{fine_tuning}
     \end{equation}
 
-    \noindent where $\alpha_i$ is a particular model parameter and $\Delta_i$ is the degree of fine tuning from variations in that parameter. The overall degree of fine tuning for the model can then be assigned as $\max{\left(\Delta_i\right)}$.
+    \noindent where $\alpha_i$ is a particular model parameter and $\Delta_i$ is the degree of fine tuning assoicated with that parameter. The overall degree of fine tuning for the model can then be assigned as $\max{\left(\Delta_i\right)}$~\cite{cornering}.
 
-    Determining the acceptable degree of fine tuning is even more open ended. Before null results and serious constraints started rolling in, it was common\fxnote{cite something} to refer to the $\Delta \lesssim 10$ regions of parameter space as natural. As models are constrained, physicists seem willing to accept greater degrees of fine tuning. Instead of asking, ``what degree of fine tuning should be considered natural?", Feng proposes physicists ask themselves, ``If SUSY were discovered with such-and-such degree of fine tuning, would I consider the naturalness problem solved and move on to different research questions?" Anecdotally, Feng reports that acceptable levels of fine tuning tend to increase when the question is posed in this way~\cite{feng}.
+    Determining the acceptable degree of fine tuning is even more open ended. Before null results and serious constraints started rolling in, it was common\fxnote{feng} to refer to the $\Delta \lesssim 10$ regions of parameter space as natural, but as models are constrained, physicists seem willing to accept greater degrees of fine tuning. Feng proposes an interesting way to recast this problem: instead of asking which regions of parameter space are most natural, physicists should instead ask themselves, ``If superpartners were discovered, what level of fine fine-tuning would be sufficient to convince me that the gauge hierarchy problem is solved by sypersymmetry and I should move on to researhing other problems?"\fxnote{paraphrase for brevity?} Anecdotally, acceptable levels of fine tuning tend to increase when the question is posed in this way~\cite{feng}.
 
-    So, how is natural SUSY fairing? Fig.~\ref{atlas_susy_summary} summarizes limits on many SUSY models and topologies from ATLAS searches. CMS limits are generally similar\fxnote{make sure this is true}, but a recent plot was not available.\fxnote{give general summary}  
+    Exact upper limits on natural sparticle masses are therefore hard to come by. A reasonable and somewhat typical set of values is given in~\cite{drees_kim}: $m_{\tilde{H}} \lesssim \SI{500}{\giga\electronvolt}$, $m_{\tilde{t}} \lesssim \SI{1.5}{\tera\electronvolt}$, and $m_{\tilde{g}} \lesssim \SI{3}{\tera\electronvolt}$. Fig.~\ref{atlas_susy_summary} summarizes current SUSY limits from ATLAS searches (CMS limits are generally similar, but a recent plot was not available). Upon inspection, one sees that experimental limits are starting to push on naturalness bounds in many scenarios.
 
+    \fxnote{what do I cite?}  
     \noindent \begin{figure}[htbp] \begin{center}
     \includegraphics[width=0.8\textwidth]{images/atlas_susy_summary}
-    \caption{Summary of current experimental limits on SUSY models from ATLAS searches.\fxnote{cite something}}
+    \caption{Summary of current experimental limits on SUSY models from ATLAS searches.}
     \label{atlas_susy_summary}
     \end{center} \end{figure}
 
-    Each of the limits in Fig.~\ref{atlas_susy_summary} comes with a particular set of assumptions, making it difficult to draw general conclusions. Some authors try to solve this problem by recasting analyses in terms of a few general models that illustrate much of the natural SUSY landscape. Fig.~\ref{cornering_limits} does just this with several searches using $\approx \SI{15}{\femto\barn^{-1}}$ of \SI{13}{\tera\electronvolt} data for the cases of Effective SUSY, RPV SUSY, Hidden Valley SUSY, and a model that combines RPV with Effective SUSY. The authors find that for $\mu \leq \SI{100}{\giga\electronvolt}$ and $\Lambda = \SI{20}{\tera\electronvolt}$, a small region of $\Delta < 10$ parameter space remains viable in all cases.\fxnote{mention that HL-LHC should rule everything out?}  
-
+    Each of the limits in Fig.~\ref{atlas_susy_summary} comes with a particular set of assumptions, making it difficult to draw general conclusions. Some authors try to solve this problem by recasting analyses in terms of a few general models that illustrate much of the natural SUSY landscape. Fig.~\ref{cornering_limits} shows the results from one such attempt using $\approx \SI{15}{\femto\barn^{-1}}$ of \SI{13}{\tera\electronvolt} data for the cases of Effective SUSY, RPV SUSY, Hidden Valley SUSY, and a model that combines RPV with Effective SUSY. The authors find that for $\mu \leq \SI{100}{\giga\electronvolt}$ and $\Lambda = \SI{20}{\tera\electronvolt}$, a small region of $\Delta < 10$ parameter space remains viable in all cases but project that all considered $\Delta < 10$ parameter space will be excluded within the next few years\fxnote{check}.
+    
         \noindent \begin{figure}[htbp] \begin{center}
-        \begin{subfigure}[htbp]{0.4\textwidth} \begin{center}
+        \begin{subfigure}[htbp]{0.3\textwidth} \begin{center}
         \includegraphics[width=\textwidth]{images/cornering_effective_100}
         \end{center} \end{subfigure}
-        \begin{subfigure}[htbp]{0.4\textwidth} \begin{center}
+        \begin{subfigure}[htbp]{0.3\textwidth} \begin{center}
         \includegraphics[width=\textwidth]{images/cornering_rpv_100}
         \end{center} \end{subfigure}
-        \begin{subfigure}[htbp]{0.4\textwidth} \begin{center}
+        \begin{subfigure}[htbp]{0.3\textwidth} \begin{center}
         \includegraphics[width=\textwidth]{images/cornering_hv_100}
         \end{center} \end{subfigure}
-        \begin{subfigure}[htbp]{0.4\textwidth} \begin{center}
+        \begin{subfigure}[htbp]{0.3\textwidth} \begin{center}
         \includegraphics[width=\textwidth]{images/cornering_rpv_effective_100}
         \end{center} \end{subfigure}
-        \caption{Limits.\fxnote{cite cornering}}
+        \caption{Limits.~\cite{cornering}}
         \label{cornering_limits}
         \end{center} \end{figure}
 
-    As viable parameter space for natural SUSY continues to shrink, it is important to identify and fill in the gaps left by conventional analyses. LLP searches such as those in Sec.~\ref{analyses} do just that by opening up sensitivity to lifetimes that would otherwise be missed. Fig.~\ref{fate_limits} shows stop mass limits from several Run I LLP searches that have been recast using a simple RPV model\fxnote{cite fate}. By combining results from several analyses, the authors constrain the stop mass for a broad and continuous range of lifetimes. LLP searches are slowly excluding the natural parameter space  
+    As viable parameter space for natural SUSY continues to shrink, it is important to identify and fill in the gaps left by conventional analyses. LLP searches such as those in Sec.~\ref{analyses} do just that by opening up sensitivity to lifetimes that would otherwise be missed. Fig.~\ref{fate_limits}, for example, shows stop mass limits from several Run I LLP searches that have been recast using a simple RPV model~\cite{fate}. By combining results from several analyses, the authors constrain the stop mass for a broad and continuous range of lifetimes that would have been invisible to conventional searches. 
 
-    Despite increasing contraints, SUSY remains one of the least-tuned options for natural BSM physics\fxnote{Make sure I can explain this and make sure it isn't plagarized from Cornering}.\fxnote{Add exotica summary plot to show how constrained everything else is?}  
+        \noindent \begin{figure}[htbp] \begin{center}
+        \includegraphics[width=\textwidth]{images/fate_limits}
+        \caption{Limits.~\cite{fate}}
+        \label{fate_limits}
+        \end{center} \end{figure}
 
-\fxnote{When should symbols be italicized and when should they be mathrm'd?} 
-\fxnote{fine-tuning or fine tuning?} 
+    CMS and ATLAS should be able to exclude or discover a wide range of natural SUSY models over the next several years~\cite{cornering}. In the absence of a discovery, physicists will have to look long and hard at the role of naturalness in the SM. In the meantime, however, SUSY remains one of the least-tuned options for natural BSM physics\fxnote{double check, then cite cornering, feng, nate, and/or giudice}\fxnote{Should I include exo summary plot to show how constrained compositeness and extra dimensions are?}. In the final years of the hunt for natrual SUSY, CMS and ATLAS will need to apply a combination of conventional and LLP searches in order to cover natural parameter space.
+\fxnote{need to answer, "which searches are important?} 
 
 \clearpage
 \pagebreak
