@@ -56,18 +56,18 @@ I'll write an abstract here.
 
     \noindent \begin{figure}[htbp] \begin{center}
         \feynmandiagram [layered layout, horizontal=b to c] {
-            a -- [scalar] b,
-            b -- [fermion, half left] c,
+            a [particle=\(H\)] -- [scalar] b,
+            b -- [fermion, half left, edge label=\(f\)] c,
             c -- [fermion, half left] b,
-            c -- [scalar] d,
+            c -- [scalar] d [particle=\(H\)],
         };
         \qquad
         \feynmandiagram [layered layout, horizontal=b to c] {
-            a -- [fermion] b,
+            a [particle=\(f\)] -- [fermion] b,
             b -- [fermion] c,
-            b -- [photon, half left] c,
+            b -- [photon, half left, edge label=\(\gamma\)] c,
             c -- [opacity=0.0, half left] b,
-            c -- [fermion] d,
+            c -- [fermion] d [particle=\(f\)],
         };
         \caption{Higgs mass (left) corrected by fermion loop and fermion mass (right) corrected by photon loop. Diagram created with~\cite{tikz}}
         \label{loop_diagrams}
@@ -93,24 +93,20 @@ I'll write an abstract here.
     \fxnote{Add particle labels} 
     \noindent \begin{figure}[htbp] \begin{center}
         \feynmandiagram [inline=(d.base), layered layout, medium, horizontal=b to c] {
-        a -- [scalar] b,
-        b -- [fermion, half left] c,
-        c -- [fermion, half left] b,
-        c -- [scalar] d,
+            a [particle=\(H\)] -- [scalar] b,
+            b -- [fermion, half left, edge label=\(t\)] c,
+            c -- [fermion, half left] b,
+            c -- [scalar] d [particle=\(H\)],
     };
     \quad + \quad
-        \begin{tikzpicture}
-            \begin{feynman}
-                \diagram [baseline={(current bounding box.center)}, horizontal=a to c] {
-                    a -- [scalar] b,
-                    b -- [scalar] c,
-            };
-                \draw (b) arc [charged scalar, start angle=270, end angle=90, radius=0.7cm];
-            \end{feynman}
-        \end{tikzpicture}
-    \quad = \quad 0 \quad
-        \caption{Broken! Corrections to the Higgs mass from the top (left) and stop (right) cancel in exact SUSY. Diagram created with~\cite{tikz}}
-    \label{exact_susy_correction}
+        \feynmandiagram [inline=(d.base), horizontal=a to b, layered layout, medium] {
+            a [particle=\(H\)] -- [scalar] b [dot] 
+            -- [out=135, in=45, loop, min distance=2.5cm, charged scalar, edge label=\(\tilde{t}\)] b 
+            -- [scalar] c [particle=\(H\)],
+        };
+        \quad = \quad 0 \quad
+        \caption{Corrections to the Higgs mass from the top (left) and stop (right) cancel in exact SUSY. Diagram created with~\cite{tikz}}
+        \label{exact_susy_correction}
     \end{center} \end{figure}
 
     Exact SUSY also requires that sparticles have the same mass as their SM counterparts, so the uniformly null results in collider searches imply SUSY must be broken. With broken SUSY, the sum of diagrams in Fig.~\ref{exact_susy_correction} produces a correction of the form~\cite{feng}
@@ -263,11 +259,11 @@ I'll write an abstract here.
         \fxnote{Add particle labels} 
         \noindent \begin{figure}[htbp] \begin{center}
         \feynmandiagram [layered layout, horizontal=a to b] {
-            a -- [plain, gluon] b,
-            b -- [anti charged scalar] c,
-            b -- [fermion] d,
-            c -- [anti fermion] e,
-            c -- [plain, boson] f,
+            a [particle=\(\tilde{g}\)] -- [plain, gluon] b,
+            b -- [anti charged scalar, edge label=\(\tilde{q}\)] c,
+            b -- [fermion] d [particle=\(q\)],
+            c -- [anti fermion] e [particle=\(q\)],
+            c -- [plain, boson] f [particle=\(\tilde{\chi}_1^0\)],
         };
         \caption{Long-lived gluino decay through highly virtual squark. Diagram created with~\cite{tikz}}
         \label{displaced_process}
@@ -381,7 +377,7 @@ I'll write an abstract here.
         \end{center} \end{figure}
 
     \subsection{Heavy Stable Charged Particles}
-        Particles that live for more than a couple \SI{}{nano\s}\fxnote{Check this and be more exact} will appear stable in CMS and ATLAS because they can traverse the entire detector before decaying. If such a particle is also sufficiently massive, it can be categorized as a heavy stable charged particle (HSCP). HSCPs are characterized by a greater rate of energy loss via ionization due to the lower speed with which they pass through detector material\fxnote{redundant w/ overview. Probably better explained here than there}. Additionally, HSCPs can be fractionally, singly, or multiply charged, which also affects their rate of energy loss, as shown in Fig.~\ref{hscp_dedx}~\cite{cms_hscp}.
+        Particles that live for more than a couple \SI{}{\nano\s}\fxnote{Check this and be more exact} will appear stable in CMS and ATLAS because they can traverse the entire detector before decaying. If such a particle is also sufficiently massive, it can be categorized as a heavy stable charged particle (HSCP). HSCPs are characterized by a greater rate of energy loss via ionization due to the lower speed with which they pass through detector material\fxnote{redundant w/ overview. Probably better explained here than there}. Additionally, HSCPs can be fractionally, singly, or multiply charged, which also affects their rate of energy loss, as shown in Fig.~\ref{hscp_dedx}~\cite{cms_hscp}.
 
         \noindent \begin{figure}[htbp] \begin{center}
         \includegraphics[width=0.4\textwidth]{images/hscp_dedx}
@@ -393,7 +389,7 @@ I'll write an abstract here.
 
         \fxnote{I could talk about how low-beta tracks will show up as zig-zags in DTs b/c reconstruction assumes $\beta \approx \num{1}$. Zig-zag offset is used to estimate beta. Not sure where to fit it in.} \fxnote{Worth mentioning tracker-only vs tracker+TOF?}
 
-        The trigger requires all events to have either a high-$\pT$ muon or large $\MET$. The high-$\pT$ muon trigger is more efficient for all benchmark models except the case where the R-hadron becomes neutral before reaching the MS. In the case where the R-hadron does not leave a track in the MS, the large MET trigger should recover some events.\fxnote{Clunky wording}  
+        The trigger requires all events to have either a high-$\pT$ muon or large $\MET$. The high-$\pT$ muon trigger is more efficient for all benchmark models except the when the R-hadron becomes neutral before reaching the MS. In that case, the large MET trigger should recover some events.
 
         The authors estimate the signal-region background using an ABCD method in which events are binned in a 2-D plane with uncorrelated axes and the ratio of events in two control regions is used to extrapolate into the signal region from a third control region \fxnote{Do I need to explain this? I glossed over the fact that they used both an ABCD and an ABCDEFGHI}. Systematic uncertainties are introduced in background estimation, signal acceptance, and integrated luminosity.
 
@@ -445,7 +441,7 @@ I'll write an abstract here.
 
     Determining the acceptable degree of fine tuning is even more subjective. Before null results and serious constraints started rolling in, it was common to refer to the $\Delta \lesssim 10$ regions of parameter space as natural, but as models are constrained, physicists seem willing to accept greater degrees of fine tuning. Feng proposes an interesting way to recast this problem: instead of asking which regions of parameter space are most natural, physicists should instead ask themselves, ``If superpartners were discovered, what level of fine tuning would be sufficient to convince me that the gauge hierarchy problem is solved by supersymmetry and I should move on to researching other problems?"\fxnote{paraphrase for brevity?} Anecdotally, fine tuning thresholds tend to increase when the question is posed in this way~\cite{feng}.
 
-    Exact upper limits on natural sparticle masses are therefore hard to come by. A somewhat typical set of values is given in~\cite{drees_kim}: $m_{\tilde{H}} \lesssim \SI{500}{\giga\electronvolt}$, $m_{\tilde{t}} \lesssim \SI{1.5}{\tera\electronvolt}$, and $m_{\tilde{g}} \lesssim \SI{3}{\tera\electronvolt}$. Fig.~\ref{atlas_susy_summary} summarizes current SUSY limits from ATLAS searches (CMS limits are generally similar, but a recent plot is not available). Upon inspection, one sees that experimental limits are starting to push on naturalness bounds in many scenarios.
+    Exact upper limits on natural sparticle masses are therefore hard to come by. A somewhat typical set of values is given in~\cite{drees_kim}: $m_{\tilde{H}} \lesssim \SI{500}{\giga\electronvolt}$, $m_{\tilde{t}} \lesssim \SI{1.5}{\tera\electronvolt}$, and $m_{\tilde{g}} \lesssim \SI{3}{\tera\electronvolt}$. Fig.~\ref{atlas_susy_summary} summarizes current SUSY limits from ATLAS searches. Upon inspection, one sees that experimental limits are starting to push on naturalness bounds in many scenarios.
 
     \fxnote{what do I cite?}  
     \noindent \begin{figure}[htbp] \begin{center}
@@ -480,7 +476,7 @@ I'll write an abstract here.
 
     Many LLP searches are motivated by and interpreted within specific models that predict unique signatures. Approaching analyses is this way often results in nearly background-free searches with good signal acceptance for the model in question, but it can be difficult to draw general conclusions or assess the complementarity (or redundancy) of different searches~\cite{fate}. As the number of LLP searches grows, it will be important to design searches around simplified models that enable researchers to combine and compare results to draw general conclusions.~\cite{evans_talk}.
 
-    Combining results from several searches can also elucidate new directions for important searches. By recasting several LLP searches similar to those described in Sec.~\ref{analyses}, Evans and Shelter looked at the current viability of several SUSY spectra that predict long-lived staus. They identified significant gaps in coverage for models with displaced taus or same-sign displaced leptons, signals that appear in several well-motivated models such as GMSB, where staus are commonly the NLSP, and RPV, where certain couplings lead to same-flavor leptons~\cite{ll_staus}. 
+    Combining results from several searches can also elucidate new directions for important searches. By recasting several LLP searches similar to those described in Sec.~\ref{analyses}, Evans and Shelten looked at the current viability of several SUSY spectra that predict long-lived staus. They identified significant gaps in coverage for models with displaced taus or same-sign displaced leptons, signals that appear in several well-motivated models such as GMSB, where staus are commonly the NLSP, and RPV, where certain couplings lead to same-flavor leptons~\cite{ll_staus}. 
 
     The uniqueness of LLP signatures and idiosyncrasy of LLP analyses leads to a broad and diverse set of analyses that will surely grow as viable natural parameter space shrinks and more imaginations are turned to filling in the gaps. Fully covering natural SUSY parameter space will take a dedicated effort from the LLP community, both to maximize the reach of individual searches and to design complementary analyses that can be used to draw general conclusions. Although natural SUSY is under pressure from conventional and long-lived null results, it remains one of the least-tuned options for natural BSM physics\fxnote{double check, then cite cornering, feng, nate, and/or giudice}. The next several years will be decisive~\cite{cornering}, and physicists will have to be clever to probe every corner of natural parameter space.
 
