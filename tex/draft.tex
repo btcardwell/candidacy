@@ -51,7 +51,7 @@ I'll write an abstract here.
         \label{yukawa_terms}
     \end{equation}
 
-    SM parameters, such as masses and couplings, are corrected by interactions with virtual particles through loop diagrams. Fig.~\ref{loop_diagrams}, for example, shows interactions that correct the Higgs and electron masses. Because the Higgs is a fundamental scalar, its corrections depend quadratically on the cutoff scale, $\Lambda$, which is the largest energy scale for which the SM is valid. The fermions and gauge bosons, on the other hand, only depend logarithmically\fxnote{check. be able to work out example} on $\Lambda$~\cite{dine_naturalness}. The next section explores the concept of naturalness, a major motivating principle for beyond the standard model (BSM) physics that is directly tied to the relationship between the bare Higgs mass and the terms that correct it.
+    SM parameters, such as masses and couplings, are corrected by interactions with virtual particles through loop diagrams. Fig.~\ref{loop_diagrams}, for example, shows interactions that correct the Higgs and electron masses. Because the Higgs is a fundamental scalar, its corrections depend quadratically on the cutoff scale, $\Lambda$, which is the largest energy scale for which the SM is valid. The fermions and gauge bosons, on the other hand, only depend logarithmically\fxnote{be able to work out example} on $\Lambda$~\cite{dine_naturalness}. The next section explores the concept of naturalness, a major motivating principle for beyond the standard model (BSM) physics that is directly tied to the relationship between the bare Higgs mass and the terms that correct it.
 
 
     \noindent \begin{figure}[htbp] \begin{center}
@@ -76,7 +76,7 @@ I'll write an abstract here.
 \section{Naturalness and the Higgs mass}
     The naturalness criterion can be formulated in many ways, a few of which are reproduced here: (1) All dimensionless parameters should be of order one, (2) An effective theory should not be sensitive to small variations in the parameters of the higher-energy theory, and (3) any dimensionless parameter much smaller than unity must be protected by a custodial symmetry~\cite{giudice_naturally, thooft_naturalness}. Physicists implicitly, and perhaps unwittingly, apply naturalness in the form of (1) any time they use dimensional analysis to estimate a quantity, while (2) merely restates the idea that a predictive effective theory requires low-energy phenomena to be decoupled from the details of the high-energy theory. \fxnote{wordy and maybe repetative}. This discussion focuses on statement (3), which is in some ways a more nuanced version of (1) that also explains cases where dimensional analysis fails.
 
-    All massive particles correct the Higgs mass with terms proportional to $\Lambda^2$~\cite{dine_naturalness}\fxnote{show diagrams and terms?}. Experimentally, the Higgs mass is \SI{125}{\giga\electronvolt}~\cite{cms_higgs, atlas_higgs}, a value that must be achieved by the sum of the bare mass and all corrections. Although corrections differ in sign, the precise cancellation of many extremely large terms to produce a value as small as the Higgs mass is extremely unlikely. In fact, the fine-tuning necessary to produce the Higgs mass is on the order of one part in \num{e30} if the SM is valid up to the Plank scale ($\mPlanck\approx$ \SI{e16}{\giga\electronvolt}), where quantum gravity becomes important~\cite{giudice_naturally}. While it's possible that the bare mass and corrections just so happen to almost perfectly cancel, such miraculous fine tuning could also be a hint that some deeper physical mechanism is at work. That is, either some previously unknown symmetry is protecting the Higgs mass or the cutoff scale is $\mathcal{O}\left(\SI{}{\tera\electronvolt}\right)$\fxnote{explain better and cite something}.
+    All massive particles correct the Higgs mass with terms proportional to $\Lambda^2$~\cite{dine_naturalness}\fxnote{show diagrams and terms?}. Experimentally, the Higgs mass is \SI{125}{\giga\electronvolt}~\cite{cms_higgs, atlas_higgs}, a value that must be achieved by the sum of the bare mass and all corrections. Although corrections differ in sign, the precise cancellation of many extremely large terms to produce a value as small as the Higgs mass is extremely unlikely. In fact, the fine-tuning necessary to produce the Higgs mass is on the order of one part in \num{e30} if the SM is valid up to the Plank scale ($\mPlanck\approx$ \SI{e16}{\giga\electronvolt}), where quantum gravity becomes important~\cite{giudice_naturally}. While it's possible that the bare mass and corrections just so happen to almost perfectly cancel, such miraculous fine tuning could also be a hint that some deeper physical mechanism is at work.
     
     As a fundamental scalar, the Higgs is doubly cursed. As explained in section \ref{SM}, $\mHiggs$ is quadratically sensitive to $\Lambda$, but that's not all: the Higgs field also lacks the chiral and gauge symmetries enjoyed by the fermions and gauge bosons. These symmetries act as the custodial symmetries mentioned in naturalness statement (3) in that they protect the fermion and gauge boson masses from large corrections. Because the SM chiral and gauge symmetries only apply to the massless theory, the SM symmetry group would be enlarged if fermions and gauge bosons were massless. That is, if the fermions and gauge bosons were massless at tree level, the chiral and gauge symmetries would cause their masses to be uncorrected to all orders in perturbation theory. As massive particles, however, the chiral and gauge symmetries instead guarantee that any corrections to their tree-level masses are proportional to their tree-level masses, preventing any large fine tuning between correction terms~\cite{giudice_naturally}.\fxnote{wordy as hell}  
 
@@ -123,9 +123,9 @@ I'll write an abstract here.
     The mechanism and scale of SUSY breaking is an open question with many competing answers that achieve different theoretical goals and lead to different TeV-scale phenemena. A handful of models with particular approaches to SUSY breaking that are particularly prominant or particularly relevant to naturalness or long-lived particles are gauge-mediated susy breaking (GMSB), anomaly-mediated SUSY breaking (AMSB), Split SUSY, and R-parity violating SUSY (RPV). The details of these models will be explored as needed throughout this paper.
 
 \section{Long-Lived Particles}
-    The SUSY variants most relevant to this discussion are those that are motivated by naturalness and \fxnote{and/or?} produce a signal that could be missed by common SUSY search techniques. Specifically, we are interested in SUSY models that predict new long-lived particles (LLPs), which are defined as particles whose lifetimes are such that they decay at least a detectable distance from the nominal interaction point. This category includes everything from particles that decay at 100um to particles that propagate through the entire detector\fxnote{I made up 100um. Find real number and cite source}. 
+    The SUSY variants most relevant to this discussion are those that are motivated by naturalness and \fxnote{and/or?} produce a signal that could be missed by common SUSY search techniques. Specifically, we are interested in SUSY models that predict new long-lived particles (LLPs), which are defined as particles whose lifetimes are such that they decay at least a detectable distance from the nominal interaction point. This category includes everything from particles that decay before reaching the inner tracker to particles that propagate through the entire detector. 
 
-    In the SM and in BSM theories, LLPs result from any of the following conditions: (1) a symmetry that guarantees stability, (2) weak couplings to decay products, (3) highly-virtual intermediate states, or (4) limited phase space in which to decay\fxnote{find source to cite}. In the SM, charge and baryon number conservation guarantee the absolute stability of the electron and proton as the the lightest particles carrying their respective conserved quantities. Neutrons and muons, whose decays are shown in Fig.\ref{sm_llp_processes}, are long-lived for reasons (2), (3), and (4). Both are pure weak decays, which gives them a smaller coupling constant, but they also decay through a W-boson, which is far more massive than either parent particle, and most importantly, the proton and electron masses leave them little phase space in which to decay\fxnote{find something to cite}. \fxnote{Mention neutrino, pion, kaon, some other bound state I might be forgetting?}
+    In the SM and in BSM theories, LLPs result from any of the following conditions: (1) a symmetry that guarantees stability, (2) weak couplings to decay products, (3) highly-virtual intermediate states, or (4) limited phase space in which to decay. In the SM, charge and baryon number conservation guarantee the absolute stability of the electron and proton as the the lightest particles carrying their respective conserved quantities. Neutrons and muons, whose decays are shown in Fig.\ref{sm_llp_processes}, are long-lived for reasons (2), (3), and (4). Both are pure weak decays, which gives them a smaller coupling constant, but they also decay through a W-boson, which is far more massive than either parent particle, and most importantly, the proton and electron masses leave them little phase space in which to decay. \fxnote{Mention neutrino, pion, kaon, some other bound state I might be forgetting?}
 
         \noindent \begin{figure}[htbp] \begin{center}
             \begin{tikzpicture}
@@ -173,7 +173,7 @@ I'll write an abstract here.
 
     In SUSY models, LLPs arise for the same basic reasons, and different SUSY models produce LLPs in different ways. The most straightforward SUSY LLP occurs in models with conserved R-partity, a proposed symmetry that prevents proton decay\fxnote{Be prepared to show this. Maybe add some diagrams illustrating proton decay w/o R-parity}. In models with R-parity, the SM particles are assigned R-parity +1 and their superpartners are assigned R-parity -1. Conserving the product of R-parity at each vertex has two immediate phenomenalogical consequences: (1) sparticles can only be produced in pairs and (2) the lightest supersymmetric particle (LSP) is absolutely stable. A neutral LSP could show up in collider searches as missing energy ($\MET$), making $\MET$ a key signature in many conventional SUSY searches~\cite{primer}.
 
-    On the other hand, models with weakly coupled R-parity violating (RPV) terms produce long-lived but not perfectly stable LSPs\fxnote{find something to cite}. A similar situation arises in GMSB models\fxnote{should I describe GMSB?} where the gravitino is the LSP. The coupling between the next-to-LSP (NLSP) and gravitino is inversely proportional to the scale of SUSY breaking, which supresses the NSLP decay rate and can lead to LLPs~\cite{dimopoulos_low_energy}.
+    On the other hand, models with weakly coupled R-parity violating (RPV) terms produce long-lived but not perfectly stable LSPs~\cite{fate}. A similar situation arises in GMSB models\fxnote{should I describe GMSB?} where the gravitino is the LSP. The coupling between the next-to-LSP (NLSP) and gravitino is inversely proportional to the scale of SUSY breaking, which supresses the NSLP decay rate and can lead to LLPs~\cite{dimopoulos_low_energy}.
 
     \fxnote{diagram or eqs for R-parity / RPV?}
 
@@ -185,17 +185,15 @@ I'll write an abstract here.
     \subsection{Overview}
         \fxnote{define eta, coordinate system in general}
         \fxnote{Mention that ATLAS is similar, says Andrew}  
-        \fxnote{Maybe mention PDFs. Definitely know about them, says Andrew}  
-        The Compact Muon Solenoid (CMS) detector is designed to reconstruct a variety of particles from collisions at the Large Hadron Collider (LHC), which is a circular proton-proton collider that ran with center-of-mass energy \SI{7}{\tera\electronvolt} in 2010-11, \SI{8}{\tera\electronvolt} in 2012, and \SI{13}{\tera\electronvolt} from 2015 to the present\fxnote{say better}\fxnote{cite something?}. To meet this goal, CMS combines information from several subdetectors nested radially in and around a \SI{4}{\tesla} superconducting solenoid. All together, CMS is \SI{21.6}{\m} long, \SI{14.6}{\m} across, and weighs approximately \SI{12500}{t}. The subdetectors that make up CMS are shown in Fig.~\ref{cms} and described below~\cite{cms_experiment}.
+        The Compact Muon Solenoid (CMS) detector is designed to reconstruct a variety of particles from collisions at the Large Hadron Collider (LHC), which is a circular proton-proton collider that ran with center-of-mass energy \SI{7}{\tera\electronvolt} in 2010-11, \SI{8}{\tera\electronvolt} in 2012, and \SI{13}{\tera\electronvolt} from 2015 to the present\fxnote{say better}. To meet this goal, CMS combines information from several subdetectors nested radially in and around a \SI{4}{\tesla} superconducting solenoid. All together, CMS is \SI{21.6}{\m} long, \SI{14.6}{\m} across, and weighs approximately \SI{12500}{t}. The subdetectors that make up CMS are shown in Fig.~\ref{cms} and described below~\cite{cms_experiment}.
 
         \noindent \begin{figure}[htbp] \begin{center}
         \includegraphics[width=0.7\textwidth]{images/cms}
-            \caption{The CMS detector\fxnote{Cite that website from Andrew's paper}}
+        \caption{The CMS detector~\cite{cms_image}}
         \label{cms}
         \end{center} \end{figure}
 
     \subsection{Tracker}
-        \fxnote{cite CMS TDR, jinst 12 c02033}
         \fxnote{mention that analyses below used pre-upgrade tracker}
         In the region closest to the interaction point, CMS uses a fast, high-granularity silicon tracker to reconstruct tracks and pinpoint primary and secondary vertices. The tracker is subdivided into two regions. Inside \SI{20}{cm}, the pixel tracker  uses smaller\fxnote{than what?} silicon pixels to keep the occupancy near \SI{0.1}{\percent} despite the high\fxnote{specify} particle flux. Outside \SI{20}{\cm}, the silicon strip tracker (SST) achieves similar occupancy with larger silicon strips~\cite{cms_tdr}.\fxnote{check occupacy numbers}  
 
@@ -203,14 +201,13 @@ I'll write an abstract here.
 
         \noindent \begin{figure}[htbp] \begin{center}
             \includegraphics[width=0.4\textwidth]{images/pixel_old_new}
-            \caption{Diagram showing barrel pixel layers before and after the winter 2016/17 upgrade.\fxnote{cite website found through Andrew's citations}}
+            \caption{Diagram showing barrel pixel layers before and after the winter 2016/17 upgrade.~\cite{pixel_old_new}}
             \label{pixel_old_new}
         \end{center} \end{figure}
         
         Just outside the pixel tracker, the silicon strip tracker (SST) occupies the $\num{20} < r < \SI{116}{cm}$ and $\lvert z \rvert < \SI{282}{cm}$ region of CMS. Composed of \num{9.3} million silicon strips that vary from \_ to \_ in size \fxnote{look up} depending on particle flux in the region, the SST covers an active area of roughly \SI{196}{m^2}. At each trigger, the strip output voltage is read out via optical link~\cite{cms_pixel_upgrade}.
 
     \subsection{Electromagnetic Calorimeter}
-        \fxnote{cite CMS TDR}
         \fxnote{I define EE \& EB but never use those definitions}
         After traversing the inner tracker, particles next encounter the electromagnetic calorimeter (ECAL). As a homogeneous scintillation calorimeter, ECAL uses \num{61200} lead tunstate crystals in the barrel and \num{7324} in each endcap to reconstruct the energy deposited during electromagnetic showers. Lead tungstate crystals allow for a fast (\SI{80}{\percent} of light within \SI{25}{ns}), compact (radiation length = \SI{0.89}{cm}), fine-grained (Moli\`ere radius = \SI{2.2}{cm}), and radiation hard (up to 10 Mrad\fxnote{learn context for this number}) calorimeter. The main drawback is the relatively low light yield (\SI{30}{photon\per\mega\electronvolt}), which necesitates photodetectors with intrinsic gain that work in magnetic fields\cite{cms_experiment, cms_tdr}.
 
@@ -219,7 +216,6 @@ I'll write an abstract here.
         The crystals in each endcap section (EE) are arranged in an x-y grid that starts at $\lvert z \rvert = \SI{315}{cm}$ and covers a pseudorapidity range of \num{1.479} to \num{3.0}. Additionally, a preshower detector, which consists of two planes of silicon strip detectors and a lead absorber, sits just inside the grid of lead tungstate crystals. \fxnote{Say what the preshower is for? Is it for pi0 rejection? If so, how and why?}
 
     \subsection{Hadronic Calorimeter}
-        \fxnote{cite CMS TDR}
         \fxnote{define HB \& HF never to be used}
         The hadronic calorimeter (HCAL) uses \SI{3.7}{mm} plates of plastic scintillator interspersed within brass absorber to reconstruct the energy deposited during hadronic showers. Embedded wavelength-shifting fibers capture the scintillation light and transfer it to clear fibers to be read out by hybrid photodiodes\cite{cms_experiment, cms_tdr}.
 
@@ -228,11 +224,9 @@ I'll write an abstract here.
         Each endcap spans a pseudorapidity range of \num{1.3} to \num{3.0} with \num{14} towers in eta and \num{5} to \SI{10}{\degree} $\phi$ segmentation. Also, a steel and quartz fiber forward calorimeter (HF) sits \SI{11.2}{m} from the interaction pipe in a pseudorapidty range of \num{3.0} to \num{5.0}. In HF, particles produce Cherenkov light when traversing the quartz fibers that run parallel to the beamline. \fxnote{say why HF is useful or mention crazy flux?}
 
     \subsection{Solenoid}
-        \fxnote{cite cms experiment at the cern lhc}
         CMS employs a \SI{4}{T} superconducting solenoid to aid in the measurement of charged particle momenta. The solenoid consists of \num{2168} turns of Nb-Ti superconducting cable and has an inner diameter of \SI{6}{m} and a length of \SI{12.5}{m}. The flux returns through an iron yoke that also houses the muon system. The significant \fxnote{quantify?} bending power helps CMS meet its physics goals of unambiguous sign determination and momentum resolution of \SI{10}{\percent} for muons up to \SI{1}{\tera\electronvolt}\cite{cms_experiment}.
 
     \subsection{Muon System}
-        \fxnote{cite CMS TDR}
         \fxnote{Specifically mention CMS design specs to meet physics goals?}
         The muon system (MS), which is the outermost subdetector, detects muons with \num{3} varieties of gaseous ionization detectors: drift tubes (DTs) in the barrel, cathode strip chambers (CSCs) in the endcaps, and resistive plate chambers (RPCs) in both the barrel and endcaps. The choice of detector varies between barrel and endcap due to the difference in neutron-induced background\fxnote{what?} , muon rates, and magnetic field strength\fxnote{why does B matter?}. The RPCs are useful in the endcaps and barrel because their fast response and good time resolution allow unambiguous bunch crossing identification. Combining MS and tracker measurements improves the muon pT\fxnote{define} resolution at high momenta where the tracker $\pT$ resolution declines \fxnote{quantify or show std plot?}\cite{cms_experiment, cms_tdr}.
 
@@ -241,14 +235,13 @@ I'll write an abstract here.
         Each muon endcap detector (ME) is composed of \num{234} CSCs and four RPC stations \fxnote{figure out exactly what RPC station means and say that instead}. Each CSC has six gas gaps with radial cathode strips and nearly perpendicualar planes of anode wires. The wire signal from the ionization-induced electron avalanch is fast enough to use in the L1 trigger, while the slower \fxnote{quantify} cathode strip signal provides precise \fxnote{quantify} position measurements. All in all, the CSC spacial resolution is approximately \SI{200}{\micro\m} and the angular resolution is approximately \SI{10}{\milli\radian}.
 
     \subsection{Trigger}
-        \fxnote{cite CMS TDR, jinst 12 c03021}
         \fxnote{Is entire detector read out at L1?}
         The trigger reduces the data writing rate from the \SI{40}{\mega\hertz} collision rate to less than \SI{1}{\kilo\hertz} so that events can be written to tape. The rate reduction happens in two stages: Level-1 (L1) and High-Level Trigger (HLT). L1 uses input from ECAL, HCAL, and MS that represents physics objects ($\mathrm{e}$/$\gamma$, $\tau$, jets, $\mu$, and $\MET$) and uses custom electronics to reduce the rate to $\approx$100 kHz in 3.8 us. The HLT then uses a dedicated processor farm to further reduce the rate to the desired $<$ 1 kHz\cite{cms_experiment, cms_trigger_upgrade}.
 
 \section{LHC Searches for Long-lived Particles} \label {analyses}
     \fxnote{mention which data was used for each search} 
     \subsection{Overview}
-        LLPs leave distinct signatures that differentiate them from SM backgrounds but also add complexity to LLP analyses. CMS and ATLAS were mainly designed to reconstruct stable particles from prompt decays\fxnote{find something to cite}, so LLP searches are often forced\fxnote{the searchers are forced, not the searches} to stray from the traditional analysis path in terms of object reconstruction\fxnote{really reconstruction? Maybe object definition?} and background estimation. This report focuses on four complementary LLP signatures: displaced vertices, disappearing tracks, low-velocity particles, and particles that come to a stop before decaying. See Fig.~\ref{jamie_cartoon} for a cartoon of several possible LLP signatures\fxnote{probably a better way to word this sentence}.
+        LLPs leave distinct signatures that differentiate them from SM backgrounds but also add complexity to LLP analyses. CMS and ATLAS were mainly designed to reconstruct stable particles from prompt decays, so LLP searches are often forced\fxnote{the searchers are forced, not the searches} to stray from the traditional analysis path in terms of object reconstruction and background estimation. This report focuses on four complementary LLP signatures: displaced vertices, disappearing tracks, low-velocity particles, and particles that come to a stop before decaying. See Fig.~\ref{jamie_cartoon} for a cartoon of several possible LLP signatures\fxnote{probably a better way to word this sentence}.
 
         \noindent \begin{figure}[htbp] \begin{center}
         \includegraphics[width=0.7\textwidth]{images/jamie_cartoon}
@@ -263,10 +256,9 @@ I'll write an abstract here.
         These\fxnote{I've been saying `these' a lot recently} four approaches cover a wide\fxnote{how wide} range of LLP lifetimes that would be missed in traditional searches. The next section will look  at a recent example of each analysis type from either ATLAS or CMS.
 
     \subsection{Displaced Vertices}
-        \fxnote{cite CONF-2017-026}
         LLPs that decay before reaching the inner tracker can be identified with a displaced vertex (DV)\fxnote{DVs defined clearly enough in overview?}\fxnote{Is it still a DV if it decays in active material somewhere?}. ATLAS performs a search for such particles by looking for at least one DV along with large MET and large track multiplicity~\cite{atlas_displaced}.\fxnote{make sure I can explain why met and multiplicity} The search is sensitive to LLPs with lifetimes in the \SI{20}{\pico\s} to \SI{10}{\nano\s} range\fxnote{Am I defining sensitivity range consistently across analyses?}.
 
-        This search\fxnote{repetative wording} uses a simplified benchmark model in the Split SUSY paradigm where gluinos are kinematically accessible but squarks are not. The relevant process, shown in Fig.~\ref{displaced_process}, is pair-produced gluinos that decay to a quark-\fxnote{how to punctuate?}virtual squark pair. The virtual squark then decays to a quark and the LSP, presumed to be a neutralino\fxnote{have I defined neutralino?}\fxnote{why is this a reasonable assumption?} \fxnote{steal diagram from andrew's preapproval. I can't access it - ask andrew}. The large mass of the intermediate squark suppresses the gluino decay, giving the gluino enough time to form an R-hadron\fxnote{first use. Define here if not in LLP section} that propagates some measureable distance before decaying. 
+        This search\fxnote{repetative wording} uses a simplified benchmark model in the Split SUSY paradigm where gluinos are kinematically accessible but squarks are not. The relevant process, shown in Fig.~\ref{displaced_process}, is pair-produced gluinos that decay to a quark-\fxnote{how to punctuate?}virtual squark pair. The virtual squark then decays to a quark and the LSP, presumed to be a neutralino\fxnote{have I defined neutralino?}\fxnote{why is this a reasonable assumption?}. The large mass of the intermediate squark suppresses the gluino decay, giving the gluino enough time to form an R-hadron\fxnote{first use. Define here if not in LLP section} that propagates some measureable distance before decaying. 
 
         \fxnote{Add particle labels} 
         \noindent \begin{figure}[htbp] \begin{center}
@@ -302,12 +294,11 @@ I'll write an abstract here.
         \begin{subfigure}[htbp]{0.45\textwidth} \begin{center}
         \includegraphics[width=\textwidth]{images/displaced_mass_limit}
         \end{center} \end{subfigure}
-        \caption{Limit\fxnote{explain}.~\cite{atlas_displaced}}
+            \caption{Limits on the gluino pair-production cross section (left) and gluino mass as a function of lifetime (right)~\cite{atlas_displaced}.}
         \label{displaced_limit}
         \end{center} \end{figure}
 
     \subsection{Disappearing Tracks}
-        \fxnote{cite CONF-2017-017}
         Certain models with nearly mass-degenerate LSP and NLSP have the potential to present a remarkable signal: charged particles that seem to disappear in the tracker. Specifically, models with winos as the lightest gauginos\fxnote{have these words been defined?}, such as many AMSB models\fxnote{why amsb? what is amsb?}, will have a chargino NLSP with an observable lifetime (\SI{0.2}{\nano\s} is a typical estimate\fxnote{why? how typical?}) that eventaully decays to the neutralino LSP and, commonly, a pion\fxnote{why?}. The nearly-degenerate masses have two important phenomenological roles: (1) increase the chargino lifetime, and (2) ensure low-momentum decay products. The low-momentum pion is then unlikely to be reconstructed, which results in a disappearing track~\cite{atlas_disappearing}.
 
         Both ATLAS and CMS looked for disappearing tracks during Run I, but the tracker improvements installed in ATLAS before 2015 datataking and CMS before 2017 datataking should increase sensitivity to decays at shorter radii \fxnote{I haven't mentioned previous iterations when talking about other analyses}. The ALTAS search presented here is sensitive to LLP lifetimes of approximately \SI{10}{\pico\s} to \SI{10}{\nano\s} \fxnote{make sure I'm talking about lifetime sensitivity in the same way across analyses}.
@@ -333,7 +324,7 @@ I'll write an abstract here.
         %    b -- [plain, boson] f3,
         %    b -- [scalar] f4,
         %};
-            \caption{Processes\fxnote{explain}.~\cite{atlas_disappearing}}
+            \caption{Benchmark signal processes: electroweak gaugino production (left) and gluino pair-production (right)~\cite{atlas_disappearing}.}
         \label{disappearing_processes}
         \end{center} \end{figure}
 
@@ -341,7 +332,7 @@ I'll write an abstract here.
         
         Pixel tracklets can be faked by random combinations of unrealted hits from nearby particles or by tracks whose pixel hits and next tracking layer hits are not properly associated, either due to a hadron suffering a hard scatter or a lepton radiating a hard photon. These backgrounds come primarily from $\ttbar$ and $\W/\Z + \mathrm{jets}$ processes, and estimates for each type of background are obtained from data. \fxnote{I initially wrote a whole big thing about how each bg was estimated, but I'm thinking it was overkill}
 
-        No excess over expected background is observed, so upper limits are placed in the NLSP chargino mass-lifetime plane for the EW signal process and in the NLSP chargino mass-gluon mass plane for the QCD production process \fxnote{hopefully will be way clearer after texing in sparticle symbols}. Fig.~\ref{disappearing_limits} shows the limits for both processes.
+        No excess over expected background is observed, so upper limits are placed in the NLSP chargino mass-lifetime plane for the EW signal process and in the NLSP chargino mass-gluon mass plane for the QCD production process. Fig.~\ref{disappearing_limits} shows the limits for both processes.
 
         \noindent \begin{figure}[htbp] \begin{center}
         \begin{subfigure}[htbp]{0.3\textwidth} \begin{center}
@@ -353,7 +344,7 @@ I'll write an abstract here.
         \begin{subfigure}[htbp]{0.3\textwidth} \begin{center}
         \includegraphics[width=\textwidth]{images/disappearing_qcd_1ns_limit}
         \end{center} \end{subfigure}
-            \caption{Limits\fxnote{explain}.~\cite{atlas_disappearing}}
+            \caption{Limits on chargino mass and lifetime in the electroweak production channel (left) and gluino and chargino masses in the gluon pair-production channel with a \SI{0.2}{\nano\s} (center) and \SI{1.0}{\nano\s} chargino lifetime.~\cite{atlas_disappearing}}
         \label{disappearing_limits}
         \end{center} \end{figure}
 
@@ -390,11 +381,10 @@ I'll write an abstract here.
         \end{center} \end{figure}
 
     \subsection{Heavy Stable Charged Particles}
-        \fxnote{nice dE/dx plot (fig 1)}
         Particles that live for more than a couple \SI{}{ns}\fxnote{Check this and be more exact} will appear stable in CMS and ATLAS because they can traverse the entire detector before decaying. If such a particle is also sufficiently massive, it can be catigorized as a heavy stable charged particle (HSCP). HSCPs are characterterized by a greater rate of energy loss via ionization due to the lower speed with which they pass through detector material\fxnote{redundant w/ overview. Probably better explained here than there}. Additionally, HSCPs can be fractionally, singly, or multiply charged, which also affects their rate of energy loss, as shown in Fig.~\ref{hscp_dedx}~\cite{cms_hscp}.
 
         \noindent \begin{figure}[htbp] \begin{center}
-        \includegraphics[width=0.5\textwidth]{images/hscp_dedx}
+        \includegraphics[width=0.4\textwidth]{images/hscp_dedx}
             \caption{Ionization energy loss as a function of momentum for paticles of varying mass and charge~\cite{cms_hscp}}
         \label{hscp_dedx}
         \end{center} \end{figure}
@@ -411,10 +401,10 @@ I'll write an abstract here.
 
         \fxnote{I show seperate trk, trk+tof limits but never explain that in text} 
         \noindent \begin{figure}[htbp] \begin{center}
-        \begin{subfigure}[htbp]{0.45\textwidth} \begin{center}
+        \begin{subfigure}[htbp]{0.4\textwidth} \begin{center}
         \includegraphics[width=\textwidth]{images/hscp_limit_tracker_only}
         \end{center} \end{subfigure}
-        \begin{subfigure}[htbp]{0.45\textwidth} \begin{center}
+        \begin{subfigure}[htbp]{0.4\textwidth} \begin{center}
         \includegraphics[width=\textwidth]{images/hscp_limit_tracker_tof}
         \end{center} \end{subfigure}
         \caption{Production cross section limits on several particles as a function of mass for the tracker-only and tracker+TOF analyses~\cite{cms_hscp}}
@@ -453,18 +443,18 @@ I'll write an abstract here.
 
     \noindent where $\alpha_i$ is a particular model parameter and $\Delta_i$ is the degree of fine tuning assoicated with that parameter. The overall degree of fine tuning for the model can then be assigned as $\max{\left(\Delta_i\right)}$~\cite{cornering}.
 
-    Determining the acceptable degree of fine tuning is even more open ended. Before null results and serious constraints started rolling in, it was common\fxnote{feng} to refer to the $\Delta \lesssim 10$ regions of parameter space as natural, but as models are constrained, physicists seem willing to accept greater degrees of fine tuning. Feng proposes an interesting way to recast this problem: instead of asking which regions of parameter space are most natural, physicists should instead ask themselves, ``If superpartners were discovered, what level of fine fine-tuning would be sufficient to convince me that the gauge hierarchy problem is solved by sypersymmetry and I should move on to researhing other problems?"\fxnote{paraphrase for brevity?} Anecdotally, acceptable levels of fine tuning tend to increase when the question is posed in this way~\cite{feng}.
+    Determining the acceptable degree of fine tuning is even more subjective. Before null results and serious constraints started rolling in, it was common to refer to the $\Delta \lesssim 10$ regions of parameter space as natural, but as models are constrained, physicists seem willing to accept greater degrees of fine tuning. Feng proposes an interesting way to recast this problem: instead of asking which regions of parameter space are most natural, physicists should instead ask themselves, ``If superpartners were discovered, what level of fine fine-tuning would be sufficient to convince me that the gauge hierarchy problem is solved by sypersymmetry and I should move on to researching other problems?"\fxnote{paraphrase for brevity?} Anecdotally, fine tuning thresholds tend to increase when the question is posed in this way~\cite{feng}.
 
-    Exact upper limits on natural sparticle masses are therefore hard to come by. A reasonable and somewhat typical set of values is given in~\cite{drees_kim}: $m_{\tilde{H}} \lesssim \SI{500}{\giga\electronvolt}$, $m_{\tilde{t}} \lesssim \SI{1.5}{\tera\electronvolt}$, and $m_{\tilde{g}} \lesssim \SI{3}{\tera\electronvolt}$. Fig.~\ref{atlas_susy_summary} summarizes current SUSY limits from ATLAS searches (CMS limits are generally similar, but a recent plot was not available). Upon inspection, one sees that experimental limits are starting to push on naturalness bounds in many scenarios.
+    Exact upper limits on natural sparticle masses are therefore hard to come by. A somewhat typical set of values is given in~\cite{drees_kim}: $m_{\tilde{H}} \lesssim \SI{500}{\giga\electronvolt}$, $m_{\tilde{t}} \lesssim \SI{1.5}{\tera\electronvolt}$, and $m_{\tilde{g}} \lesssim \SI{3}{\tera\electronvolt}$. Fig.~\ref{atlas_susy_summary} summarizes current SUSY limits from ATLAS searches (CMS limits are generally similar, but a recent plot is not available). Upon inspection, one sees that experimental limits are starting to push on naturalness bounds in many scenarios.
 
     \fxnote{what do I cite?}  
     \noindent \begin{figure}[htbp] \begin{center}
-    \includegraphics[width=0.8\textwidth]{images/atlas_susy_summary}
+    \includegraphics[width=0.7\textwidth]{images/atlas_susy_summary}
     \caption{Summary of current experimental limits on SUSY models from ATLAS searches.}
     \label{atlas_susy_summary}
     \end{center} \end{figure}
 
-    Each of the limits in Fig.~\ref{atlas_susy_summary} comes with a particular set of assumptions, making it difficult to draw general conclusions. Some authors try to solve this problem by recasting analyses in terms of a few general models that illustrate much of the natural SUSY landscape. Fig.~\ref{cornering_limits} shows the results from one such attempt using $\approx \SI{15}{\femto\barn^{-1}}$ of \SI{13}{\tera\electronvolt} data for the cases of Effective SUSY, RPV SUSY, Hidden Valley SUSY, and a model that combines RPV with Effective SUSY. The authors find that for $\mu \leq \SI{100}{\giga\electronvolt}$ and $\Lambda = \SI{20}{\tera\electronvolt}$, a small region of $\Delta < 10$ parameter space remains viable in all cases but project that all considered $\Delta < 10$ parameter space will be excluded within the next few years\fxnote{check}.
+    Each of the limits in Fig.~\ref{atlas_susy_summary} comes with a particular set of assumptions, making it difficult to draw general conclusions. Some authors try to solve this problem by recasting analyses in terms of a few simplified models that illustrate much of the natural SUSY landscape. Fig.~\ref{cornering_limits} shows the results from one such attempt using $\approx \SI{15}{\femto\barn^{-1}}$ of \SI{13}{\tera\electronvolt} data for the cases of Effective SUSY, RPV SUSY, and a model that combines RPV with Effective SUSY. The authors find that for $\mu \leq \SI{100}{\giga\electronvolt}$ and $\Lambda = \SI{20}{\tera\electronvolt}$, a small region of $\Delta < 10$ parameter space remains viable in all cases but also project that all considered $\Delta < 10$ parameter space can be excluded within the next few years\fxnote{check}.
     
         \noindent \begin{figure}[htbp] \begin{center}
         \begin{subfigure}[htbp]{0.3\textwidth} \begin{center}
@@ -472,9 +462,6 @@ I'll write an abstract here.
         \end{center} \end{subfigure}
         \begin{subfigure}[htbp]{0.3\textwidth} \begin{center}
         \includegraphics[width=\textwidth]{images/cornering_rpv_100}
-        \end{center} \end{subfigure}
-        \begin{subfigure}[htbp]{0.3\textwidth} \begin{center}
-        \includegraphics[width=\textwidth]{images/cornering_hv_100}
         \end{center} \end{subfigure}
         \begin{subfigure}[htbp]{0.3\textwidth} \begin{center}
         \includegraphics[width=\textwidth]{images/cornering_rpv_effective_100}
@@ -486,13 +473,16 @@ I'll write an abstract here.
     As viable parameter space for natural SUSY continues to shrink, it is important to identify and fill in the gaps left by conventional analyses. LLP searches such as those in Sec.~\ref{analyses} do just that by opening up sensitivity to lifetimes that would otherwise be missed. Fig.~\ref{fate_limits}, for example, shows stop mass limits from several Run I LLP searches that have been recast using a simple RPV model~\cite{fate}. By combining results from several analyses, the authors constrain the stop mass for a broad and continuous range of lifetimes that would have been invisible to conventional searches. 
 
         \noindent \begin{figure}[htbp] \begin{center}
-        \includegraphics[width=\textwidth]{images/fate_limits}
+        \includegraphics[width=0.4\textwidth]{images/fate_limits}
         \caption{Limits.~\cite{fate}}
         \label{fate_limits}
         \end{center} \end{figure}
 
-    CMS and ATLAS should be able to exclude or discover a wide range of natural SUSY models over the next several years~\cite{cornering}. In the absence of a discovery, physicists will have to look long and hard at the role of naturalness in the SM. In the meantime, however, SUSY remains one of the least-tuned options for natural BSM physics\fxnote{double check, then cite cornering, feng, nate, and/or giudice}\fxnote{Should I include exo summary plot to show how constrained compositeness and extra dimensions are?}. In the final years of the hunt for natrual SUSY, CMS and ATLAS will need to apply a combination of conventional and LLP searches in order to cover natural parameter space.
-\fxnote{need to answer, "which searches are important?} 
+    Many LLP searches are motivated by and interpreted within specific models that predict unique signatures. Approaching analyses is this way often results in nearly background-free searches with good signal acceptance for the model in question, but it can be difficult to draw general conclusions or assess the complementarity (or redundancy) of different searches~\cite{fate}. As the number of LLP searches grows, it will be important to for researchers to design their searches around simplified models that encourage combining results to draw general conclusions~\cite{evans_talk}.
+
+    Combining results from several searches can also elucidate new directions for important searches. By recasting several LLP searches similar to those described in Sec.~\ref{analyses}, Evans and Shelter looked at the current viability of several SUSY spectra that predict long-lived staus. They identified significant gaps in coverage for models with displaced taus or same-sign displaced leptons, which appear in several well-motivated models such as GMSB, which frequently predicts NLSP staus that can become long-lived or certain RPV couplings that lead to same-flavor leptons~\cite{ll_staus}. 
+
+    The uniqueness of LLP signatures and idosyncrasy of LLP analyses leads to a broad and diverse set of analyses that will surely grow as viable natural parameter space shrinks and more imaginations are turned to filling in the gaps. Fully covering natural SUSY parameter space will take a dedicated effort from the LLP community, both to maximize the reach of individual searches and to design complementary analyses that can be used to draw general conclusions. Although natural SUSY is under pressure from conventional and long-lived null results, it remains one of the least-tuned options for natural BSM physics\fxnote{double check, then cite cornering, feng, nate, and/or giudice}. The next several years will be decisive~\cite{cornering}, and physicists will have to be clever to probe every corner of natural parameter space.
 
 \clearpage
 \pagebreak
