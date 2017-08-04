@@ -132,3 +132,36 @@ Answers I don't know to Ethan's Q's
     What makes a b jet special?
     Which subdetectors involved in L1?
     How does each subdetector store information until trigger?
+
+List of phases from paper to be good at explaining (and questions from comments)
+    The standard model is verified to astonishing accuracy
+    All SM particles transform according to the gauged symmetry group SU(3)xSU(2)xU(1)
+    The fermions are categorized by which representation of each group they fit into
+    know about the weinberg angle, first measured precisely in neutrino electron elastic scattering
+    why can't you explicitly break gauge symmetry?
+    Because the Higgs is a fundamental scalar, its corrections depend quadratically on the cutoff scale
+    The cutoff scale is the largest energy scale for which the SM is valid
+    The fermions and gauge bosons only depend logarithmically on the cutoff scale
+    be prepared to offer historical examples of times when fine tuning was a hint of some deeper theory and times when it was not
+    Supersymmetry (SUSY) introduces a new symmetry in which every SM field fits into a larger multiplet with an inherent symmetry between bosons and fermions
+    Why does susy need a 2nd Higgs doublet?
+    R-parity prevents proton decay
+    Know about the beam, says stan
+    simply explain how the LHC works during your talk: how does it accelerate protons, how does it curve their trajectories in a circle, etc, says andrew
+    Learn context for #s in 'Lead tungstate crystals allow for a fast (\SI{80}{\percent} of light within \SI{25}{\nano\s}), compact (radiation length = \SI{0.89}{cm}), fine-grained (Moli\`ere radius = \SI{2.2}{cm}), and radiation hard (up to 10 Mrad) calorimeter'
+    Why do electrons and photons shower in the ECAL but not (usually) hadrons?, asks andrew
+    Get a feel for 0.087x0.087 in eta-phi
+    The choice of detector varies between barrel and endcap due to the difference in neutron-induced background, muon rates, and magnetic field strength
+    Is entire detector read out at L1 trigger?
+    displaced and disappearing cover a wide range of lifetimes and topologies for LLPs that decay on detector timescales
+    ATLAS performs a search for such particles by looking for at least one DV along with large MET and large track multiplicity
+    Why pions in disappearing decays?
+    Why might ew gaugino production be only gaugino production mode at lhc if gluino mass is kinematically inaccessible?
+    disappearing backgrounds come primarily from $\ttbar$ and $\W/\Z + \mathrm{jets}$ processes
+    why does 0 CSC hits minimize beam halo?
+    Why do first two models in hscp relate more directly to naturalness and SUSY?
+    Why is leaving out mchamps cool?
+    What is mu parameter in SUSY? How is it related to higgsino mass?
+    Is it only the lightest higgsino that corrects mH at tree-level?
+    Messenger scale vs susy breaking scale vs cutoff scale
+    What are the consequences of a lower messenger scale?
