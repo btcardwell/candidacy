@@ -121,14 +121,9 @@ Practice doing
         Estimate lifetimes, propagation distances, widths from each other real fast
         Find other things I should be able to numerically estimate real fast
 
-List of phrases I should have in my back pocket
-    In general, loop momentum integrals always diverge either quadratically or logarithmically, not linearly
-
-
 Answers I don't know to Ethan's Q's
     Pixel deadtime
     Gap between pixel chips?
-    Why bother with pseudorapidity?
     What makes a b jet special?
     Which subdetectors involved in L1?
     How does each subdetector store information until trigger?
@@ -165,3 +160,7 @@ List of phases from paper to be good at explaining (and questions from comments)
     Is it only the lightest higgsino that corrects mH at tree-level?
     Messenger scale vs susy breaking scale vs cutoff scale
     What are the consequences of a lower messenger scale?
+    Is M_3 in eq. 4 just m_gluino?
+    What's up with m_stop vs m_t1-type stuff?
+    The Higgsino, however, does not carry color charge and is far less likely to be produced at the LHC
+    a small region of $\Delta < 10$ parameter space is currently viable in all cases but, barring discovery, will be excluded within the next few years.
